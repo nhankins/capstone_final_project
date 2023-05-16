@@ -1,0 +1,697 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 (erg_nom) Nick deep-subjecthood-custom % python3 run_one_experiment.py --only-ao --balance\
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html\
+args: Namespace(all_major_cases=False, average_embs=False, balance=True, erg_abs=False, nom_acc=False, only_ao=True, output_fn='last_run', reeval_src_test=False, seed=0, test_lang_fn='language_data/UD_Indonesian-GSD-master/id_gsd-ud-test.conllu', train_lang_base_path='language_data/UD_Indonesian-GSD-master/id_gsd-ud')\
+Just set the seed to 0\
+Need to train classifiers!\
+Loading the source train set, with limit 2025\
+Loading all of the tokens and non-bert stuff from cached_datasets/all_features_aso_exps_id_gsd-ud-train_AO_balanced_2025.pkl\
+There are 2026 relevant tokens, and 3082 overall sentences\
+Bert vectors file is cached_bert_vectors/all_features_aso_exps_id_gsd-ud-train_AO_balanced_2025.hdf5\
+Running 3082 sentences through BERT. This takes a while\
+100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 3082/3082 [01:56<00:00, 26.53it/s]\
+length of bert outputs 3082\
+Length of train set is 2026, limit is 2025\
+Loading all of the tokens and non-bert stuff from cached_datasets/all_features_aso_exps_id_gsd-ud-test_aso_unbalanced_2000.pkl\
+There are 958 relevant tokens, and 557 overall sentences\
+Bert vectors file is cached_bert_vectors/all_features_aso_exps_id_gsd-ud-test_aso_unbalanced_2000.hdf5\
+Running 557 sentences through BERT. This takes a while\
+100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 557/557 [00:20<00:00, 26.90it/s]\
+length of bert outputs 557\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.430\
+[2/20] Train loss: 0.209\
+[3/20] Train loss: 0.151\
+[4/20] Train loss: 0.103\
+[5/20] Train loss: 0.080\
+[6/20] Train loss: 0.057\
+[7/20] Train loss: 0.044\
+[8/20] Train loss: 0.031\
+[9/20] Train loss: 0.026\
+[10/20] Train loss: 0.024\
+[11/20] Train loss: 0.017\
+[12/20] Train loss: 0.015\
+[13/20] Train loss: 0.014\
+[14/20] Train loss: 0.014\
+[15/20] Train loss: 0.011\
+[16/20] Train loss: 0.012\
+[17/20] Train loss: 0.010\
+[18/20] Train loss: 0.011\
+[19/20] Train loss: 0.010\
+[20/20] Train loss: 0.010\
+Trained a case classifier!\
+Examples # 958\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-aux': 4, 'S-passive': 5\}\
+Accuracy on test set of training language: \{'A': 0.9548022598870056, 'O': 0.9269776876267748\}\
+Saving classifier to classifiers/aso_id_gsd-ud_0_ao_balanced_12_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.311\
+[2/20] Train loss: 0.120\
+[3/20] Train loss: 0.079\
+[4/20] Train loss: 0.066\
+[5/20] Train loss: 0.043\
+[6/20] Train loss: 0.031\
+[7/20] Train loss: 0.021\
+[8/20] Train loss: 0.019\
+[9/20] Train loss: 0.016\
+[10/20] Train loss: 0.011\
+[11/20] Train loss: 0.009\
+[12/20] Train loss: 0.009\
+[13/20] Train loss: 0.013\
+[14/20] Train loss: 0.009\
+[15/20] Train loss: 0.011\
+[16/20] Train loss: 0.009\
+[17/20] Train loss: 0.009\
+[18/20] Train loss: 0.008\
+[19/20] Train loss: 0.010\
+[20/20] Train loss: 0.009\
+Trained a case classifier!\
+Examples # 958\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-aux': 4, 'S-passive': 5\}\
+Accuracy on test set of training language: \{'A': 0.9830508474576272, 'O': 0.9411764705882353\}\
+Saving classifier to classifiers/aso_id_gsd-ud_0_ao_balanced_11_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.302\
+[2/20] Train loss: 0.110\
+[3/20] Train loss: 0.063\
+[4/20] Train loss: 0.051\
+[5/20] Train loss: 0.035\
+[6/20] Train loss: 0.023\
+[7/20] Train loss: 0.019\
+[8/20] Train loss: 0.014\
+[9/20] Train loss: 0.014\
+[10/20] Train loss: 0.010\
+[11/20] Train loss: 0.012\
+[12/20] Train loss: 0.010\
+[13/20] Train loss: 0.014\
+[14/20] Train loss: 0.009\
+[15/20] Train loss: 0.008\
+[16/20] Train loss: 0.006\
+[17/20] Train loss: 0.009\
+[18/20] Train loss: 0.008\
+[19/20] Train loss: 0.009\
+[20/20] Train loss: 0.004\
+Trained a case classifier!\
+Examples # 958\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-aux': 4, 'S-passive': 5\}\
+Accuracy on test set of training language: \{'A': 0.9887005649717514, 'O': 0.9614604462474645\}\
+Saving classifier to classifiers/aso_id_gsd-ud_0_ao_balanced_10_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.236\
+[2/20] Train loss: 0.080\
+[3/20] Train loss: 0.048\
+[4/20] Train loss: 0.034\
+[5/20] Train loss: 0.024\
+[6/20] Train loss: 0.022\
+[7/20] Train loss: 0.020\
+[8/20] Train loss: 0.015\
+[9/20] Train loss: 0.011\
+[10/20] Train loss: 0.008\
+[11/20] Train loss: 0.012\
+[12/20] Train loss: 0.009\
+[13/20] Train loss: 0.007\
+[14/20] Train loss: 0.008\
+[15/20] Train loss: 0.011\
+[16/20] Train loss: 0.010\
+[17/20] Train loss: 0.008\
+[18/20] Train loss: 0.009\
+[19/20] Train loss: 0.009\
+[20/20] Train loss: 0.008\
+Trained a case classifier!\
+Examples # 958\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-aux': 4, 'S-passive': 5\}\
+Accuracy on test set of training language: \{'A': 0.9943502824858758, 'O': 0.9533468559837728\}\
+Saving classifier to classifiers/aso_id_gsd-ud_0_ao_balanced_9_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.214\
+[2/20] Train loss: 0.068\
+[3/20] Train loss: 0.043\
+[4/20] Train loss: 0.025\
+[5/20] Train loss: 0.022\
+[6/20] Train loss: 0.013\
+[7/20] Train loss: 0.011\
+[8/20] Train loss: 0.009\
+[9/20] Train loss: 0.014\
+[10/20] Train loss: 0.010\
+[11/20] Train loss: 0.010\
+[12/20] Train loss: 0.008\
+[13/20] Train loss: 0.008\
+[14/20] Train loss: 0.009\
+[15/20] Train loss: 0.013\
+[16/20] Train loss: 0.006\
+[17/20] Train loss: 0.006\
+[18/20] Train loss: 0.008\
+[19/20] Train loss: 0.009\
+[20/20] Train loss: 0.007\
+Trained a case classifier!\
+Examples # 958\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-aux': 4, 'S-passive': 5\}\
+Accuracy on test set of training language: \{'A': 0.9943502824858758, 'O': 0.9594320486815415\}\
+Saving classifier to classifiers/aso_id_gsd-ud_0_ao_balanced_8_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.205\
+[2/20] Train loss: 0.063\
+[3/20] Train loss: 0.036\
+[4/20] Train loss: 0.028\
+[5/20] Train loss: 0.018\
+[6/20] Train loss: 0.012\
+[7/20] Train loss: 0.009\
+[8/20] Train loss: 0.007\
+[9/20] Train loss: 0.007\
+[10/20] Train loss: 0.008\
+[11/20] Train loss: 0.010\
+[12/20] Train loss: 0.009\
+[13/20] Train loss: 0.008\
+[14/20] Train loss: 0.006\
+[15/20] Train loss: 0.008\
+[16/20] Train loss: 0.010\
+[17/20] Train loss: 0.007\
+[18/20] Train loss: 0.007\
+[19/20] Train loss: 0.009\
+[20/20] Train loss: 0.007\
+Trained a case classifier!\
+Examples # 958\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-aux': 4, 'S-passive': 5\}\
+Accuracy on test set of training language: \{'A': 0.9717514124293786, 'O': 0.9634888438133874\}\
+Saving classifier to classifiers/aso_id_gsd-ud_0_ao_balanced_7_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.205\
+[2/20] Train loss: 0.078\
+[3/20] Train loss: 0.042\
+[4/20] Train loss: 0.027\
+[5/20] Train loss: 0.023\
+[6/20] Train loss: 0.014\
+[7/20] Train loss: 0.009\
+[8/20] Train loss: 0.010\
+[9/20] Train loss: 0.012\
+[10/20] Train loss: 0.010\
+[11/20] Train loss: 0.008\
+[12/20] Train loss: 0.008\
+[13/20] Train loss: 0.012\
+[14/20] Train loss: 0.008\
+[15/20] Train loss: 0.011\
+[16/20] Train loss: 0.006\
+[17/20] Train loss: 0.006\
+[18/20] Train loss: 0.005\
+[19/20] Train loss: 0.009\
+[20/20] Train loss: 0.010\
+Trained a case classifier!\
+Examples # 958\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-aux': 4, 'S-passive': 5\}\
+Accuracy on test set of training language: \{'A': 0.9774011299435028, 'O': 0.9594320486815415\}\
+Saving classifier to classifiers/aso_id_gsd-ud_0_ao_balanced_6_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.292\
+[2/20] Train loss: 0.110\
+[3/20] Train loss: 0.069\
+[4/20] Train loss: 0.050\
+[5/20] Train loss: 0.031\
+[6/20] Train loss: 0.025\
+[7/20] Train loss: 0.027\
+[8/20] Train loss: 0.017\
+[9/20] Train loss: 0.015\
+[10/20] Train loss: 0.013\
+[11/20] Train loss: 0.014\
+[12/20] Train loss: 0.010\
+[13/20] Train loss: 0.008\
+[14/20] Train loss: 0.009\
+[15/20] Train loss: 0.011\
+[16/20] Train loss: 0.010\
+[17/20] Train loss: 0.007\
+[18/20] Train loss: 0.006\
+[19/20] Train loss: 0.008\
+[20/20] Train loss: 0.011\
+Trained a case classifier!\
+Examples # 958\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-aux': 4, 'S-passive': 5\}\
+Accuracy on test set of training language: \{'A': 0.9774011299435028, 'O': 0.9269776876267748\}\
+Saving classifier to classifiers/aso_id_gsd-ud_0_ao_balanced_5_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.352\
+[2/20] Train loss: 0.159\
+[3/20] Train loss: 0.098\
+[4/20] Train loss: 0.065\
+[5/20] Train loss: 0.047\
+[6/20] Train loss: 0.035\
+[7/20] Train loss: 0.032\
+[8/20] Train loss: 0.021\
+[9/20] Train loss: 0.020\
+[10/20] Train loss: 0.019\
+[11/20] Train loss: 0.013\
+[12/20] Train loss: 0.011\
+[13/20] Train loss: 0.014\
+[14/20] Train loss: 0.013\
+[15/20] Train loss: 0.011\
+[16/20] Train loss: 0.010\
+[17/20] Train loss: 0.005\
+[18/20] Train loss: 0.008\
+[19/20] Train loss: 0.009\
+[20/20] Train loss: 0.013\
+Trained a case classifier!\
+Examples # 958\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-aux': 4, 'S-passive': 5\}\
+Accuracy on test set of training language: \{'A': 0.9717514124293786, 'O': 0.922920892494929\}\
+Saving classifier to classifiers/aso_id_gsd-ud_0_ao_balanced_4_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.360\
+[2/20] Train loss: 0.166\
+[3/20] Train loss: 0.111\
+[4/20] Train loss: 0.073\
+[5/20] Train loss: 0.052\
+[6/20] Train loss: 0.041\
+[7/20] Train loss: 0.038\
+[8/20] Train loss: 0.033\
+[9/20] Train loss: 0.018\
+[10/20] Train loss: 0.019\
+[11/20] Train loss: 0.020\
+[12/20] Train loss: 0.016\
+[13/20] Train loss: 0.010\
+[14/20] Train loss: 0.011\
+[15/20] Train loss: 0.009\
+[16/20] Train loss: 0.011\
+[17/20] Train loss: 0.010\
+[18/20] Train loss: 0.012\
+[19/20] Train loss: 0.007\
+[20/20] Train loss: 0.007\
+Trained a case classifier!\
+Examples # 958\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-aux': 4, 'S-passive': 5\}\
+Accuracy on test set of training language: \{'A': 0.9491525423728814, 'O': 0.9310344827586207\}\
+Saving classifier to classifiers/aso_id_gsd-ud_0_ao_balanced_3_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.462\
+[2/20] Train loss: 0.325\
+[3/20] Train loss: 0.265\
+[4/20] Train loss: 0.203\
+[5/20] Train loss: 0.163\
+[6/20] Train loss: 0.138\
+[7/20] Train loss: 0.107\
+[8/20] Train loss: 0.099\
+[9/20] Train loss: 0.079\
+[10/20] Train loss: 0.069\
+[11/20] Train loss: 0.057\
+[12/20] Train loss: 0.049\
+[13/20] Train loss: 0.046\
+[14/20] Train loss: 0.035\
+[15/20] Train loss: 0.039\
+[16/20] Train loss: 0.038\
+[17/20] Train loss: 0.040\
+[18/20] Train loss: 0.040\
+[19/20] Train loss: 0.027\
+[20/20] Train loss: 0.032\
+Trained a case classifier!\
+Examples # 958\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-aux': 4, 'S-passive': 5\}\
+Accuracy on test set of training language: \{'A': 0.8248587570621468, 'O': 0.8255578093306288\}\
+Saving classifier to classifiers/aso_id_gsd-ud_0_ao_balanced_2_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.484\
+[2/20] Train loss: 0.349\
+[3/20] Train loss: 0.290\
+[4/20] Train loss: 0.239\
+[5/20] Train loss: 0.204\
+[6/20] Train loss: 0.171\
+[7/20] Train loss: 0.145\
+[8/20] Train loss: 0.132\
+[9/20] Train loss: 0.110\
+[10/20] Train loss: 0.106\
+[11/20] Train loss: 0.097\
+[12/20] Train loss: 0.081\
+[13/20] Train loss: 0.085\
+[14/20] Train loss: 0.063\
+[15/20] Train loss: 0.057\
+[16/20] Train loss: 0.054\
+[17/20] Train loss: 0.053\
+[18/20] Train loss: 0.075\
+[19/20] Train loss: 0.051\
+[20/20] Train loss: 0.044\
+Trained a case classifier!\
+Examples # 958\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-aux': 4, 'S-passive': 5\}\
+Accuracy on test set of training language: \{'A': 0.7627118644067796, 'O': 0.795131845841785\}\
+Saving classifier to classifiers/aso_id_gsd-ud_0_ao_balanced_1_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.499\
+[2/20] Train loss: 0.376\
+[3/20] Train loss: 0.324\
+[4/20] Train loss: 0.268\
+[5/20] Train loss: 0.243\
+[6/20] Train loss: 0.222\
+[7/20] Train loss: 0.188\
+[8/20] Train loss: 0.169\
+[9/20] Train loss: 0.152\
+[10/20] Train loss: 0.145\
+[11/20] Train loss: 0.132\
+[12/20] Train loss: 0.124\
+[13/20] Train loss: 0.108\
+[14/20] Train loss: 0.107\
+[15/20] Train loss: 0.092\
+[16/20] Train loss: 0.083\
+[17/20] Train loss: 0.080\
+[18/20] Train loss: 0.069\
+[19/20] Train loss: 0.073\
+[20/20] Train loss: 0.067\
+Trained a case classifier!\
+Examples # 958\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-aux': 4, 'S-passive': 5\}\
+Accuracy on test set of training language: \{'A': 0.7062146892655368, 'O': 0.768762677484787\}\
+Saving classifier to classifiers/aso_id_gsd-ud_0_ao_balanced_0_exproles\
+Loading the dest test set, with limit 2000\
+Loading all of the tokens and non-bert stuff from cached_datasets/all_features_aso_exps_id_gsd-ud-test_aso_unbalanced_2000.pkl\
+There are 958 relevant tokens, and 557 overall sentences\
+Bert vectors file is cached_bert_vectors/all_features_aso_exps_id_gsd-ud-test_aso_unbalanced_2000.hdf5\
+[Loading from disk]: 100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 557/557 [00:00<00:00, 2394.63it/s]\
+Loaded 556 sentences from disk.\
+length of bert outputs 557\
+On layer 12\
+Loaded case classifier from classifiers/aso_id_gsd-ud_0_ao_balanced_12_exproles!\
+src_test_accuracy: \{'A': 0.9548022598870056, 'O': 0.9269776876267748\}\
+Examples # 958\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-aux': 4, 'S-passive': 5\}\
+There are 958 examples to evaluate on.\
+          role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0    S-passive                    Sampul  ...  9.999994e-01    12               0.954802                0.926978\
+1            O                            ...  1.797737e-08    12               0.954802                0.926978\
+2            S                    Sampul  ...  9.992442e-01    12               0.954802                0.926978\
+3            S                     Perry  ...  7.319647e-01    12               0.954802                0.926978\
+4            S                 Pencurian  ...  9.999981e-01    12               0.954802                0.926978\
+..         ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+953          O                            ...  5.116731e-02    12               0.954802                0.926978\
+954          A                     Genta  ...  9.999970e-01    12               0.954802                0.926978\
+955          O                            ...  1.062168e-05    12               0.954802                0.926978\
+956          S                     Abram  ...  9.999999e-01    12               0.954802                0.926978\
+957          O                            ...  9.623693e-03    12               0.954802                0.926978\
+\
+[958 rows x 11 columns]\
+On layer 11\
+Loaded case classifier from classifiers/aso_id_gsd-ud_0_ao_balanced_11_exproles!\
+src_test_accuracy: \{'A': 0.9830508474576272, 'O': 0.9411764705882353\}\
+Examples # 958\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-aux': 4, 'S-passive': 5\}\
+There are 958 examples to evaluate on.\
+          role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0    S-passive                    Sampul  ...      0.999993    11               0.983051                0.941176\
+1            O                            ...      0.000061    11               0.983051                0.941176\
+2            S                    Sampul  ...      0.998463    11               0.983051                0.941176\
+3            S                     Perry  ...      0.950655    11               0.983051                0.941176\
+4            S                 Pencurian  ...      0.995089    11               0.983051                0.941176\
+..         ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+953          O                            ...      0.002281    11               0.983051                0.941176\
+954          A                     Genta  ...      1.000000    11               0.983051                0.941176\
+955          O                            ...      0.000088    11               0.983051                0.941176\
+956          S                     Abram  ...      0.999026    11               0.983051                0.941176\
+957          O                            ...      0.002793    11               0.983051                0.941176\
+\
+[958 rows x 11 columns]\
+On layer 10\
+Loaded case classifier from classifiers/aso_id_gsd-ud_0_ao_balanced_10_exproles!\
+src_test_accuracy: \{'A': 0.9887005649717514, 'O': 0.9614604462474645\}\
+Examples # 958\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-aux': 4, 'S-passive': 5\}\
+There are 958 examples to evaluate on.\
+          role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0    S-passive                    Sampul  ...  9.999957e-01    10               0.988701                 0.96146\
+1            O                            ...  3.610749e-10    10               0.988701                 0.96146\
+2            S                    Sampul  ...  9.991373e-01    10               0.988701                 0.96146\
+3            S                     Perry  ...  9.926186e-01    10               0.988701                 0.96146\
+4            S                 Pencurian  ...  9.999739e-01    10               0.988701                 0.96146\
+..         ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+953          O                            ...  4.117562e-03    10               0.988701                 0.96146\
+954          A                     Genta  ...  1.000000e+00    10               0.988701                 0.96146\
+955          O                            ...  1.515307e-09    10               0.988701                 0.96146\
+956          S                     Abram  ...  9.998630e-01    10               0.988701                 0.96146\
+957          O                            ...  3.579853e-08    10               0.988701                 0.96146\
+\
+[958 rows x 11 columns]\
+On layer 9\
+Loaded case classifier from classifiers/aso_id_gsd-ud_0_ao_balanced_9_exproles!\
+src_test_accuracy: \{'A': 0.9943502824858758, 'O': 0.9533468559837728\}\
+Examples # 958\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-aux': 4, 'S-passive': 5\}\
+There are 958 examples to evaluate on.\
+          role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0    S-passive                    Sampul  ...  1.000000e+00     9                0.99435                0.953347\
+1            O                            ...  3.046757e-09     9                0.99435                0.953347\
+2            S                    Sampul  ...  1.000000e+00     9                0.99435                0.953347\
+3            S                     Perry  ...  9.999994e-01     9                0.99435                0.953347\
+4            S                 Pencurian  ...  1.000000e+00     9                0.99435                0.953347\
+..         ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+953          O                            ...  2.516211e-04     9                0.99435                0.953347\
+954          A                     Genta  ...  1.000000e+00     9                0.99435                0.953347\
+955          O                            ...  2.308506e-09     9                0.99435                0.953347\
+956          S                     Abram  ...  9.999813e-01     9                0.99435                0.953347\
+957          O                            ...  1.595746e-06     9                0.99435                0.953347\
+\
+[958 rows x 11 columns]\
+On layer 8\
+Loaded case classifier from classifiers/aso_id_gsd-ud_0_ao_balanced_8_exproles!\
+src_test_accuracy: \{'A': 0.9943502824858758, 'O': 0.9594320486815415\}\
+Examples # 958\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-aux': 4, 'S-passive': 5\}\
+There are 958 examples to evaluate on.\
+          role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0    S-passive                    Sampul  ...  1.000000e+00     8                0.99435                0.959432\
+1            O                            ...  2.466831e-09     8                0.99435                0.959432\
+2            S                    Sampul  ...  1.000000e+00     8                0.99435                0.959432\
+3            S                     Perry  ...  9.999959e-01     8                0.99435                0.959432\
+4            S                 Pencurian  ...  1.000000e+00     8                0.99435                0.959432\
+..         ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+953          O                            ...  9.924754e-08     8                0.99435                0.959432\
+954          A                     Genta  ...  1.000000e+00     8                0.99435                0.959432\
+955          O                            ...  6.399454e-06     8                0.99435                0.959432\
+956          S                     Abram  ...  9.999999e-01     8                0.99435                0.959432\
+957          O                            ...  2.165285e-05     8                0.99435                0.959432\
+\
+[958 rows x 11 columns]\
+On layer 7\
+Loaded case classifier from classifiers/aso_id_gsd-ud_0_ao_balanced_7_exproles!\
+src_test_accuracy: \{'A': 0.9717514124293786, 'O': 0.9634888438133874\}\
+Examples # 958\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-aux': 4, 'S-passive': 5\}\
+There are 958 examples to evaluate on.\
+          role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0    S-passive                    Sampul  ...  1.000000e+00     7               0.971751                0.963489\
+1            O                            ...  2.283482e-10     7               0.971751                0.963489\
+2            S                    Sampul  ...  1.000000e+00     7               0.971751                0.963489\
+3            S                     Perry  ...  9.999913e-01     7               0.971751                0.963489\
+4            S                 Pencurian  ...  9.999977e-01     7               0.971751                0.963489\
+..         ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+953          O                            ...  1.341581e-04     7               0.971751                0.963489\
+954          A                     Genta  ...  1.000000e+00     7               0.971751                0.963489\
+955          O                            ...  2.784264e-10     7               0.971751                0.963489\
+956          S                     Abram  ...  1.000000e+00     7               0.971751                0.963489\
+957          O                            ...  2.796676e-10     7               0.971751                0.963489\
+\
+[958 rows x 11 columns]\
+On layer 6\
+Loaded case classifier from classifiers/aso_id_gsd-ud_0_ao_balanced_6_exproles!\
+src_test_accuracy: \{'A': 0.9774011299435028, 'O': 0.9594320486815415\}\
+Examples # 958\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-aux': 4, 'S-passive': 5\}\
+There are 958 examples to evaluate on.\
+          role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0    S-passive                    Sampul  ...  1.000000e+00     6               0.977401                0.959432\
+1            O                            ...  7.048119e-11     6               0.977401                0.959432\
+2            S                    Sampul  ...  1.000000e+00     6               0.977401                0.959432\
+3            S                     Perry  ...  9.999979e-01     6               0.977401                0.959432\
+4            S                 Pencurian  ...  1.000000e+00     6               0.977401                0.959432\
+..         ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+953          O                            ...  1.027384e-08     6               0.977401                0.959432\
+954          A                     Genta  ...  1.000000e+00     6               0.977401                0.959432\
+955          O                            ...  5.262012e-10     6               0.977401                0.959432\
+956          S                     Abram  ...  1.000000e+00     6               0.977401                0.959432\
+957          O                            ...  6.020206e-05     6               0.977401                0.959432\
+\
+[958 rows x 11 columns]\
+On layer 5\
+Loaded case classifier from classifiers/aso_id_gsd-ud_0_ao_balanced_5_exproles!\
+src_test_accuracy: \{'A': 0.9774011299435028, 'O': 0.9269776876267748\}\
+Examples # 958\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-aux': 4, 'S-passive': 5\}\
+There are 958 examples to evaluate on.\
+          role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0    S-passive                    Sampul  ...      1.000000     5               0.977401                0.926978\
+1            O                            ...      0.000007     5               0.977401                0.926978\
+2            S                    Sampul  ...      1.000000     5               0.977401                0.926978\
+3            S                     Perry  ...      0.999992     5               0.977401                0.926978\
+4            S                 Pencurian  ...      0.999998     5               0.977401                0.926978\
+..         ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+953          O                            ...      0.000368     5               0.977401                0.926978\
+954          A                     Genta  ...      1.000000     5               0.977401                0.926978\
+955          O                            ...      0.000010     5               0.977401                0.926978\
+956          S                     Abram  ...      1.000000     5               0.977401                0.926978\
+957          O                            ...      0.000001     5               0.977401                0.926978\
+\
+[958 rows x 11 columns]\
+On layer 4\
+Loaded case classifier from classifiers/aso_id_gsd-ud_0_ao_balanced_4_exproles!\
+src_test_accuracy: \{'A': 0.9717514124293786, 'O': 0.922920892494929\}\
+Examples # 958\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-aux': 4, 'S-passive': 5\}\
+There are 958 examples to evaluate on.\
+          role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0    S-passive                    Sampul  ...  1.000000e+00     4               0.971751                0.922921\
+1            O                            ...  1.771767e-12     4               0.971751                0.922921\
+2            S                    Sampul  ...  9.999666e-01     4               0.971751                0.922921\
+3            S                     Perry  ...  9.999423e-01     4               0.971751                0.922921\
+4            S                 Pencurian  ...  9.998944e-01     4               0.971751                0.922921\
+..         ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+953          O                            ...  2.816208e-04     4               0.971751                0.922921\
+954          A                     Genta  ...  1.000000e+00     4               0.971751                0.922921\
+955          O                            ...  8.080088e-12     4               0.971751                0.922921\
+956          S                     Abram  ...  1.000000e+00     4               0.971751                0.922921\
+957          O                            ...  1.258844e-03     4               0.971751                0.922921\
+\
+[958 rows x 11 columns]\
+On layer 3\
+Loaded case classifier from classifiers/aso_id_gsd-ud_0_ao_balanced_3_exproles!\
+src_test_accuracy: \{'A': 0.9491525423728814, 'O': 0.9310344827586207\}\
+Examples # 958\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-aux': 4, 'S-passive': 5\}\
+There are 958 examples to evaluate on.\
+          role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0    S-passive                    Sampul  ...  1.000000e+00     3               0.949153                0.931034\
+1            O                            ...  1.842707e-09     3               0.949153                0.931034\
+2            S                    Sampul  ...  1.000000e+00     3               0.949153                0.931034\
+3            S                     Perry  ...  9.974189e-01     3               0.949153                0.931034\
+4            S                 Pencurian  ...  1.000000e+00     3               0.949153                0.931034\
+..         ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+953          O                            ...  1.091568e-01     3               0.949153                0.931034\
+954          A                     Genta  ...  1.000000e+00     3               0.949153                0.931034\
+955          O                            ...  8.751406e-11     3               0.949153                0.931034\
+956          S                     Abram  ...  1.000000e+00     3               0.949153                0.931034\
+957          O                            ...  1.462124e-05     3               0.949153                0.931034\
+\
+[958 rows x 11 columns]\
+On layer 2\
+Loaded case classifier from classifiers/aso_id_gsd-ud_0_ao_balanced_2_exproles!\
+src_test_accuracy: \{'A': 0.8248587570621468, 'O': 0.8255578093306288\}\
+Examples # 958\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-aux': 4, 'S-passive': 5\}\
+There are 958 examples to evaluate on.\
+          role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0    S-passive                    Sampul  ...  1.000000e+00     2               0.824859                0.825558\
+1            O                            ...  1.308662e-04     2               0.824859                0.825558\
+2            S                    Sampul  ...  9.998363e-01     2               0.824859                0.825558\
+3            S                     Perry  ...  5.000000e-01     2               0.824859                0.825558\
+4            S                 Pencurian  ...  1.000000e+00     2               0.824859                0.825558\
+..         ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+953          O                            ...  3.595013e-02     2               0.824859                0.825558\
+954          A                     Genta  ...  1.000000e+00     2               0.824859                0.825558\
+955          O                            ...  5.732560e-08     2               0.824859                0.825558\
+956          S                     Abram  ...  9.860767e-01     2               0.824859                0.825558\
+957          O                            ...  3.785684e-01     2               0.824859                0.825558\
+\
+[958 rows x 11 columns]\
+On layer 1\
+Loaded case classifier from classifiers/aso_id_gsd-ud_0_ao_balanced_1_exproles!\
+src_test_accuracy: \{'A': 0.7627118644067796, 'O': 0.795131845841785\}\
+Examples # 958\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-aux': 4, 'S-passive': 5\}\
+There are 958 examples to evaluate on.\
+          role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0    S-passive                    Sampul  ...      1.000000     1               0.762712                0.795132\
+1            O                            ...      0.015335     1               0.762712                0.795132\
+2            S                    Sampul  ...      0.999593     1               0.762712                0.795132\
+3            S                     Perry  ...      0.938676     1               0.762712                0.795132\
+4            S                 Pencurian  ...      0.999998     1               0.762712                0.795132\
+..         ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+953          O                            ...      0.602147     1               0.762712                0.795132\
+954          A                     Genta  ...      1.000000     1               0.762712                0.795132\
+955          O                            ...      0.000024     1               0.762712                0.795132\
+956          S                     Abram  ...      0.999998     1               0.762712                0.795132\
+957          O                            ...      0.081397     1               0.762712                0.795132\
+\
+[958 rows x 11 columns]\
+On layer 0\
+Loaded case classifier from classifiers/aso_id_gsd-ud_0_ao_balanced_0_exproles!\
+src_test_accuracy: \{'A': 0.7062146892655368, 'O': 0.768762677484787\}\
+Examples # 958\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-aux': 4, 'S-passive': 5\}\
+There are 958 examples to evaluate on.\
+          role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0    S-passive                    Sampul  ...      0.999994     0               0.706215                0.768763\
+1            O                            ...      0.021340     0               0.706215                0.768763\
+2            S                    Sampul  ...      0.070269     0               0.706215                0.768763\
+3            S                     Perry  ...      0.700657     0               0.706215                0.768763\
+4            S                 Pencurian  ...      1.000000     0               0.706215                0.768763\
+..         ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+953          O                            ...      0.875472     0               0.706215                0.768763\
+954          A                     Genta  ...      0.999994     0               0.706215                0.768763\
+955          O                            ...      0.000147     0               0.706215                0.768763\
+956          S                     Abram  ...      0.999992     0               0.706215                0.768763\
+957          O                            ...      0.011704     0               0.706215                0.768763\
+\
+[958 rows x 11 columns]\
+(erg_nom) Nick deep-subjecthood-custom % }

@@ -1,0 +1,384 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset77 NotoSansArmenian-Regular;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 (erg_nom) Nick deep-subjecthood-custom % python3 run_one_experiment.py --only-ao --balance\
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html\
+args: Namespace(all_major_cases=False, average_embs=False, balance=True, erg_abs=False, nom_acc=False, only_ao=True, output_fn='last_run', reeval_src_test=False, seed=0, test_lang_fn='language_data/UD_Western_Armenian-ArmTDP-master/hyw_armtdp-ud-test.conllu', train_lang_base_path='language_data/UD_Western_Armenian-ArmTDP-master/hyw_armtdp-ud')\
+Just set the seed to 0\
+Classifiers already trained!\
+Loading the dest test set, with limit 2000\
+Loading all of the tokens and non-bert stuff from cached_datasets/all_features_aso_exps_hyw_armtdp-ud-test_aso_unbalanced_2000.pkl\
+There are 1079 relevant tokens, and 680 overall sentences\
+Bert vectors file is cached_bert_vectors/all_features_aso_exps_hyw_armtdp-ud-test_aso_unbalanced_2000.hdf5\
+[Loading from disk]: 100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 680/680 [00:00<00:00, 836.73it/s]\
+Loaded 679 sentences from disk.\
+length of bert outputs 680\
+On layer 12\
+Loaded case classifier from classifiers/aso_hyw_armtdp-ud_0_ao_balanced_12_exproles!\
+src_test_accuracy: \{'A': 0.8654970760233918, 'O': 0.7182608695652174\}\
+Examples # 1079\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-passive': 4\}\
+There are 1079 examples to evaluate on.\
+     role case animacy     subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       O  Nom    Nhum                   ...      0.077848    12               0.865497                0.718261\
+1       A  Nom     Hum          
+\f1 \uc0\u1377 \u1404 \u1377 \u1403 \u1387 \u1398 \u1384 
+\f0   ...      0.998014    12               0.865497                0.718261\
+2       O  Nom    Nhum                   ...      0.006163    12               0.865497                0.718261\
+3       A  Nom     Hum                
+\f1 \uc0\u1351 
+\f0   ...      1.000000    12               0.865497                0.718261\
+4       O  Nom     Hum                   ...      0.006094    12               0.865497                0.718261\
+...   ...  ...     ...              ...  ...           ...   ...                    ...                     ...\
+1074    S  Nom    Nhum            
+\f1 \uc0\u1405 \u1387 \u1408 \u1407 \u1384 
+\f0   ...      0.400755    12               0.865497                0.718261\
+1075    S  Nom    Nhum  
+\f1 \uc0\u1384 \u1398 \u1385 \u1381 \u1408 \u1409 \u1377 \u1398 \u1400 \u1410 \u1385 \u1387 \u1410 \u1398 \u1384 
+\f0   ...      0.998049    12               0.865497                0.718261\
+1076    O  Nom    Nhum                   ...      0.001194    12               0.865497                0.718261\
+1077    O  Dat    Nhum                   ...      0.054054    12               0.865497                0.718261\
+1078    O  Nom    Nhum                   ...      0.196620    12               0.865497                0.718261\
+\
+[1079 rows x 11 columns]\
+On layer 11\
+Loaded case classifier from classifiers/aso_hyw_armtdp-ud_0_ao_balanced_11_exproles!\
+src_test_accuracy: \{'A': 0.8771929824561403, 'O': 0.7895652173913044\}\
+Examples # 1079\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-passive': 4\}\
+There are 1079 examples to evaluate on.\
+     role case animacy     subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       O  Nom    Nhum                   ...  1.579868e-02    11               0.877193                0.789565\
+1       A  Nom     Hum          
+\f1 \uc0\u1377 \u1404 \u1377 \u1403 \u1387 \u1398 \u1384 
+\f0   ...  9.992661e-01    11               0.877193                0.789565\
+2       O  Nom    Nhum                   ...  3.166196e-05    11               0.877193                0.789565\
+3       A  Nom     Hum                
+\f1 \uc0\u1351 
+\f0   ...  9.999996e-01    11               0.877193                0.789565\
+4       O  Nom     Hum                   ...  2.910934e-07    11               0.877193                0.789565\
+...   ...  ...     ...              ...  ...           ...   ...                    ...                     ...\
+1074    S  Nom    Nhum            
+\f1 \uc0\u1405 \u1387 \u1408 \u1407 \u1384 
+\f0   ...  9.703162e-02    11               0.877193                0.789565\
+1075    S  Nom    Nhum  
+\f1 \uc0\u1384 \u1398 \u1385 \u1381 \u1408 \u1409 \u1377 \u1398 \u1400 \u1410 \u1385 \u1387 \u1410 \u1398 \u1384 
+\f0   ...  9.962589e-01    11               0.877193                0.789565\
+1076    O  Nom    Nhum                   ...  6.811643e-03    11               0.877193                0.789565\
+1077    O  Dat    Nhum                   ...  2.485833e-01    11               0.877193                0.789565\
+1078    O  Nom    Nhum                   ...  5.456666e-04    11               0.877193                0.789565\
+\
+[1079 rows x 11 columns]\
+On layer 10\
+Loaded case classifier from classifiers/aso_hyw_armtdp-ud_0_ao_balanced_10_exproles!\
+src_test_accuracy: \{'A': 0.9122807017543859, 'O': 0.8191304347826087\}\
+Examples # 1079\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-passive': 4\}\
+There are 1079 examples to evaluate on.\
+     role case animacy     subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       O  Nom    Nhum                   ...  1.869308e-04    10               0.912281                 0.81913\
+1       A  Nom     Hum          
+\f1 \uc0\u1377 \u1404 \u1377 \u1403 \u1387 \u1398 \u1384 
+\f0   ...  9.991120e-01    10               0.912281                 0.81913\
+2       O  Nom    Nhum                   ...  1.289845e-05    10               0.912281                 0.81913\
+3       A  Nom     Hum                
+\f1 \uc0\u1351 
+\f0   ...  9.999973e-01    10               0.912281                 0.81913\
+4       O  Nom     Hum                   ...  2.347624e-04    10               0.912281                 0.81913\
+...   ...  ...     ...              ...  ...           ...   ...                    ...                     ...\
+1074    S  Nom    Nhum            
+\f1 \uc0\u1405 \u1387 \u1408 \u1407 \u1384 
+\f0   ...  3.486182e-01    10               0.912281                 0.81913\
+1075    S  Nom    Nhum  
+\f1 \uc0\u1384 \u1398 \u1385 \u1381 \u1408 \u1409 \u1377 \u1398 \u1400 \u1410 \u1385 \u1387 \u1410 \u1398 \u1384 
+\f0   ...  9.891397e-01    10               0.912281                 0.81913\
+1076    O  Nom    Nhum                   ...  3.534006e-07    10               0.912281                 0.81913\
+1077    O  Dat    Nhum                   ...  7.335364e-01    10               0.912281                 0.81913\
+1078    O  Nom    Nhum                   ...  5.362271e-03    10               0.912281                 0.81913\
+\
+[1079 rows x 11 columns]\
+On layer 9\
+Loaded case classifier from classifiers/aso_hyw_armtdp-ud_0_ao_balanced_9_exproles!\
+src_test_accuracy: \{'A': 0.8888888888888888, 'O': 0.8469565217391304\}\
+Examples # 1079\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-passive': 4\}\
+There are 1079 examples to evaluate on.\
+     role case animacy     subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       O  Nom    Nhum                   ...  1.033649e-03     9               0.888889                0.846957\
+1       A  Nom     Hum          
+\f1 \uc0\u1377 \u1404 \u1377 \u1403 \u1387 \u1398 \u1384 
+\f0   ...  9.958604e-01     9               0.888889                0.846957\
+2       O  Nom    Nhum                   ...  6.905117e-02     9               0.888889                0.846957\
+3       A  Nom     Hum                
+\f1 \uc0\u1351 
+\f0   ...  9.995553e-01     9               0.888889                0.846957\
+4       O  Nom     Hum                   ...  2.079555e-09     9               0.888889                0.846957\
+...   ...  ...     ...              ...  ...           ...   ...                    ...                     ...\
+1074    S  Nom    Nhum            
+\f1 \uc0\u1405 \u1387 \u1408 \u1407 \u1384 
+\f0   ...  4.123679e-01     9               0.888889                0.846957\
+1075    S  Nom    Nhum  
+\f1 \uc0\u1384 \u1398 \u1385 \u1381 \u1408 \u1409 \u1377 \u1398 \u1400 \u1410 \u1385 \u1387 \u1410 \u1398 \u1384 
+\f0   ...  9.993445e-01     9               0.888889                0.846957\
+1076    O  Nom    Nhum                   ...  1.800705e-03     9               0.888889                0.846957\
+1077    O  Dat    Nhum                   ...  7.652369e-02     9               0.888889                0.846957\
+1078    O  Nom    Nhum                   ...  5.181973e-02     9               0.888889                0.846957\
+\
+[1079 rows x 11 columns]\
+On layer 8\
+Loaded case classifier from classifiers/aso_hyw_armtdp-ud_0_ao_balanced_8_exproles!\
+src_test_accuracy: \{'A': 0.8654970760233918, 'O': 0.8539130434782609\}\
+Examples # 1079\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-passive': 4\}\
+There are 1079 examples to evaluate on.\
+     role case animacy     subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       O  Nom    Nhum                   ...  1.164224e-03     8               0.865497                0.853913\
+1       A  Nom     Hum          
+\f1 \uc0\u1377 \u1404 \u1377 \u1403 \u1387 \u1398 \u1384 
+\f0   ...  9.999678e-01     8               0.865497                0.853913\
+2       O  Nom    Nhum                   ...  7.133107e-02     8               0.865497                0.853913\
+3       A  Nom     Hum                
+\f1 \uc0\u1351 
+\f0   ...  1.000000e+00     8               0.865497                0.853913\
+4       O  Nom     Hum                   ...  4.785606e-08     8               0.865497                0.853913\
+...   ...  ...     ...              ...  ...           ...   ...                    ...                     ...\
+1074    S  Nom    Nhum            
+\f1 \uc0\u1405 \u1387 \u1408 \u1407 \u1384 
+\f0   ...  1.042499e-01     8               0.865497                0.853913\
+1075    S  Nom    Nhum  
+\f1 \uc0\u1384 \u1398 \u1385 \u1381 \u1408 \u1409 \u1377 \u1398 \u1400 \u1410 \u1385 \u1387 \u1410 \u1398 \u1384 
+\f0   ...  9.904268e-01     8               0.865497                0.853913\
+1076    O  Nom    Nhum                   ...  1.072945e-04     8               0.865497                0.853913\
+1077    O  Dat    Nhum                   ...  1.171546e-02     8               0.865497                0.853913\
+1078    O  Nom    Nhum                   ...  1.704656e-01     8               0.865497                0.853913\
+\
+[1079 rows x 11 columns]\
+On layer 7\
+Loaded case classifier from classifiers/aso_hyw_armtdp-ud_0_ao_balanced_7_exproles!\
+src_test_accuracy: \{'A': 0.8421052631578947, 'O': 0.8278260869565217\}\
+Examples # 1079\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-passive': 4\}\
+There are 1079 examples to evaluate on.\
+     role case animacy     subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       O  Nom    Nhum                   ...  3.844489e-04     7               0.842105                0.827826\
+1       A  Nom     Hum          
+\f1 \uc0\u1377 \u1404 \u1377 \u1403 \u1387 \u1398 \u1384 
+\f0   ...  9.974412e-01     7               0.842105                0.827826\
+2       O  Nom    Nhum                   ...  4.441358e-04     7               0.842105                0.827826\
+3       A  Nom     Hum                
+\f1 \uc0\u1351 
+\f0   ...  9.999995e-01     7               0.842105                0.827826\
+4       O  Nom     Hum                   ...  1.058516e-05     7               0.842105                0.827826\
+...   ...  ...     ...              ...  ...           ...   ...                    ...                     ...\
+1074    S  Nom    Nhum            
+\f1 \uc0\u1405 \u1387 \u1408 \u1407 \u1384 
+\f0   ...  2.163495e-02     7               0.842105                0.827826\
+1075    S  Nom    Nhum  
+\f1 \uc0\u1384 \u1398 \u1385 \u1381 \u1408 \u1409 \u1377 \u1398 \u1400 \u1410 \u1385 \u1387 \u1410 \u1398 \u1384 
+\f0   ...  6.994633e-01     7               0.842105                0.827826\
+1076    O  Nom    Nhum                   ...  2.655374e-07     7               0.842105                0.827826\
+1077    O  Dat    Nhum                   ...  4.049512e-03     7               0.842105                0.827826\
+1078    O  Nom    Nhum                   ...  1.588954e-02     7               0.842105                0.827826\
+\
+[1079 rows x 11 columns]\
+On layer 6\
+Loaded case classifier from classifiers/aso_hyw_armtdp-ud_0_ao_balanced_6_exproles!\
+src_test_accuracy: \{'A': 0.8128654970760234, 'O': 0.7878260869565218\}\
+Examples # 1079\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-passive': 4\}\
+There are 1079 examples to evaluate on.\
+     role case animacy     subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       O  Nom    Nhum                   ...      0.500000     6               0.812865                0.787826\
+1       A  Nom     Hum          
+\f1 \uc0\u1377 \u1404 \u1377 \u1403 \u1387 \u1398 \u1384 
+\f0   ...      0.999967     6               0.812865                0.787826\
+2       O  Nom    Nhum                   ...      0.002785     6               0.812865                0.787826\
+3       A  Nom     Hum                
+\f1 \uc0\u1351 
+\f0   ...      1.000000     6               0.812865                0.787826\
+4       O  Nom     Hum                   ...      0.000063     6               0.812865                0.787826\
+...   ...  ...     ...              ...  ...           ...   ...                    ...                     ...\
+1074    S  Nom    Nhum            
+\f1 \uc0\u1405 \u1387 \u1408 \u1407 \u1384 
+\f0   ...      0.103577     6               0.812865                0.787826\
+1075    S  Nom    Nhum  
+\f1 \uc0\u1384 \u1398 \u1385 \u1381 \u1408 \u1409 \u1377 \u1398 \u1400 \u1410 \u1385 \u1387 \u1410 \u1398 \u1384 
+\f0   ...      0.603776     6               0.812865                0.787826\
+1076    O  Nom    Nhum                   ...      0.000037     6               0.812865                0.787826\
+1077    O  Dat    Nhum                   ...      0.101987     6               0.812865                0.787826\
+1078    O  Nom    Nhum                   ...      0.346969     6               0.812865                0.787826\
+\
+[1079 rows x 11 columns]\
+On layer 5\
+Loaded case classifier from classifiers/aso_hyw_armtdp-ud_0_ao_balanced_5_exproles!\
+src_test_accuracy: \{'A': 0.7777777777777778, 'O': 0.72\}\
+Examples # 1079\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-passive': 4\}\
+There are 1079 examples to evaluate on.\
+     role case animacy     subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       O  Nom    Nhum                   ...      0.000024     5               0.777778                    0.72\
+1       A  Nom     Hum          
+\f1 \uc0\u1377 \u1404 \u1377 \u1403 \u1387 \u1398 \u1384 
+\f0   ...      0.999464     5               0.777778                    0.72\
+2       O  Nom    Nhum                   ...      0.149150     5               0.777778                    0.72\
+3       A  Nom     Hum                
+\f1 \uc0\u1351 
+\f0   ...      0.999997     5               0.777778                    0.72\
+4       O  Nom     Hum                   ...      0.000001     5               0.777778                    0.72\
+...   ...  ...     ...              ...  ...           ...   ...                    ...                     ...\
+1074    S  Nom    Nhum            
+\f1 \uc0\u1405 \u1387 \u1408 \u1407 \u1384 
+\f0   ...      0.500000     5               0.777778                    0.72\
+1075    S  Nom    Nhum  
+\f1 \uc0\u1384 \u1398 \u1385 \u1381 \u1408 \u1409 \u1377 \u1398 \u1400 \u1410 \u1385 \u1387 \u1410 \u1398 \u1384 
+\f0   ...      0.994567     5               0.777778                    0.72\
+1076    O  Nom    Nhum                   ...      0.000201     5               0.777778                    0.72\
+1077    O  Dat    Nhum                   ...      0.883287     5               0.777778                    0.72\
+1078    O  Nom    Nhum                   ...      0.838975     5               0.777778                    0.72\
+\
+[1079 rows x 11 columns]\
+On layer 4\
+Loaded case classifier from classifiers/aso_hyw_armtdp-ud_0_ao_balanced_4_exproles!\
+src_test_accuracy: \{'A': 0.7368421052631579, 'O': 0.7356521739130435\}\
+Examples # 1079\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-passive': 4\}\
+There are 1079 examples to evaluate on.\
+     role case animacy     subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       O  Nom    Nhum                   ...      0.025283     4               0.736842                0.735652\
+1       A  Nom     Hum          
+\f1 \uc0\u1377 \u1404 \u1377 \u1403 \u1387 \u1398 \u1384 
+\f0   ...      0.999805     4               0.736842                0.735652\
+2       O  Nom    Nhum                   ...      0.729035     4               0.736842                0.735652\
+3       A  Nom     Hum                
+\f1 \uc0\u1351 
+\f0   ...      0.999978     4               0.736842                0.735652\
+4       O  Nom     Hum                   ...      0.000511     4               0.736842                0.735652\
+...   ...  ...     ...              ...  ...           ...   ...                    ...                     ...\
+1074    S  Nom    Nhum            
+\f1 \uc0\u1405 \u1387 \u1408 \u1407 \u1384 
+\f0   ...      0.876924     4               0.736842                0.735652\
+1075    S  Nom    Nhum  
+\f1 \uc0\u1384 \u1398 \u1385 \u1381 \u1408 \u1409 \u1377 \u1398 \u1400 \u1410 \u1385 \u1387 \u1410 \u1398 \u1384 
+\f0   ...      0.974889     4               0.736842                0.735652\
+1076    O  Nom    Nhum                   ...      0.003613     4               0.736842                0.735652\
+1077    O  Dat    Nhum                   ...      0.476665     4               0.736842                0.735652\
+1078    O  Nom    Nhum                   ...      0.031661     4               0.736842                0.735652\
+\
+[1079 rows x 11 columns]\
+On layer 3\
+Loaded case classifier from classifiers/aso_hyw_armtdp-ud_0_ao_balanced_3_exproles!\
+src_test_accuracy: \{'A': 0.7368421052631579, 'O': 0.6504347826086957\}\
+Examples # 1079\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-passive': 4\}\
+There are 1079 examples to evaluate on.\
+     role case animacy     subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       O  Nom    Nhum                   ...      0.001356     3               0.736842                0.650435\
+1       A  Nom     Hum          
+\f1 \uc0\u1377 \u1404 \u1377 \u1403 \u1387 \u1398 \u1384 
+\f0   ...      0.999241     3               0.736842                0.650435\
+2       O  Nom    Nhum                   ...      0.757777     3               0.736842                0.650435\
+3       A  Nom     Hum                
+\f1 \uc0\u1351 
+\f0   ...      0.999811     3               0.736842                0.650435\
+4       O  Nom     Hum                   ...      0.008605     3               0.736842                0.650435\
+...   ...  ...     ...              ...  ...           ...   ...                    ...                     ...\
+1074    S  Nom    Nhum            
+\f1 \uc0\u1405 \u1387 \u1408 \u1407 \u1384 
+\f0   ...      0.920021     3               0.736842                0.650435\
+1075    S  Nom    Nhum  
+\f1 \uc0\u1384 \u1398 \u1385 \u1381 \u1408 \u1409 \u1377 \u1398 \u1400 \u1410 \u1385 \u1387 \u1410 \u1398 \u1384 
+\f0   ...      0.951410     3               0.736842                0.650435\
+1076    O  Nom    Nhum                   ...      0.054240     3               0.736842                0.650435\
+1077    O  Dat    Nhum                   ...      0.604607     3               0.736842                0.650435\
+1078    O  Nom    Nhum                   ...      0.954649     3               0.736842                0.650435\
+\
+[1079 rows x 11 columns]\
+On layer 2\
+Loaded case classifier from classifiers/aso_hyw_armtdp-ud_0_ao_balanced_2_exproles!\
+src_test_accuracy: \{'A': 0.6900584795321637, 'O': 0.6678260869565218\}\
+Examples # 1079\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-passive': 4\}\
+There are 1079 examples to evaluate on.\
+     role case animacy     subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       O  Nom    Nhum                   ...      0.020879     2               0.690058                0.667826\
+1       A  Nom     Hum          
+\f1 \uc0\u1377 \u1404 \u1377 \u1403 \u1387 \u1398 \u1384 
+\f0   ...      0.999991     2               0.690058                0.667826\
+2       O  Nom    Nhum                   ...      0.839854     2               0.690058                0.667826\
+3       A  Nom     Hum                
+\f1 \uc0\u1351 
+\f0   ...      0.999079     2               0.690058                0.667826\
+4       O  Nom     Hum                   ...      0.074097     2               0.690058                0.667826\
+...   ...  ...     ...              ...  ...           ...   ...                    ...                     ...\
+1074    S  Nom    Nhum            
+\f1 \uc0\u1405 \u1387 \u1408 \u1407 \u1384 
+\f0   ...      0.101520     2               0.690058                0.667826\
+1075    S  Nom    Nhum  
+\f1 \uc0\u1384 \u1398 \u1385 \u1381 \u1408 \u1409 \u1377 \u1398 \u1400 \u1410 \u1385 \u1387 \u1410 \u1398 \u1384 
+\f0   ...      0.260347     2               0.690058                0.667826\
+1076    O  Nom    Nhum                   ...      0.079811     2               0.690058                0.667826\
+1077    O  Dat    Nhum                   ...      0.217640     2               0.690058                0.667826\
+1078    O  Nom    Nhum                   ...      0.999725     2               0.690058                0.667826\
+\
+[1079 rows x 11 columns]\
+On layer 1\
+Loaded case classifier from classifiers/aso_hyw_armtdp-ud_0_ao_balanced_1_exproles!\
+src_test_accuracy: \{'A': 0.5847953216374269, 'O': 0.6695652173913044\}\
+Examples # 1079\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-passive': 4\}\
+There are 1079 examples to evaluate on.\
+     role case animacy     subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       O  Nom    Nhum                   ...      0.036312     1               0.584795                0.669565\
+1       A  Nom     Hum          
+\f1 \uc0\u1377 \u1404 \u1377 \u1403 \u1387 \u1398 \u1384 
+\f0   ...      0.999816     1               0.584795                0.669565\
+2       O  Nom    Nhum                   ...      0.758188     1               0.584795                0.669565\
+3       A  Nom     Hum                
+\f1 \uc0\u1351 
+\f0   ...      0.999545     1               0.584795                0.669565\
+4       O  Nom     Hum                   ...      0.068988     1               0.584795                0.669565\
+...   ...  ...     ...              ...  ...           ...   ...                    ...                     ...\
+1074    S  Nom    Nhum            
+\f1 \uc0\u1405 \u1387 \u1408 \u1407 \u1384 
+\f0   ...      0.126088     1               0.584795                0.669565\
+1075    S  Nom    Nhum  
+\f1 \uc0\u1384 \u1398 \u1385 \u1381 \u1408 \u1409 \u1377 \u1398 \u1400 \u1410 \u1385 \u1387 \u1410 \u1398 \u1384 
+\f0   ...      0.444502     1               0.584795                0.669565\
+1076    O  Nom    Nhum                   ...      0.566229     1               0.584795                0.669565\
+1077    O  Dat    Nhum                   ...      0.588187     1               0.584795                0.669565\
+1078    O  Nom    Nhum                   ...      0.999889     1               0.584795                0.669565\
+\
+[1079 rows x 11 columns]\
+On layer 0\
+Loaded case classifier from classifiers/aso_hyw_armtdp-ud_0_ao_balanced_0_exproles!\
+src_test_accuracy: \{'A': 0.6491228070175439, 'O': 0.6921739130434783\}\
+Examples # 1079\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-passive': 4\}\
+There are 1079 examples to evaluate on.\
+     role case animacy     subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       O  Nom    Nhum                   ...      0.109361     0               0.649123                0.692174\
+1       A  Nom     Hum          
+\f1 \uc0\u1377 \u1404 \u1377 \u1403 \u1387 \u1398 \u1384 
+\f0   ...      0.996812     0               0.649123                0.692174\
+2       O  Nom    Nhum                   ...      0.517833     0               0.649123                0.692174\
+3       A  Nom     Hum                
+\f1 \uc0\u1351 
+\f0   ...      0.999480     0               0.649123                0.692174\
+4       O  Nom     Hum                   ...      0.143077     0               0.649123                0.692174\
+...   ...  ...     ...              ...  ...           ...   ...                    ...                     ...\
+1074    S  Nom    Nhum            
+\f1 \uc0\u1405 \u1387 \u1408 \u1407 \u1384 
+\f0   ...      0.114197     0               0.649123                0.692174\
+1075    S  Nom    Nhum  
+\f1 \uc0\u1384 \u1398 \u1385 \u1381 \u1408 \u1409 \u1377 \u1398 \u1400 \u1410 \u1385 \u1387 \u1410 \u1398 \u1384 
+\f0   ...      0.474007     0               0.649123                0.692174\
+1076    O  Nom    Nhum                   ...      0.632323     0               0.649123                0.692174\
+1077    O  Dat    Nhum                   ...      0.435131     0               0.649123                0.692174\
+1078    O  Nom    Nhum                   ...      0.998137     0               0.649123                0.692174\
+\
+[1079 rows x 11 columns]\
+(erg_nom) Nick deep-subjecthood-custom % }

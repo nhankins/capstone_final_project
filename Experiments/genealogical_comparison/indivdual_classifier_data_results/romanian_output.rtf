@@ -1,0 +1,703 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 (erg_nom) Nick deep-subjecthood-custom % python3 run_one_experiment.py --only-ao --balance\
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html\
+args: Namespace(all_major_cases=False, average_embs=False, balance=True, erg_abs=False, nom_acc=False, only_ao=True, output_fn='last_run', reeval_src_test=False, seed=0, test_lang_fn='language_data/UD_Romanian-RRT-master/ro_rrt-ud-test.conllu', train_lang_base_path='language_data/UD_Romanian-RRT-master/ro_rrt-ud')\
+Just set the seed to 0\
+Need to train classifiers!\
+Loading the source train set, with limit 2025\
+Counts of each role \{'A': 1013, 'O': 2953\}\
+Case counts per role defaultdict(<class 'collections.Counter'>, \{None: Counter(\{None: 87235\}), 'O': Counter(\{'Acc,Nom': 1830, None: 894, 'Dat,Gen': 228, 'Voc': 1\}), 'S-expletive': Counter(\{'Acc,Nom': 54, None: 25\}), 'S': Counter(\{'Acc,Nom': 1143, None: 502, 'Dat,Gen': 4\}), 'A': Counter(\{'Acc,Nom': 756, None: 257\}), 'S-passive': Counter(\{'Acc,Nom': 490, None: 208\}), 'O-aux': Counter(\{'Acc,Nom': 8, None: 6, 'Dat,Gen': 1\}), 'A-passive': Counter(\{'Acc,Nom': 33, None: 14\}), 'S-expletive-passive': Counter(\{'Acc,Nom': 8, None: 4\}), 'A-aux': Counter(\{'Acc,Nom': 8\}), 'S-aux': Counter(\{'Acc,Nom': 1\})\})\
+lengths of bert ids etc 4122 4122 4122 4122\
+Saving all of the tokens and non-bert stuff to cached_datasets/all_features_aso_exps_ro_rrt-ud-train_AO_balanced_2025.pkl\
+There are 2026 relevant tokens, and 4122 overall sentences\
+Bert vectors file is cached_bert_vectors/all_features_aso_exps_ro_rrt-ud-train_AO_balanced_2025.hdf5\
+Running 4122 sentences through BERT. This takes a while\
+100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 4122/4122 [02:37<00:00, 26.23it/s]\
+length of bert outputs 4122\
+Length of train set is 2026, limit is 2025\
+Counts of each role Counter(\{'O': 517, 'S': 306, 'A': 172, 'S-passive': 130, 'S-expletive': 10, 'A-passive': 5, 'S-expletive-passive': 4, 'O-aux': 3, 'A-aux': 3, 'S-aux': 2\})\
+Case counts per role defaultdict(<class 'collections.Counter'>, \{None: Counter(\{None: 15172\}), 'O': Counter(\{'Acc,Nom': 302, None: 169, 'Dat,Gen': 46\}), 'S': Counter(\{'Acc,Nom': 204, None: 102\}), 'A': Counter(\{'Acc,Nom': 134, None: 37, 'Dat,Gen': 1\}), 'S-passive': Counter(\{'Acc,Nom': 97, None: 33\}), 'S-expletive': Counter(\{None: 6, 'Acc,Nom': 4\}), 'O-aux': Counter(\{'Acc,Nom': 2, None: 1\}), 'A-aux': Counter(\{'Acc,Nom': 3\}), 'S-aux': Counter(\{'Acc,Nom': 2\}), 'S-expletive-passive': Counter(\{None: 3, 'Acc,Nom': 1\}), 'A-passive': Counter(\{'Acc,Nom': 5\})\})\
+lengths of bert ids etc 729 729 729 729\
+Saving all of the tokens and non-bert stuff to cached_datasets/all_features_aso_exps_ro_rrt-ud-test_aso_unbalanced_2000.pkl\
+There are 1152 relevant tokens, and 729 overall sentences\
+Bert vectors file is cached_bert_vectors/all_features_aso_exps_ro_rrt-ud-test_aso_unbalanced_2000.hdf5\
+Running 729 sentences through BERT. This takes a while\
+100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 729/729 [00:27<00:00, 26.58it/s]\
+length of bert outputs 729\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.423\
+[2/20] Train loss: 0.253\
+[3/20] Train loss: 0.198\
+[4/20] Train loss: 0.160\
+[5/20] Train loss: 0.138\
+[6/20] Train loss: 0.105\
+[7/20] Train loss: 0.087\
+[8/20] Train loss: 0.072\
+[9/20] Train loss: 0.049\
+[10/20] Train loss: 0.043\
+[11/20] Train loss: 0.032\
+[12/20] Train loss: 0.025\
+[13/20] Train loss: 0.021\
+[14/20] Train loss: 0.020\
+[15/20] Train loss: 0.015\
+[16/20] Train loss: 0.016\
+[17/20] Train loss: 0.014\
+[18/20] Train loss: 0.014\
+[19/20] Train loss: 0.013\
+[20/20] Train loss: 0.012\
+Trained a case classifier!\
+Examples # 1152\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-aux': 6, 'S-expletive': 7, 'S-expletive-passive': 8, 'S-passive': 9\}\
+Accuracy on test set of training language: \{'A': 0.9069767441860465, 'O': 0.7852998065764023\}\
+Saving classifier to classifiers/aso_ro_rrt-ud_0_ao_balanced_12_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.344\
+[2/20] Train loss: 0.200\
+[3/20] Train loss: 0.155\
+[4/20] Train loss: 0.126\
+[5/20] Train loss: 0.098\
+[6/20] Train loss: 0.071\
+[7/20] Train loss: 0.054\
+[8/20] Train loss: 0.039\
+[9/20] Train loss: 0.029\
+[10/20] Train loss: 0.027\
+[11/20] Train loss: 0.017\
+[12/20] Train loss: 0.016\
+[13/20] Train loss: 0.017\
+[14/20] Train loss: 0.014\
+[15/20] Train loss: 0.012\
+[16/20] Train loss: 0.012\
+[17/20] Train loss: 0.011\
+[18/20] Train loss: 0.010\
+[19/20] Train loss: 0.011\
+[20/20] Train loss: 0.010\
+Trained a case classifier!\
+Examples # 1152\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-aux': 6, 'S-expletive': 7, 'S-expletive-passive': 8, 'S-passive': 9\}\
+Accuracy on test set of training language: \{'A': 0.8953488372093024, 'O': 0.8839458413926499\}\
+Saving classifier to classifiers/aso_ro_rrt-ud_0_ao_balanced_11_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.302\
+[2/20] Train loss: 0.164\
+[3/20] Train loss: 0.130\
+[4/20] Train loss: 0.098\
+[5/20] Train loss: 0.070\
+[6/20] Train loss: 0.055\
+[7/20] Train loss: 0.044\
+[8/20] Train loss: 0.030\
+[9/20] Train loss: 0.030\
+[10/20] Train loss: 0.017\
+[11/20] Train loss: 0.015\
+[12/20] Train loss: 0.016\
+[13/20] Train loss: 0.014\
+[14/20] Train loss: 0.011\
+[15/20] Train loss: 0.009\
+[16/20] Train loss: 0.009\
+[17/20] Train loss: 0.010\
+[18/20] Train loss: 0.010\
+[19/20] Train loss: 0.008\
+[20/20] Train loss: 0.008\
+Trained a case classifier!\
+Examples # 1152\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-aux': 6, 'S-expletive': 7, 'S-expletive-passive': 8, 'S-passive': 9\}\
+Accuracy on test set of training language: \{'A': 0.9011627906976745, 'O': 0.8897485493230174\}\
+Saving classifier to classifiers/aso_ro_rrt-ud_0_ao_balanced_10_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.297\
+[2/20] Train loss: 0.140\
+[3/20] Train loss: 0.107\
+[4/20] Train loss: 0.088\
+[5/20] Train loss: 0.066\
+[6/20] Train loss: 0.057\
+[7/20] Train loss: 0.037\
+[8/20] Train loss: 0.029\
+[9/20] Train loss: 0.020\
+[10/20] Train loss: 0.018\
+[11/20] Train loss: 0.016\
+[12/20] Train loss: 0.014\
+[13/20] Train loss: 0.008\
+[14/20] Train loss: 0.011\
+[15/20] Train loss: 0.014\
+[16/20] Train loss: 0.012\
+[17/20] Train loss: 0.008\
+[18/20] Train loss: 0.011\
+[19/20] Train loss: 0.010\
+[20/20] Train loss: 0.007\
+Trained a case classifier!\
+Examples # 1152\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-aux': 6, 'S-expletive': 7, 'S-expletive-passive': 8, 'S-passive': 9\}\
+Accuracy on test set of training language: \{'A': 0.8953488372093024, 'O': 0.8858800773694391\}\
+Saving classifier to classifiers/aso_ro_rrt-ud_0_ao_balanced_9_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.260\
+[2/20] Train loss: 0.131\
+[3/20] Train loss: 0.099\
+[4/20] Train loss: 0.069\
+[5/20] Train loss: 0.051\
+[6/20] Train loss: 0.031\
+[7/20] Train loss: 0.026\
+[8/20] Train loss: 0.020\
+[9/20] Train loss: 0.019\
+[10/20] Train loss: 0.015\
+[11/20] Train loss: 0.011\
+[12/20] Train loss: 0.011\
+[13/20] Train loss: 0.010\
+[14/20] Train loss: 0.012\
+[15/20] Train loss: 0.012\
+[16/20] Train loss: 0.007\
+[17/20] Train loss: 0.008\
+[18/20] Train loss: 0.008\
+[19/20] Train loss: 0.011\
+[20/20] Train loss: 0.007\
+Trained a case classifier!\
+Examples # 1152\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-aux': 6, 'S-expletive': 7, 'S-expletive-passive': 8, 'S-passive': 9\}\
+Accuracy on test set of training language: \{'A': 0.9011627906976745, 'O': 0.9052224371373307\}\
+Saving classifier to classifiers/aso_ro_rrt-ud_0_ao_balanced_8_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.280\
+[2/20] Train loss: 0.143\
+[3/20] Train loss: 0.111\
+[4/20] Train loss: 0.084\
+[5/20] Train loss: 0.058\
+[6/20] Train loss: 0.037\
+[7/20] Train loss: 0.024\
+[8/20] Train loss: 0.019\
+[9/20] Train loss: 0.015\
+[10/20] Train loss: 0.013\
+[11/20] Train loss: 0.011\
+[12/20] Train loss: 0.012\
+[13/20] Train loss: 0.008\
+[14/20] Train loss: 0.010\
+[15/20] Train loss: 0.011\
+[16/20] Train loss: 0.011\
+[17/20] Train loss: 0.008\
+[18/20] Train loss: 0.010\
+[19/20] Train loss: 0.009\
+[20/20] Train loss: 0.009\
+Trained a case classifier!\
+Examples # 1152\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-aux': 6, 'S-expletive': 7, 'S-expletive-passive': 8, 'S-passive': 9\}\
+Accuracy on test set of training language: \{'A': 0.8604651162790697, 'O': 0.8762088974854932\}\
+Saving classifier to classifiers/aso_ro_rrt-ud_0_ao_balanced_7_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.279\
+[2/20] Train loss: 0.151\
+[3/20] Train loss: 0.117\
+[4/20] Train loss: 0.089\
+[5/20] Train loss: 0.072\
+[6/20] Train loss: 0.047\
+[7/20] Train loss: 0.042\
+[8/20] Train loss: 0.033\
+[9/20] Train loss: 0.022\
+[10/20] Train loss: 0.020\
+[11/20] Train loss: 0.016\
+[12/20] Train loss: 0.016\
+[13/20] Train loss: 0.012\
+[14/20] Train loss: 0.014\
+[15/20] Train loss: 0.010\
+[16/20] Train loss: 0.010\
+[17/20] Train loss: 0.009\
+[18/20] Train loss: 0.008\
+[19/20] Train loss: 0.012\
+[20/20] Train loss: 0.011\
+Trained a case classifier!\
+Examples # 1152\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-aux': 6, 'S-expletive': 7, 'S-expletive-passive': 8, 'S-passive': 9\}\
+Accuracy on test set of training language: \{'A': 0.8604651162790697, 'O': 0.8955512572533849\}\
+Saving classifier to classifiers/aso_ro_rrt-ud_0_ao_balanced_6_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.374\
+[2/20] Train loss: 0.218\
+[3/20] Train loss: 0.168\
+[4/20] Train loss: 0.135\
+[5/20] Train loss: 0.120\
+[6/20] Train loss: 0.093\
+[7/20] Train loss: 0.067\
+[8/20] Train loss: 0.059\
+[9/20] Train loss: 0.047\
+[10/20] Train loss: 0.044\
+[11/20] Train loss: 0.033\
+[12/20] Train loss: 0.024\
+[13/20] Train loss: 0.024\
+[14/20] Train loss: 0.028\
+[15/20] Train loss: 0.018\
+[16/20] Train loss: 0.011\
+[17/20] Train loss: 0.011\
+[18/20] Train loss: 0.012\
+[19/20] Train loss: 0.013\
+[20/20] Train loss: 0.014\
+Trained a case classifier!\
+Examples # 1152\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-aux': 6, 'S-expletive': 7, 'S-expletive-passive': 8, 'S-passive': 9\}\
+Accuracy on test set of training language: \{'A': 0.872093023255814, 'O': 0.8568665377176016\}\
+Saving classifier to classifiers/aso_ro_rrt-ud_0_ao_balanced_5_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.392\
+[2/20] Train loss: 0.237\
+[3/20] Train loss: 0.184\
+[4/20] Train loss: 0.148\
+[5/20] Train loss: 0.126\
+[6/20] Train loss: 0.104\
+[7/20] Train loss: 0.082\
+[8/20] Train loss: 0.068\
+[9/20] Train loss: 0.057\
+[10/20] Train loss: 0.055\
+[11/20] Train loss: 0.042\
+[12/20] Train loss: 0.038\
+[13/20] Train loss: 0.031\
+[14/20] Train loss: 0.024\
+[15/20] Train loss: 0.032\
+[16/20] Train loss: 0.039\
+[17/20] Train loss: 0.022\
+[18/20] Train loss: 0.016\
+[19/20] Train loss: 0.016\
+[20/20] Train loss: 0.015\
+Trained a case classifier!\
+Examples # 1152\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-aux': 6, 'S-expletive': 7, 'S-expletive-passive': 8, 'S-passive': 9\}\
+Accuracy on test set of training language: \{'A': 0.8604651162790697, 'O': 0.804642166344294\}\
+Saving classifier to classifiers/aso_ro_rrt-ud_0_ao_balanced_4_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.427\
+[2/20] Train loss: 0.279\
+[3/20] Train loss: 0.220\
+[4/20] Train loss: 0.176\
+[5/20] Train loss: 0.148\
+[6/20] Train loss: 0.118\
+[7/20] Train loss: 0.101\
+[8/20] Train loss: 0.082\
+[9/20] Train loss: 0.070\
+[10/20] Train loss: 0.059\
+[11/20] Train loss: 0.053\
+[12/20] Train loss: 0.054\
+[13/20] Train loss: 0.043\
+[14/20] Train loss: 0.046\
+[15/20] Train loss: 0.035\
+[16/20] Train loss: 0.030\
+[17/20] Train loss: 0.030\
+[18/20] Train loss: 0.021\
+[19/20] Train loss: 0.014\
+[20/20] Train loss: 0.017\
+Trained a case classifier!\
+Examples # 1152\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-aux': 6, 'S-expletive': 7, 'S-expletive-passive': 8, 'S-passive': 9\}\
+Accuracy on test set of training language: \{'A': 0.8023255813953488, 'O': 0.8336557059961315\}\
+Saving classifier to classifiers/aso_ro_rrt-ud_0_ao_balanced_3_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.491\
+[2/20] Train loss: 0.366\
+[3/20] Train loss: 0.306\
+[4/20] Train loss: 0.266\
+[5/20] Train loss: 0.221\
+[6/20] Train loss: 0.183\
+[7/20] Train loss: 0.168\
+[8/20] Train loss: 0.138\
+[9/20] Train loss: 0.125\
+[10/20] Train loss: 0.110\
+[11/20] Train loss: 0.102\
+[12/20] Train loss: 0.085\
+[13/20] Train loss: 0.082\
+[14/20] Train loss: 0.067\
+[15/20] Train loss: 0.062\
+[16/20] Train loss: 0.051\
+[17/20] Train loss: 0.049\
+[18/20] Train loss: 0.047\
+[19/20] Train loss: 0.043\
+[20/20] Train loss: 0.032\
+Trained a case classifier!\
+Examples # 1152\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-aux': 6, 'S-expletive': 7, 'S-expletive-passive': 8, 'S-passive': 9\}\
+Accuracy on test set of training language: \{'A': 0.7325581395348837, 'O': 0.7446808510638298\}\
+Saving classifier to classifiers/aso_ro_rrt-ud_0_ao_balanced_2_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.504\
+[2/20] Train loss: 0.373\
+[3/20] Train loss: 0.314\
+[4/20] Train loss: 0.270\
+[5/20] Train loss: 0.238\
+[6/20] Train loss: 0.225\
+[7/20] Train loss: 0.200\
+[8/20] Train loss: 0.184\
+[9/20] Train loss: 0.161\
+[10/20] Train loss: 0.136\
+[11/20] Train loss: 0.133\
+[12/20] Train loss: 0.124\
+[13/20] Train loss: 0.114\
+[14/20] Train loss: 0.101\
+[15/20] Train loss: 0.094\
+[16/20] Train loss: 0.086\
+[17/20] Train loss: 0.078\
+[18/20] Train loss: 0.073\
+[19/20] Train loss: 0.066\
+[20/20] Train loss: 0.070\
+Trained a case classifier!\
+Examples # 1152\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-aux': 6, 'S-expletive': 7, 'S-expletive-passive': 8, 'S-passive': 9\}\
+Accuracy on test set of training language: \{'A': 0.6453488372093024, 'O': 0.816247582205029\}\
+Saving classifier to classifiers/aso_ro_rrt-ud_0_ao_balanced_1_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.504\
+[2/20] Train loss: 0.381\
+[3/20] Train loss: 0.327\
+[4/20] Train loss: 0.299\
+[5/20] Train loss: 0.278\
+[6/20] Train loss: 0.259\
+[7/20] Train loss: 0.234\
+[8/20] Train loss: 0.218\
+[9/20] Train loss: 0.206\
+[10/20] Train loss: 0.193\
+[11/20] Train loss: 0.174\
+[12/20] Train loss: 0.168\
+[13/20] Train loss: 0.142\
+[14/20] Train loss: 0.128\
+[15/20] Train loss: 0.122\
+[16/20] Train loss: 0.121\
+[17/20] Train loss: 0.106\
+[18/20] Train loss: 0.100\
+[19/20] Train loss: 0.104\
+[20/20] Train loss: 0.090\
+Trained a case classifier!\
+Examples # 1152\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-aux': 6, 'S-expletive': 7, 'S-expletive-passive': 8, 'S-passive': 9\}\
+Accuracy on test set of training language: \{'A': 0.6744186046511628, 'O': 0.7311411992263056\}\
+Saving classifier to classifiers/aso_ro_rrt-ud_0_ao_balanced_0_exproles\
+Loading the dest test set, with limit 2000\
+Loading all of the tokens and non-bert stuff from cached_datasets/all_features_aso_exps_ro_rrt-ud-test_aso_unbalanced_2000.pkl\
+There are 1152 relevant tokens, and 729 overall sentences\
+Bert vectors file is cached_bert_vectors/all_features_aso_exps_ro_rrt-ud-test_aso_unbalanced_2000.hdf5\
+[Loading from disk]: 100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 729/729 [00:00<00:00, 2197.28it/s]\
+Loaded 728 sentences from disk.\
+length of bert outputs 729\
+On layer 12\
+Loaded case classifier from classifiers/aso_ro_rrt-ud_0_ao_balanced_12_exproles!\
+src_test_accuracy: \{'A': 0.9069767441860465, 'O': 0.7852998065764023\}\
+Examples # 1152\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-aux': 6, 'S-expletive': 7, 'S-expletive-passive': 8, 'S-passive': 9\}\
+There are 1152 examples to evaluate on.\
+           role     case animacy    subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0             O  Acc,Nom                          ...      0.000003    12               0.906977                  0.7853\
+1             S  Acc,Nom               b\uc0\u259 ie\u539 elul  ...      0.999999    12               0.906977                  0.7853\
+2             O  Acc,Nom                          ...      0.000001    12               0.906977                  0.7853\
+3             A  Acc,Nom                  femeia  ...      0.997233    12               0.906977                  0.7853\
+4             S  Acc,Nom                 bra\uc0\u539 ele  ...      0.005220    12               0.906977                  0.7853\
+...         ...      ...     ...             ...  ...           ...   ...                    ...                     ...\
+1147  S-passive  Acc,Nom                 incint\uc0\u259   ...      0.047782    12               0.906977                  0.7853\
+1148  S-passive                        electrozi  ...      0.932109    12               0.906977                  0.7853\
+1149  S-passive  Acc,Nom               diferen\uc0\u539 \u259   ...      0.032664    12               0.906977                  0.7853\
+1150  S-passive  Acc,Nom          caracteristica  ...      0.838331    12               0.906977                  0.7853\
+1151  S-passive                             legi  ...      0.998748    12               0.906977                  0.7853\
+\
+[1152 rows x 11 columns]\
+On layer 11\
+Loaded case classifier from classifiers/aso_ro_rrt-ud_0_ao_balanced_11_exproles!\
+src_test_accuracy: \{'A': 0.8953488372093024, 'O': 0.8839458413926499\}\
+Examples # 1152\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-aux': 6, 'S-expletive': 7, 'S-expletive-passive': 8, 'S-passive': 9\}\
+There are 1152 examples to evaluate on.\
+           role     case animacy    subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0             O  Acc,Nom                          ...      0.000015    11               0.895349                0.883946\
+1             S  Acc,Nom               b\uc0\u259 ie\u539 elul  ...      0.999970    11               0.895349                0.883946\
+2             O  Acc,Nom                          ...      0.000002    11               0.895349                0.883946\
+3             A  Acc,Nom                  femeia  ...      0.999756    11               0.895349                0.883946\
+4             S  Acc,Nom                 bra\uc0\u539 ele  ...      0.065405    11               0.895349                0.883946\
+...         ...      ...     ...             ...  ...           ...   ...                    ...                     ...\
+1147  S-passive  Acc,Nom                 incint\uc0\u259   ...      0.689353    11               0.895349                0.883946\
+1148  S-passive                        electrozi  ...      0.098304    11               0.895349                0.883946\
+1149  S-passive  Acc,Nom               diferen\uc0\u539 \u259   ...      0.083083    11               0.895349                0.883946\
+1150  S-passive  Acc,Nom          caracteristica  ...      0.996135    11               0.895349                0.883946\
+1151  S-passive                             legi  ...      0.999735    11               0.895349                0.883946\
+\
+[1152 rows x 11 columns]\
+On layer 10\
+Loaded case classifier from classifiers/aso_ro_rrt-ud_0_ao_balanced_10_exproles!\
+src_test_accuracy: \{'A': 0.9011627906976745, 'O': 0.8897485493230174\}\
+Examples # 1152\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-aux': 6, 'S-expletive': 7, 'S-expletive-passive': 8, 'S-passive': 9\}\
+There are 1152 examples to evaluate on.\
+           role     case animacy    subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0             O  Acc,Nom                          ...  3.395681e-04    10               0.901163                0.889749\
+1             S  Acc,Nom               b\uc0\u259 ie\u539 elul  ...  9.999357e-01    10               0.901163                0.889749\
+2             O  Acc,Nom                          ...  7.724506e-07    10               0.901163                0.889749\
+3             A  Acc,Nom                  femeia  ...  9.954372e-01    10               0.901163                0.889749\
+4             S  Acc,Nom                 bra\uc0\u539 ele  ...  8.602988e-03    10               0.901163                0.889749\
+...         ...      ...     ...             ...  ...           ...   ...                    ...                     ...\
+1147  S-passive  Acc,Nom                 incint\uc0\u259   ...  5.942573e-03    10               0.901163                0.889749\
+1148  S-passive                        electrozi  ...  1.261792e-03    10               0.901163                0.889749\
+1149  S-passive  Acc,Nom               diferen\uc0\u539 \u259   ...  8.065891e-01    10               0.901163                0.889749\
+1150  S-passive  Acc,Nom          caracteristica  ...  9.999112e-01    10               0.901163                0.889749\
+1151  S-passive                             legi  ...  9.989625e-01    10               0.901163                0.889749\
+\
+[1152 rows x 11 columns]\
+On layer 9\
+Loaded case classifier from classifiers/aso_ro_rrt-ud_0_ao_balanced_9_exproles!\
+src_test_accuracy: \{'A': 0.8953488372093024, 'O': 0.8858800773694391\}\
+Examples # 1152\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-aux': 6, 'S-expletive': 7, 'S-expletive-passive': 8, 'S-passive': 9\}\
+There are 1152 examples to evaluate on.\
+           role     case animacy    subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0             O  Acc,Nom                          ...  2.613613e-06     9               0.895349                 0.88588\
+1             S  Acc,Nom               b\uc0\u259 ie\u539 elul  ...  9.870592e-01     9               0.895349                 0.88588\
+2             O  Acc,Nom                          ...  1.403437e-08     9               0.895349                 0.88588\
+3             A  Acc,Nom                  femeia  ...  9.631478e-01     9               0.895349                 0.88588\
+4             S  Acc,Nom                 bra\uc0\u539 ele  ...  5.792416e-01     9               0.895349                 0.88588\
+...         ...      ...     ...             ...  ...           ...   ...                    ...                     ...\
+1147  S-passive  Acc,Nom                 incint\uc0\u259   ...  8.645265e-03     9               0.895349                 0.88588\
+1148  S-passive                        electrozi  ...  1.339889e-03     9               0.895349                 0.88588\
+1149  S-passive  Acc,Nom               diferen\uc0\u539 \u259   ...  9.909104e-01     9               0.895349                 0.88588\
+1150  S-passive  Acc,Nom          caracteristica  ...  9.999590e-01     9               0.895349                 0.88588\
+1151  S-passive                             legi  ...  4.321123e-01     9               0.895349                 0.88588\
+\
+[1152 rows x 11 columns]\
+On layer 8\
+Loaded case classifier from classifiers/aso_ro_rrt-ud_0_ao_balanced_8_exproles!\
+src_test_accuracy: \{'A': 0.9011627906976745, 'O': 0.9052224371373307\}\
+Examples # 1152\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-aux': 6, 'S-expletive': 7, 'S-expletive-passive': 8, 'S-passive': 9\}\
+There are 1152 examples to evaluate on.\
+           role     case animacy    subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0             O  Acc,Nom                          ...      0.000560     8               0.901163                0.905222\
+1             S  Acc,Nom               b\uc0\u259 ie\u539 elul  ...      0.998387     8               0.901163                0.905222\
+2             O  Acc,Nom                          ...      0.500000     8               0.901163                0.905222\
+3             A  Acc,Nom                  femeia  ...      1.000000     8               0.901163                0.905222\
+4             S  Acc,Nom                 bra\uc0\u539 ele  ...      0.485455     8               0.901163                0.905222\
+...         ...      ...     ...             ...  ...           ...   ...                    ...                     ...\
+1147  S-passive  Acc,Nom                 incint\uc0\u259   ...      0.005511     8               0.901163                0.905222\
+1148  S-passive                        electrozi  ...      0.000006     8               0.901163                0.905222\
+1149  S-passive  Acc,Nom               diferen\uc0\u539 \u259   ...      0.989728     8               0.901163                0.905222\
+1150  S-passive  Acc,Nom          caracteristica  ...      0.998742     8               0.901163                0.905222\
+1151  S-passive                             legi  ...      0.036486     8               0.901163                0.905222\
+\
+[1152 rows x 11 columns]\
+On layer 7\
+Loaded case classifier from classifiers/aso_ro_rrt-ud_0_ao_balanced_7_exproles!\
+src_test_accuracy: \{'A': 0.8604651162790697, 'O': 0.8762088974854932\}\
+Examples # 1152\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-aux': 6, 'S-expletive': 7, 'S-expletive-passive': 8, 'S-passive': 9\}\
+There are 1152 examples to evaluate on.\
+           role     case animacy    subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0             O  Acc,Nom                          ...  2.223401e-05     7               0.860465                0.876209\
+1             S  Acc,Nom               b\uc0\u259 ie\u539 elul  ...  9.999992e-01     7               0.860465                0.876209\
+2             O  Acc,Nom                          ...  4.228648e-09     7               0.860465                0.876209\
+3             A  Acc,Nom                  femeia  ...  9.999995e-01     7               0.860465                0.876209\
+4             S  Acc,Nom                 bra\uc0\u539 ele  ...  1.296525e-01     7               0.860465                0.876209\
+...         ...      ...     ...             ...  ...           ...   ...                    ...                     ...\
+1147  S-passive  Acc,Nom                 incint\uc0\u259   ...  3.544132e-04     7               0.860465                0.876209\
+1148  S-passive                        electrozi  ...  3.017594e-02     7               0.860465                0.876209\
+1149  S-passive  Acc,Nom               diferen\uc0\u539 \u259   ...  8.603298e-01     7               0.860465                0.876209\
+1150  S-passive  Acc,Nom          caracteristica  ...  5.062808e-02     7               0.860465                0.876209\
+1151  S-passive                             legi  ...  1.877104e-01     7               0.860465                0.876209\
+\
+[1152 rows x 11 columns]\
+On layer 6\
+Loaded case classifier from classifiers/aso_ro_rrt-ud_0_ao_balanced_6_exproles!\
+src_test_accuracy: \{'A': 0.8604651162790697, 'O': 0.8955512572533849\}\
+Examples # 1152\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-aux': 6, 'S-expletive': 7, 'S-expletive-passive': 8, 'S-passive': 9\}\
+There are 1152 examples to evaluate on.\
+           role     case animacy    subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0             O  Acc,Nom                          ...      0.000048     6               0.860465                0.895551\
+1             S  Acc,Nom               b\uc0\u259 ie\u539 elul  ...      1.000000     6               0.860465                0.895551\
+2             O  Acc,Nom                          ...      0.000308     6               0.860465                0.895551\
+3             A  Acc,Nom                  femeia  ...      1.000000     6               0.860465                0.895551\
+4             S  Acc,Nom                 bra\uc0\u539 ele  ...      0.999978     6               0.860465                0.895551\
+...         ...      ...     ...             ...  ...           ...   ...                    ...                     ...\
+1147  S-passive  Acc,Nom                 incint\uc0\u259   ...      0.608528     6               0.860465                0.895551\
+1148  S-passive                        electrozi  ...      0.003324     6               0.860465                0.895551\
+1149  S-passive  Acc,Nom               diferen\uc0\u539 \u259   ...      0.873723     6               0.860465                0.895551\
+1150  S-passive  Acc,Nom          caracteristica  ...      0.933454     6               0.860465                0.895551\
+1151  S-passive                             legi  ...      0.057209     6               0.860465                0.895551\
+\
+[1152 rows x 11 columns]\
+On layer 5\
+Loaded case classifier from classifiers/aso_ro_rrt-ud_0_ao_balanced_5_exproles!\
+src_test_accuracy: \{'A': 0.872093023255814, 'O': 0.8568665377176016\}\
+Examples # 1152\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-aux': 6, 'S-expletive': 7, 'S-expletive-passive': 8, 'S-passive': 9\}\
+There are 1152 examples to evaluate on.\
+           role     case animacy    subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0             O  Acc,Nom                          ...  2.060361e-08     5               0.872093                0.856867\
+1             S  Acc,Nom               b\uc0\u259 ie\u539 elul  ...  9.999998e-01     5               0.872093                0.856867\
+2             O  Acc,Nom                          ...  2.256197e-07     5               0.872093                0.856867\
+3             A  Acc,Nom                  femeia  ...  9.999999e-01     5               0.872093                0.856867\
+4             S  Acc,Nom                 bra\uc0\u539 ele  ...  9.986437e-01     5               0.872093                0.856867\
+...         ...      ...     ...             ...  ...           ...   ...                    ...                     ...\
+1147  S-passive  Acc,Nom                 incint\uc0\u259   ...  1.800390e-04     5               0.872093                0.856867\
+1148  S-passive                        electrozi  ...  5.634075e-04     5               0.872093                0.856867\
+1149  S-passive  Acc,Nom               diferen\uc0\u539 \u259   ...  3.950442e-01     5               0.872093                0.856867\
+1150  S-passive  Acc,Nom          caracteristica  ...  3.201069e-01     5               0.872093                0.856867\
+1151  S-passive                             legi  ...  4.086412e-02     5               0.872093                0.856867\
+\
+[1152 rows x 11 columns]\
+On layer 4\
+Loaded case classifier from classifiers/aso_ro_rrt-ud_0_ao_balanced_4_exproles!\
+src_test_accuracy: \{'A': 0.8604651162790697, 'O': 0.804642166344294\}\
+Examples # 1152\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-aux': 6, 'S-expletive': 7, 'S-expletive-passive': 8, 'S-passive': 9\}\
+There are 1152 examples to evaluate on.\
+           role     case animacy    subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0             O  Acc,Nom                          ...  1.385471e-08     4               0.860465                0.804642\
+1             S  Acc,Nom               b\uc0\u259 ie\u539 elul  ...  9.999996e-01     4               0.860465                0.804642\
+2             O  Acc,Nom                          ...  1.464121e-03     4               0.860465                0.804642\
+3             A  Acc,Nom                  femeia  ...  9.986566e-01     4               0.860465                0.804642\
+4             S  Acc,Nom                 bra\uc0\u539 ele  ...  1.342355e-01     4               0.860465                0.804642\
+...         ...      ...     ...             ...  ...           ...   ...                    ...                     ...\
+1147  S-passive  Acc,Nom                 incint\uc0\u259   ...  1.698818e-03     4               0.860465                0.804642\
+1148  S-passive                        electrozi  ...  5.201505e-03     4               0.860465                0.804642\
+1149  S-passive  Acc,Nom               diferen\uc0\u539 \u259   ...  9.842768e-01     4               0.860465                0.804642\
+1150  S-passive  Acc,Nom          caracteristica  ...  3.456174e-01     4               0.860465                0.804642\
+1151  S-passive                             legi  ...  1.770668e-02     4               0.860465                0.804642\
+\
+[1152 rows x 11 columns]\
+On layer 3\
+Loaded case classifier from classifiers/aso_ro_rrt-ud_0_ao_balanced_3_exproles!\
+src_test_accuracy: \{'A': 0.8023255813953488, 'O': 0.8336557059961315\}\
+Examples # 1152\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-aux': 6, 'S-expletive': 7, 'S-expletive-passive': 8, 'S-passive': 9\}\
+There are 1152 examples to evaluate on.\
+           role     case animacy    subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0             O  Acc,Nom                          ...  4.453032e-08     3               0.802326                0.833656\
+1             S  Acc,Nom               b\uc0\u259 ie\u539 elul  ...  9.999959e-01     3               0.802326                0.833656\
+2             O  Acc,Nom                          ...  1.023746e-03     3               0.802326                0.833656\
+3             A  Acc,Nom                  femeia  ...  9.995887e-01     3               0.802326                0.833656\
+4             S  Acc,Nom                 bra\uc0\u539 ele  ...  6.232846e-05     3               0.802326                0.833656\
+...         ...      ...     ...             ...  ...           ...   ...                    ...                     ...\
+1147  S-passive  Acc,Nom                 incint\uc0\u259   ...  7.386354e-02     3               0.802326                0.833656\
+1148  S-passive                        electrozi  ...  2.878565e-06     3               0.802326                0.833656\
+1149  S-passive  Acc,Nom               diferen\uc0\u539 \u259   ...  2.358847e-02     3               0.802326                0.833656\
+1150  S-passive  Acc,Nom          caracteristica  ...  2.686356e-03     3               0.802326                0.833656\
+1151  S-passive                             legi  ...  1.252305e-03     3               0.802326                0.833656\
+\
+[1152 rows x 11 columns]\
+On layer 2\
+Loaded case classifier from classifiers/aso_ro_rrt-ud_0_ao_balanced_2_exproles!\
+src_test_accuracy: \{'A': 0.7325581395348837, 'O': 0.7446808510638298\}\
+Examples # 1152\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-aux': 6, 'S-expletive': 7, 'S-expletive-passive': 8, 'S-passive': 9\}\
+There are 1152 examples to evaluate on.\
+           role     case animacy    subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0             O  Acc,Nom                          ...      0.000003     2               0.732558                0.744681\
+1             S  Acc,Nom               b\uc0\u259 ie\u539 elul  ...      0.999997     2               0.732558                0.744681\
+2             O  Acc,Nom                          ...      0.006320     2               0.732558                0.744681\
+3             A  Acc,Nom                  femeia  ...      0.969243     2               0.732558                0.744681\
+4             S  Acc,Nom                 bra\uc0\u539 ele  ...      0.002330     2               0.732558                0.744681\
+...         ...      ...     ...             ...  ...           ...   ...                    ...                     ...\
+1147  S-passive  Acc,Nom                 incint\uc0\u259   ...      0.966415     2               0.732558                0.744681\
+1148  S-passive                        electrozi  ...      0.064339     2               0.732558                0.744681\
+1149  S-passive  Acc,Nom               diferen\uc0\u539 \u259   ...      0.046117     2               0.732558                0.744681\
+1150  S-passive  Acc,Nom          caracteristica  ...      0.104690     2               0.732558                0.744681\
+1151  S-passive                             legi  ...      0.536352     2               0.732558                0.744681\
+\
+[1152 rows x 11 columns]\
+On layer 1\
+Loaded case classifier from classifiers/aso_ro_rrt-ud_0_ao_balanced_1_exproles!\
+src_test_accuracy: \{'A': 0.6453488372093024, 'O': 0.816247582205029\}\
+Examples # 1152\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-aux': 6, 'S-expletive': 7, 'S-expletive-passive': 8, 'S-passive': 9\}\
+There are 1152 examples to evaluate on.\
+           role     case animacy    subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0             O  Acc,Nom                          ...      0.000008     1               0.645349                0.816248\
+1             S  Acc,Nom               b\uc0\u259 ie\u539 elul  ...      0.998024     1               0.645349                0.816248\
+2             O  Acc,Nom                          ...      0.007550     1               0.645349                0.816248\
+3             A  Acc,Nom                  femeia  ...      0.940287     1               0.645349                0.816248\
+4             S  Acc,Nom                 bra\uc0\u539 ele  ...      0.000003     1               0.645349                0.816248\
+...         ...      ...     ...             ...  ...           ...   ...                    ...                     ...\
+1147  S-passive  Acc,Nom                 incint\uc0\u259   ...      0.676001     1               0.645349                0.816248\
+1148  S-passive                        electrozi  ...      0.000139     1               0.645349                0.816248\
+1149  S-passive  Acc,Nom               diferen\uc0\u539 \u259   ...      0.500000     1               0.645349                0.816248\
+1150  S-passive  Acc,Nom          caracteristica  ...      0.007008     1               0.645349                0.816248\
+1151  S-passive                             legi  ...      0.002522     1               0.645349                0.816248\
+\
+[1152 rows x 11 columns]\
+On layer 0\
+Loaded case classifier from classifiers/aso_ro_rrt-ud_0_ao_balanced_0_exproles!\
+src_test_accuracy: \{'A': 0.6744186046511628, 'O': 0.7311411992263056\}\
+Examples # 1152\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-aux': 6, 'S-expletive': 7, 'S-expletive-passive': 8, 'S-passive': 9\}\
+There are 1152 examples to evaluate on.\
+           role     case animacy    subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0             O  Acc,Nom                          ...      0.001940     0               0.674419                0.731141\
+1             S  Acc,Nom               b\uc0\u259 ie\u539 elul  ...      0.425330     0               0.674419                0.731141\
+2             O  Acc,Nom                          ...      0.000476     0               0.674419                0.731141\
+3             A  Acc,Nom                  femeia  ...      0.965192     0               0.674419                0.731141\
+4             S  Acc,Nom                 bra\uc0\u539 ele  ...      0.000057     0               0.674419                0.731141\
+...         ...      ...     ...             ...  ...           ...   ...                    ...                     ...\
+1147  S-passive  Acc,Nom                 incint\uc0\u259   ...      0.206446     0               0.674419                0.731141\
+1148  S-passive                        electrozi  ...      0.009028     0               0.674419                0.731141\
+1149  S-passive  Acc,Nom               diferen\uc0\u539 \u259   ...      0.171609     0               0.674419                0.731141\
+1150  S-passive  Acc,Nom          caracteristica  ...      0.166539     0               0.674419                0.731141\
+1151  S-passive                             legi  ...      0.634856     0               0.674419                0.731141\
+\
+[1152 rows x 11 columns]\
+(erg_nom) Nick deep-subjecthood-custom % }

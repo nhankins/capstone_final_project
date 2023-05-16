@@ -1,0 +1,703 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 (erg_nom) Nick deep-subjecthood-custom % python3 run_one_experiment.py --only-ao --balance              \
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html\
+args: Namespace(all_major_cases=False, average_embs=False, balance=True, erg_abs=False, nom_acc=False, only_ao=True, output_fn='last_run', reeval_src_test=False, seed=0, test_lang_fn='language_data/UD_Czech-FicTree-master/cs_fictree-ud-test.conllu', train_lang_base_path='language_data/UD_Czech-FicTree-master/cs_fictree-ud')\
+Just set the seed to 0\
+Need to train classifiers!\
+Loading the source train set, with limit 2025\
+Counts of each role \{'A': 1013, 'O': 3548\}\
+Case counts per role defaultdict(<class 'collections.Counter'>, \{None: Counter(\{None: 115347\}), 'O': Counter(\{'Acc': 3417, 'Gen': 112, 'Nom': 19\}), 'S': Counter(\{'Nom': 2532, 'Gen': 35\}), 'A': Counter(\{'Nom': 1001, 'Gen': 12\}), 'S-aux': Counter(\{'Nom': 265, 'Gen': 30\}), 'S-passive': Counter(\{'Nom': 110, 'Gen': 1\})\})\
+lengths of bert ids etc 9307 9307 9307 9307\
+Saving all of the tokens and non-bert stuff to cached_datasets/all_features_aso_exps_cs_fictree-ud-train_AO_balanced_2025.pkl\
+There are 2026 relevant tokens, and 9307 overall sentences\
+Bert vectors file is cached_bert_vectors/all_features_aso_exps_cs_fictree-ud-train_AO_balanced_2025.hdf5\
+Running 9307 sentences through BERT. This takes a while\
+100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 9307/9307 [05:22<00:00, 28.83it/s]\
+length of bert outputs 9307\
+Length of train set is 2026, limit is 2025\
+Counts of each role Counter(\{'O': 476, 'S': 375, 'A': 140, 'S-aux': 30, 'S-passive': 13\})\
+Case counts per role defaultdict(<class 'collections.Counter'>, \{None: Counter(\{None: 15761\}), 'O': Counter(\{'Acc': 457, 'Gen': 17, 'Nom': 2\}), 'S': Counter(\{'Nom': 367, 'Gen': 8\}), 'A': Counter(\{'Nom': 139, 'Gen': 1\}), 'S-aux': Counter(\{'Nom': 25, 'Gen': 5\}), 'S-passive': Counter(\{'Nom': 13\})\})\
+lengths of bert ids etc 1291 1291 1291 1291\
+Saving all of the tokens and non-bert stuff to cached_datasets/all_features_aso_exps_cs_fictree-ud-test_aso_unbalanced_2000.pkl\
+There are 1034 relevant tokens, and 1291 overall sentences\
+Bert vectors file is cached_bert_vectors/all_features_aso_exps_cs_fictree-ud-test_aso_unbalanced_2000.hdf5\
+Running 1291 sentences through BERT. This takes a while\
+100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 1291/1291 [00:43<00:00, 29.39it/s]\
+length of bert outputs 1291\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.474\
+[2/20] Train loss: 0.279\
+[3/20] Train loss: 0.214\
+[4/20] Train loss: 0.179\
+[5/20] Train loss: 0.147\
+[6/20] Train loss: 0.114\
+[7/20] Train loss: 0.098\
+[8/20] Train loss: 0.084\
+[9/20] Train loss: 0.067\
+[10/20] Train loss: 0.051\
+[11/20] Train loss: 0.035\
+[12/20] Train loss: 0.028\
+[13/20] Train loss: 0.026\
+[14/20] Train loss: 0.026\
+[15/20] Train loss: 0.020\
+[16/20] Train loss: 0.018\
+[17/20] Train loss: 0.016\
+[18/20] Train loss: 0.015\
+[19/20] Train loss: 0.014\
+[20/20] Train loss: 0.012\
+Trained a case classifier!\
+Examples # 1034\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-passive': 4\}\
+Accuracy on test set of training language: \{'A': 0.8571428571428571, 'O': 0.8529411764705882\}\
+Saving classifier to classifiers/aso_cs_fictree-ud_0_ao_balanced_12_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.380\
+[2/20] Train loss: 0.225\
+[3/20] Train loss: 0.181\
+[4/20] Train loss: 0.146\
+[5/20] Train loss: 0.115\
+[6/20] Train loss: 0.093\
+[7/20] Train loss: 0.075\
+[8/20] Train loss: 0.053\
+[9/20] Train loss: 0.044\
+[10/20] Train loss: 0.043\
+[11/20] Train loss: 0.029\
+[12/20] Train loss: 0.023\
+[13/20] Train loss: 0.022\
+[14/20] Train loss: 0.015\
+[15/20] Train loss: 0.015\
+[16/20] Train loss: 0.014\
+[17/20] Train loss: 0.014\
+[18/20] Train loss: 0.012\
+[19/20] Train loss: 0.013\
+[20/20] Train loss: 0.011\
+Trained a case classifier!\
+Examples # 1034\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-passive': 4\}\
+Accuracy on test set of training language: \{'A': 0.8642857142857143, 'O': 0.8781512605042017\}\
+Saving classifier to classifiers/aso_cs_fictree-ud_0_ao_balanced_11_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.344\
+[2/20] Train loss: 0.201\
+[3/20] Train loss: 0.159\
+[4/20] Train loss: 0.135\
+[5/20] Train loss: 0.104\
+[6/20] Train loss: 0.084\
+[7/20] Train loss: 0.068\
+[8/20] Train loss: 0.055\
+[9/20] Train loss: 0.040\
+[10/20] Train loss: 0.034\
+[11/20] Train loss: 0.031\
+[12/20] Train loss: 0.026\
+[13/20] Train loss: 0.023\
+[14/20] Train loss: 0.017\
+[15/20] Train loss: 0.013\
+[16/20] Train loss: 0.012\
+[17/20] Train loss: 0.012\
+[18/20] Train loss: 0.011\
+[19/20] Train loss: 0.012\
+[20/20] Train loss: 0.008\
+Trained a case classifier!\
+Examples # 1034\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-passive': 4\}\
+Accuracy on test set of training language: \{'A': 0.9071428571428571, 'O': 0.8802521008403361\}\
+Saving classifier to classifiers/aso_cs_fictree-ud_0_ao_balanced_10_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.321\
+[2/20] Train loss: 0.188\
+[3/20] Train loss: 0.145\
+[4/20] Train loss: 0.118\
+[5/20] Train loss: 0.094\
+[6/20] Train loss: 0.076\
+[7/20] Train loss: 0.062\
+[8/20] Train loss: 0.044\
+[9/20] Train loss: 0.032\
+[10/20] Train loss: 0.022\
+[11/20] Train loss: 0.021\
+[12/20] Train loss: 0.020\
+[13/20] Train loss: 0.012\
+[14/20] Train loss: 0.014\
+[15/20] Train loss: 0.016\
+[16/20] Train loss: 0.013\
+[17/20] Train loss: 0.010\
+[18/20] Train loss: 0.013\
+[19/20] Train loss: 0.011\
+[20/20] Train loss: 0.009\
+Trained a case classifier!\
+Examples # 1034\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-passive': 4\}\
+Accuracy on test set of training language: \{'A': 0.9071428571428571, 'O': 0.8949579831932774\}\
+Saving classifier to classifiers/aso_cs_fictree-ud_0_ao_balanced_9_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.341\
+[2/20] Train loss: 0.207\
+[3/20] Train loss: 0.156\
+[4/20] Train loss: 0.121\
+[5/20] Train loss: 0.096\
+[6/20] Train loss: 0.077\
+[7/20] Train loss: 0.057\
+[8/20] Train loss: 0.045\
+[9/20] Train loss: 0.038\
+[10/20] Train loss: 0.026\
+[11/20] Train loss: 0.020\
+[12/20] Train loss: 0.015\
+[13/20] Train loss: 0.014\
+[14/20] Train loss: 0.015\
+[15/20] Train loss: 0.016\
+[16/20] Train loss: 0.010\
+[17/20] Train loss: 0.010\
+[18/20] Train loss: 0.011\
+[19/20] Train loss: 0.012\
+[20/20] Train loss: 0.007\
+Trained a case classifier!\
+Examples # 1034\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-passive': 4\}\
+Accuracy on test set of training language: \{'A': 0.9, 'O': 0.8718487394957983\}\
+Saving classifier to classifiers/aso_cs_fictree-ud_0_ao_balanced_8_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.353\
+[2/20] Train loss: 0.230\
+[3/20] Train loss: 0.185\
+[4/20] Train loss: 0.146\
+[5/20] Train loss: 0.111\
+[6/20] Train loss: 0.083\
+[7/20] Train loss: 0.069\
+[8/20] Train loss: 0.046\
+[9/20] Train loss: 0.033\
+[10/20] Train loss: 0.026\
+[11/20] Train loss: 0.021\
+[12/20] Train loss: 0.022\
+[13/20] Train loss: 0.017\
+[14/20] Train loss: 0.013\
+[15/20] Train loss: 0.014\
+[16/20] Train loss: 0.015\
+[17/20] Train loss: 0.012\
+[18/20] Train loss: 0.012\
+[19/20] Train loss: 0.012\
+[20/20] Train loss: 0.012\
+Trained a case classifier!\
+Examples # 1034\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-passive': 4\}\
+Accuracy on test set of training language: \{'A': 0.8785714285714286, 'O': 0.8361344537815126\}\
+Saving classifier to classifiers/aso_cs_fictree-ud_0_ao_balanced_7_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.419\
+[2/20] Train loss: 0.291\
+[3/20] Train loss: 0.250\
+[4/20] Train loss: 0.200\
+[5/20] Train loss: 0.178\
+[6/20] Train loss: 0.135\
+[7/20] Train loss: 0.113\
+[8/20] Train loss: 0.087\
+[9/20] Train loss: 0.066\
+[10/20] Train loss: 0.054\
+[11/20] Train loss: 0.041\
+[12/20] Train loss: 0.038\
+[13/20] Train loss: 0.034\
+[14/20] Train loss: 0.035\
+[15/20] Train loss: 0.021\
+[16/20] Train loss: 0.015\
+[17/20] Train loss: 0.014\
+[18/20] Train loss: 0.013\
+[19/20] Train loss: 0.014\
+[20/20] Train loss: 0.014\
+Trained a case classifier!\
+Examples # 1034\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-passive': 4\}\
+Accuracy on test set of training language: \{'A': 0.8285714285714286, 'O': 0.8466386554621849\}\
+Saving classifier to classifiers/aso_cs_fictree-ud_0_ao_balanced_6_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.468\
+[2/20] Train loss: 0.339\
+[3/20] Train loss: 0.282\
+[4/20] Train loss: 0.247\
+[5/20] Train loss: 0.217\
+[6/20] Train loss: 0.183\
+[7/20] Train loss: 0.155\
+[8/20] Train loss: 0.129\
+[9/20] Train loss: 0.100\
+[10/20] Train loss: 0.084\
+[11/20] Train loss: 0.080\
+[12/20] Train loss: 0.066\
+[13/20] Train loss: 0.048\
+[14/20] Train loss: 0.040\
+[15/20] Train loss: 0.034\
+[16/20] Train loss: 0.027\
+[17/20] Train loss: 0.023\
+[18/20] Train loss: 0.019\
+[19/20] Train loss: 0.022\
+[20/20] Train loss: 0.023\
+Trained a case classifier!\
+Examples # 1034\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-passive': 4\}\
+Accuracy on test set of training language: \{'A': 0.8, 'O': 0.7836134453781513\}\
+Saving classifier to classifiers/aso_cs_fictree-ud_0_ao_balanced_5_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.500\
+[2/20] Train loss: 0.358\
+[3/20] Train loss: 0.310\
+[4/20] Train loss: 0.273\
+[5/20] Train loss: 0.233\
+[6/20] Train loss: 0.203\
+[7/20] Train loss: 0.172\
+[8/20] Train loss: 0.149\
+[9/20] Train loss: 0.123\
+[10/20] Train loss: 0.115\
+[11/20] Train loss: 0.105\
+[12/20] Train loss: 0.086\
+[13/20] Train loss: 0.068\
+[14/20] Train loss: 0.058\
+[15/20] Train loss: 0.056\
+[16/20] Train loss: 0.043\
+[17/20] Train loss: 0.036\
+[18/20] Train loss: 0.032\
+[19/20] Train loss: 0.033\
+[20/20] Train loss: 0.032\
+Trained a case classifier!\
+Examples # 1034\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-passive': 4\}\
+Accuracy on test set of training language: \{'A': 0.8214285714285714, 'O': 0.7352941176470589\}\
+Saving classifier to classifiers/aso_cs_fictree-ud_0_ao_balanced_4_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.528\
+[2/20] Train loss: 0.397\
+[3/20] Train loss: 0.333\
+[4/20] Train loss: 0.306\
+[5/20] Train loss: 0.270\
+[6/20] Train loss: 0.232\
+[7/20] Train loss: 0.194\
+[8/20] Train loss: 0.169\
+[9/20] Train loss: 0.154\
+[10/20] Train loss: 0.122\
+[11/20] Train loss: 0.122\
+[12/20] Train loss: 0.106\
+[13/20] Train loss: 0.088\
+[14/20] Train loss: 0.084\
+[15/20] Train loss: 0.080\
+[16/20] Train loss: 0.063\
+[17/20] Train loss: 0.060\
+[18/20] Train loss: 0.062\
+[19/20] Train loss: 0.039\
+[20/20] Train loss: 0.042\
+Trained a case classifier!\
+Examples # 1034\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-passive': 4\}\
+Accuracy on test set of training language: \{'A': 0.7357142857142858, 'O': 0.7899159663865546\}\
+Saving classifier to classifiers/aso_cs_fictree-ud_0_ao_balanced_3_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.563\
+[2/20] Train loss: 0.439\
+[3/20] Train loss: 0.401\
+[4/20] Train loss: 0.373\
+[5/20] Train loss: 0.339\
+[6/20] Train loss: 0.310\
+[7/20] Train loss: 0.272\
+[8/20] Train loss: 0.251\
+[9/20] Train loss: 0.240\
+[10/20] Train loss: 0.220\
+[11/20] Train loss: 0.200\
+[12/20] Train loss: 0.171\
+[13/20] Train loss: 0.155\
+[14/20] Train loss: 0.147\
+[15/20] Train loss: 0.155\
+[16/20] Train loss: 0.137\
+[17/20] Train loss: 0.120\
+[18/20] Train loss: 0.119\
+[19/20] Train loss: 0.103\
+[20/20] Train loss: 0.090\
+Trained a case classifier!\
+Examples # 1034\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-passive': 4\}\
+Accuracy on test set of training language: \{'A': 0.75, 'O': 0.7016806722689075\}\
+Saving classifier to classifiers/aso_cs_fictree-ud_0_ao_balanced_2_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.567\
+[2/20] Train loss: 0.469\
+[3/20] Train loss: 0.425\
+[4/20] Train loss: 0.388\
+[5/20] Train loss: 0.362\
+[6/20] Train loss: 0.342\
+[7/20] Train loss: 0.325\
+[8/20] Train loss: 0.316\
+[9/20] Train loss: 0.295\
+[10/20] Train loss: 0.283\
+[11/20] Train loss: 0.258\
+[12/20] Train loss: 0.259\
+[13/20] Train loss: 0.230\
+[14/20] Train loss: 0.221\
+[15/20] Train loss: 0.210\
+[16/20] Train loss: 0.194\
+[17/20] Train loss: 0.186\
+[18/20] Train loss: 0.181\
+[19/20] Train loss: 0.170\
+[20/20] Train loss: 0.165\
+Trained a case classifier!\
+Examples # 1034\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-passive': 4\}\
+Accuracy on test set of training language: \{'A': 0.7285714285714285, 'O': 0.7226890756302521\}\
+Saving classifier to classifiers/aso_cs_fictree-ud_0_ao_balanced_1_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.569\
+[2/20] Train loss: 0.467\
+[3/20] Train loss: 0.423\
+[4/20] Train loss: 0.390\
+[5/20] Train loss: 0.376\
+[6/20] Train loss: 0.362\
+[7/20] Train loss: 0.343\
+[8/20] Train loss: 0.321\
+[9/20] Train loss: 0.317\
+[10/20] Train loss: 0.303\
+[11/20] Train loss: 0.287\
+[12/20] Train loss: 0.275\
+[13/20] Train loss: 0.258\
+[14/20] Train loss: 0.249\
+[15/20] Train loss: 0.242\
+[16/20] Train loss: 0.231\
+[17/20] Train loss: 0.223\
+[18/20] Train loss: 0.211\
+[19/20] Train loss: 0.196\
+[20/20] Train loss: 0.194\
+Trained a case classifier!\
+Examples # 1034\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-passive': 4\}\
+Accuracy on test set of training language: \{'A': 0.7285714285714285, 'O': 0.6953781512605042\}\
+Saving classifier to classifiers/aso_cs_fictree-ud_0_ao_balanced_0_exproles\
+Loading the dest test set, with limit 2000\
+Loading all of the tokens and non-bert stuff from cached_datasets/all_features_aso_exps_cs_fictree-ud-test_aso_unbalanced_2000.pkl\
+There are 1034 relevant tokens, and 1291 overall sentences\
+Bert vectors file is cached_bert_vectors/all_features_aso_exps_cs_fictree-ud-test_aso_unbalanced_2000.hdf5\
+[Loading from disk]: 100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 1291/1291 [00:00<00:00, 3060.67it/s]\
+Loaded 1290 sentences from disk.\
+length of bert outputs 1291\
+On layer 12\
+Loaded case classifier from classifiers/aso_cs_fictree-ud_0_ao_balanced_12_exproles!\
+src_test_accuracy: \{'A': 0.8571428571428571, 'O': 0.8529411764705882\}\
+Examples # 1034\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-passive': 4\}\
+There are 1034 examples to evaluate on.\
+       role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0         O  Acc    Inan               ...      0.007842    12               0.857143                0.852941\
+1         S  Nom    Inan      v\'fdst\uc0\u345 ih  ...      0.812738    12               0.857143                0.852941\
+2         S  Nom              babi\uc0\u269 ka  ...      0.997526    12               0.857143                0.852941\
+3         O  Acc                       ...      0.000004    12               0.857143                0.852941\
+4         S  Nom    Anim      d\uc0\u283 de\u269 ek  ...      0.999840    12               0.857143                0.852941\
+...     ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1029      A  Nom    Anim        mistr  ...      1.000000    12               0.857143                0.852941\
+1030      S  Nom    Anim        l\'e9ka\uc0\u345   ...      0.999395    12               0.857143                0.852941\
+1031      O  Acc    Inan               ...      0.380463    12               0.857143                0.852941\
+1032      O  Acc    Inan               ...      0.845886    12               0.857143                0.852941\
+1033  S-aux  Nom    Inan          \'9a\'edp  ...      0.997754    12               0.857143                0.852941\
+\
+[1034 rows x 11 columns]\
+On layer 11\
+Loaded case classifier from classifiers/aso_cs_fictree-ud_0_ao_balanced_11_exproles!\
+src_test_accuracy: \{'A': 0.8642857142857143, 'O': 0.8781512605042017\}\
+Examples # 1034\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-passive': 4\}\
+There are 1034 examples to evaluate on.\
+       role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0         O  Acc    Inan               ...      0.000526    11               0.864286                0.878151\
+1         S  Nom    Inan      v\'fdst\uc0\u345 ih  ...      0.941421    11               0.864286                0.878151\
+2         S  Nom              babi\uc0\u269 ka  ...      0.999152    11               0.864286                0.878151\
+3         O  Acc                       ...      0.013386    11               0.864286                0.878151\
+4         S  Nom    Anim      d\uc0\u283 de\u269 ek  ...      0.999997    11               0.864286                0.878151\
+...     ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1029      A  Nom    Anim        mistr  ...      0.999991    11               0.864286                0.878151\
+1030      S  Nom    Anim        l\'e9ka\uc0\u345   ...      1.000000    11               0.864286                0.878151\
+1031      O  Acc    Inan               ...      0.017409    11               0.864286                0.878151\
+1032      O  Acc    Inan               ...      0.848153    11               0.864286                0.878151\
+1033  S-aux  Nom    Inan          \'9a\'edp  ...      0.996696    11               0.864286                0.878151\
+\
+[1034 rows x 11 columns]\
+On layer 10\
+Loaded case classifier from classifiers/aso_cs_fictree-ud_0_ao_balanced_10_exproles!\
+src_test_accuracy: \{'A': 0.9071428571428571, 'O': 0.8802521008403361\}\
+Examples # 1034\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-passive': 4\}\
+There are 1034 examples to evaluate on.\
+       role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0         O  Acc    Inan               ...      0.000013    10               0.907143                0.880252\
+1         S  Nom    Inan      v\'fdst\uc0\u345 ih  ...      0.998661    10               0.907143                0.880252\
+2         S  Nom              babi\uc0\u269 ka  ...      0.999355    10               0.907143                0.880252\
+3         O  Acc                       ...      0.000276    10               0.907143                0.880252\
+4         S  Nom    Anim      d\uc0\u283 de\u269 ek  ...      1.000000    10               0.907143                0.880252\
+...     ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1029      A  Nom    Anim        mistr  ...      1.000000    10               0.907143                0.880252\
+1030      S  Nom    Anim        l\'e9ka\uc0\u345   ...      1.000000    10               0.907143                0.880252\
+1031      O  Acc    Inan               ...      0.000566    10               0.907143                0.880252\
+1032      O  Acc    Inan               ...      0.977932    10               0.907143                0.880252\
+1033  S-aux  Nom    Inan          \'9a\'edp  ...      0.156330    10               0.907143                0.880252\
+\
+[1034 rows x 11 columns]\
+On layer 9\
+Loaded case classifier from classifiers/aso_cs_fictree-ud_0_ao_balanced_9_exproles!\
+src_test_accuracy: \{'A': 0.9071428571428571, 'O': 0.8949579831932774\}\
+Examples # 1034\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-passive': 4\}\
+There are 1034 examples to evaluate on.\
+       role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0         O  Acc    Inan               ...      0.000002     9               0.907143                0.894958\
+1         S  Nom    Inan      v\'fdst\uc0\u345 ih  ...      0.997944     9               0.907143                0.894958\
+2         S  Nom              babi\uc0\u269 ka  ...      0.996996     9               0.907143                0.894958\
+3         O  Acc                       ...      0.000132     9               0.907143                0.894958\
+4         S  Nom    Anim      d\uc0\u283 de\u269 ek  ...      1.000000     9               0.907143                0.894958\
+...     ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1029      A  Nom    Anim        mistr  ...      1.000000     9               0.907143                0.894958\
+1030      S  Nom    Anim        l\'e9ka\uc0\u345   ...      0.999836     9               0.907143                0.894958\
+1031      O  Acc    Inan               ...      0.000022     9               0.907143                0.894958\
+1032      O  Acc    Inan               ...      0.917714     9               0.907143                0.894958\
+1033  S-aux  Nom    Inan          \'9a\'edp  ...      0.002954     9               0.907143                0.894958\
+\
+[1034 rows x 11 columns]\
+On layer 8\
+Loaded case classifier from classifiers/aso_cs_fictree-ud_0_ao_balanced_8_exproles!\
+src_test_accuracy: \{'A': 0.9, 'O': 0.8718487394957983\}\
+Examples # 1034\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-passive': 4\}\
+There are 1034 examples to evaluate on.\
+       role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0         O  Acc    Inan               ...      0.000067     8                    0.9                0.871849\
+1         S  Nom    Inan      v\'fdst\uc0\u345 ih  ...      0.133947     8                    0.9                0.871849\
+2         S  Nom              babi\uc0\u269 ka  ...      0.999879     8                    0.9                0.871849\
+3         O  Acc                       ...      0.008992     8                    0.9                0.871849\
+4         S  Nom    Anim      d\uc0\u283 de\u269 ek  ...      1.000000     8                    0.9                0.871849\
+...     ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1029      A  Nom    Anim        mistr  ...      1.000000     8                    0.9                0.871849\
+1030      S  Nom    Anim        l\'e9ka\uc0\u345   ...      1.000000     8                    0.9                0.871849\
+1031      O  Acc    Inan               ...      0.001755     8                    0.9                0.871849\
+1032      O  Acc    Inan               ...      0.999580     8                    0.9                0.871849\
+1033  S-aux  Nom    Inan          \'9a\'edp  ...      0.170763     8                    0.9                0.871849\
+\
+[1034 rows x 11 columns]\
+On layer 7\
+Loaded case classifier from classifiers/aso_cs_fictree-ud_0_ao_balanced_7_exproles!\
+src_test_accuracy: \{'A': 0.8785714285714286, 'O': 0.8361344537815126\}\
+Examples # 1034\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-passive': 4\}\
+There are 1034 examples to evaluate on.\
+       role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0         O  Acc    Inan               ...      0.000002     7               0.878571                0.836134\
+1         S  Nom    Inan      v\'fdst\uc0\u345 ih  ...      0.005312     7               0.878571                0.836134\
+2         S  Nom              babi\uc0\u269 ka  ...      0.894219     7               0.878571                0.836134\
+3         O  Acc                       ...      0.000229     7               0.878571                0.836134\
+4         S  Nom    Anim      d\uc0\u283 de\u269 ek  ...      1.000000     7               0.878571                0.836134\
+...     ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1029      A  Nom    Anim        mistr  ...      1.000000     7               0.878571                0.836134\
+1030      S  Nom    Anim        l\'e9ka\uc0\u345   ...      1.000000     7               0.878571                0.836134\
+1031      O  Acc    Inan               ...      0.001254     7               0.878571                0.836134\
+1032      O  Acc    Inan               ...      0.907537     7               0.878571                0.836134\
+1033  S-aux  Nom    Inan          \'9a\'edp  ...      0.154349     7               0.878571                0.836134\
+\
+[1034 rows x 11 columns]\
+On layer 6\
+Loaded case classifier from classifiers/aso_cs_fictree-ud_0_ao_balanced_6_exproles!\
+src_test_accuracy: \{'A': 0.8285714285714286, 'O': 0.8466386554621849\}\
+Examples # 1034\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-passive': 4\}\
+There are 1034 examples to evaluate on.\
+       role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0         O  Acc    Inan               ...  3.782972e-05     6               0.828571                0.846639\
+1         S  Nom    Inan      v\'fdst\uc0\u345 ih  ...  5.977731e-03     6               0.828571                0.846639\
+2         S  Nom              babi\uc0\u269 ka  ...  9.908190e-02     6               0.828571                0.846639\
+3         O  Acc                       ...  9.697289e-08     6               0.828571                0.846639\
+4         S  Nom    Anim      d\uc0\u283 de\u269 ek  ...  7.767805e-01     6               0.828571                0.846639\
+...     ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1029      A  Nom    Anim        mistr  ...  9.999878e-01     6               0.828571                0.846639\
+1030      S  Nom    Anim        l\'e9ka\uc0\u345   ...  9.999045e-01     6               0.828571                0.846639\
+1031      O  Acc    Inan               ...  6.466660e-05     6               0.828571                0.846639\
+1032      O  Acc    Inan               ...  9.906918e-01     6               0.828571                0.846639\
+1033  S-aux  Nom    Inan          \'9a\'edp  ...  1.722093e-04     6               0.828571                0.846639\
+\
+[1034 rows x 11 columns]\
+On layer 5\
+Loaded case classifier from classifiers/aso_cs_fictree-ud_0_ao_balanced_5_exproles!\
+src_test_accuracy: \{'A': 0.8, 'O': 0.7836134453781513\}\
+Examples # 1034\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-passive': 4\}\
+There are 1034 examples to evaluate on.\
+       role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0         O  Acc    Inan               ...  3.338039e-05     5                    0.8                0.783613\
+1         S  Nom    Inan      v\'fdst\uc0\u345 ih  ...  1.771047e-02     5                    0.8                0.783613\
+2         S  Nom              babi\uc0\u269 ka  ...  9.542276e-01     5                    0.8                0.783613\
+3         O  Acc                       ...  4.098916e-07     5                    0.8                0.783613\
+4         S  Nom    Anim      d\uc0\u283 de\u269 ek  ...  6.971846e-01     5                    0.8                0.783613\
+...     ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1029      A  Nom    Anim        mistr  ...  9.999778e-01     5                    0.8                0.783613\
+1030      S  Nom    Anim        l\'e9ka\uc0\u345   ...  9.955687e-01     5                    0.8                0.783613\
+1031      O  Acc    Inan               ...  5.501924e-04     5                    0.8                0.783613\
+1032      O  Acc    Inan               ...  9.964657e-01     5                    0.8                0.783613\
+1033  S-aux  Nom    Inan          \'9a\'edp  ...  2.118319e-05     5                    0.8                0.783613\
+\
+[1034 rows x 11 columns]\
+On layer 4\
+Loaded case classifier from classifiers/aso_cs_fictree-ud_0_ao_balanced_4_exproles!\
+src_test_accuracy: \{'A': 0.8214285714285714, 'O': 0.7352941176470589\}\
+Examples # 1034\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-passive': 4\}\
+There are 1034 examples to evaluate on.\
+       role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0         O  Acc    Inan               ...      0.007142     4               0.821429                0.735294\
+1         S  Nom    Inan      v\'fdst\uc0\u345 ih  ...      0.014852     4               0.821429                0.735294\
+2         S  Nom              babi\uc0\u269 ka  ...      0.997841     4               0.821429                0.735294\
+3         O  Acc                       ...      0.000058     4               0.821429                0.735294\
+4         S  Nom    Anim      d\uc0\u283 de\u269 ek  ...      0.987450     4               0.821429                0.735294\
+...     ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1029      A  Nom    Anim        mistr  ...      0.998646     4               0.821429                0.735294\
+1030      S  Nom    Anim        l\'e9ka\uc0\u345   ...      0.713850     4               0.821429                0.735294\
+1031      O  Acc    Inan               ...      0.140039     4               0.821429                0.735294\
+1032      O  Acc    Inan               ...      0.817378     4               0.821429                0.735294\
+1033  S-aux  Nom    Inan          \'9a\'edp  ...      0.022238     4               0.821429                0.735294\
+\
+[1034 rows x 11 columns]\
+On layer 3\
+Loaded case classifier from classifiers/aso_cs_fictree-ud_0_ao_balanced_3_exproles!\
+src_test_accuracy: \{'A': 0.7357142857142858, 'O': 0.7899159663865546\}\
+Examples # 1034\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-passive': 4\}\
+There are 1034 examples to evaluate on.\
+       role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0         O  Acc    Inan               ...      0.500000     3               0.735714                0.789916\
+1         S  Nom    Inan      v\'fdst\uc0\u345 ih  ...      0.312311     3               0.735714                0.789916\
+2         S  Nom              babi\uc0\u269 ka  ...      0.940295     3               0.735714                0.789916\
+3         O  Acc                       ...      0.008568     3               0.735714                0.789916\
+4         S  Nom    Anim      d\uc0\u283 de\u269 ek  ...      0.710741     3               0.735714                0.789916\
+...     ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1029      A  Nom    Anim        mistr  ...      0.707377     3               0.735714                0.789916\
+1030      S  Nom    Anim        l\'e9ka\uc0\u345   ...      0.255744     3               0.735714                0.789916\
+1031      O  Acc    Inan               ...      0.003408     3               0.735714                0.789916\
+1032      O  Acc    Inan               ...      0.425823     3               0.735714                0.789916\
+1033  S-aux  Nom    Inan          \'9a\'edp  ...      0.002844     3               0.735714                0.789916\
+\
+[1034 rows x 11 columns]\
+On layer 2\
+Loaded case classifier from classifiers/aso_cs_fictree-ud_0_ao_balanced_2_exproles!\
+src_test_accuracy: \{'A': 0.75, 'O': 0.7016806722689075\}\
+Examples # 1034\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-passive': 4\}\
+There are 1034 examples to evaluate on.\
+       role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0         O  Acc    Inan               ...      0.790416     2                   0.75                0.701681\
+1         S  Nom    Inan      v\'fdst\uc0\u345 ih  ...      0.521711     2                   0.75                0.701681\
+2         S  Nom              babi\uc0\u269 ka  ...      0.646991     2                   0.75                0.701681\
+3         O  Acc                       ...      0.076363     2                   0.75                0.701681\
+4         S  Nom    Anim      d\uc0\u283 de\u269 ek  ...      0.938542     2                   0.75                0.701681\
+...     ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1029      A  Nom    Anim        mistr  ...      0.764037     2                   0.75                0.701681\
+1030      S  Nom    Anim        l\'e9ka\uc0\u345   ...      0.781096     2                   0.75                0.701681\
+1031      O  Acc    Inan               ...      0.475356     2                   0.75                0.701681\
+1032      O  Acc    Inan               ...      0.013092     2                   0.75                0.701681\
+1033  S-aux  Nom    Inan          \'9a\'edp  ...      0.084128     2                   0.75                0.701681\
+\
+[1034 rows x 11 columns]\
+On layer 1\
+Loaded case classifier from classifiers/aso_cs_fictree-ud_0_ao_balanced_1_exproles!\
+src_test_accuracy: \{'A': 0.7285714285714285, 'O': 0.7226890756302521\}\
+Examples # 1034\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-passive': 4\}\
+There are 1034 examples to evaluate on.\
+       role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0         O  Acc    Inan               ...      0.120513     1               0.728571                0.722689\
+1         S  Nom    Inan      v\'fdst\uc0\u345 ih  ...      0.386065     1               0.728571                0.722689\
+2         S  Nom              babi\uc0\u269 ka  ...      0.225566     1               0.728571                0.722689\
+3         O  Acc                       ...      0.501979     1               0.728571                0.722689\
+4         S  Nom    Anim      d\uc0\u283 de\u269 ek  ...      0.642452     1               0.728571                0.722689\
+...     ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1029      A  Nom    Anim        mistr  ...      0.679690     1               0.728571                0.722689\
+1030      S  Nom    Anim        l\'e9ka\uc0\u345   ...      0.062170     1               0.728571                0.722689\
+1031      O  Acc    Inan               ...      0.029510     1               0.728571                0.722689\
+1032      O  Acc    Inan               ...      0.468383     1               0.728571                0.722689\
+1033  S-aux  Nom    Inan          \'9a\'edp  ...      0.402859     1               0.728571                0.722689\
+\
+[1034 rows x 11 columns]\
+On layer 0\
+Loaded case classifier from classifiers/aso_cs_fictree-ud_0_ao_balanced_0_exproles!\
+src_test_accuracy: \{'A': 0.7285714285714285, 'O': 0.6953781512605042\}\
+Examples # 1034\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-passive': 4\}\
+There are 1034 examples to evaluate on.\
+       role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0         O  Acc    Inan               ...      0.683605     0               0.728571                0.695378\
+1         S  Nom    Inan      v\'fdst\uc0\u345 ih  ...      0.397629     0               0.728571                0.695378\
+2         S  Nom              babi\uc0\u269 ka  ...      0.089150     0               0.728571                0.695378\
+3         O  Acc                       ...      0.319113     0               0.728571                0.695378\
+4         S  Nom    Anim      d\uc0\u283 de\u269 ek  ...      0.500000     0               0.728571                0.695378\
+...     ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1029      A  Nom    Anim        mistr  ...      0.527022     0               0.728571                0.695378\
+1030      S  Nom    Anim        l\'e9ka\uc0\u345   ...      0.093923     0               0.728571                0.695378\
+1031      O  Acc    Inan               ...      0.042003     0               0.728571                0.695378\
+1032      O  Acc    Inan               ...      0.247663     0               0.728571                0.695378\
+1033  S-aux  Nom    Inan          \'9a\'edp  ...      0.242923     0               0.728571                0.695378\
+\
+[1034 rows x 11 columns]\
+(erg_nom) Nick deep-subjecthood-custom % }

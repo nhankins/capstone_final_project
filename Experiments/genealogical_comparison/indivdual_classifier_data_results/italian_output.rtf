@@ -1,0 +1,703 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 (erg_nom) Nick deep-subjecthood-custom % python3 run_one_experiment.py --only-ao --balance\
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html\
+args: Namespace(all_major_cases=False, average_embs=False, balance=True, erg_abs=False, nom_acc=False, only_ao=True, output_fn='last_run', reeval_src_test=False, seed=0, test_lang_fn='language_data/UD_Italian-VIT-master/it_vit-ud-test.conllu', train_lang_base_path='language_data/UD_Italian-VIT-master/it_vit-ud')\
+Just set the seed to 0\
+Need to train classifiers!\
+Loading the source train set, with limit 2025\
+Counts of each role \{'A': 1013, 'O': 2951\}\
+Case counts per role defaultdict(<class 'collections.Counter'>, \{None: Counter(\{None: 123252\}), 'S-passive': Counter(\{None: 524\}), 'O': Counter(\{None: 2951\}), 'S': Counter(\{None: 1203\}), 'A': Counter(\{None: 1013\}), 'S-expletive': Counter(\{None: 405\}), 'A-passive': Counter(\{None: 10\}), 'S-expletive-passive': Counter(\{None: 9\})\})\
+lengths of bert ids etc 4356 4356 4356 4356\
+Saving all of the tokens and non-bert stuff to cached_datasets/all_features_aso_exps_it_vit-ud-train_AO_balanced_2025.pkl\
+There are 2026 relevant tokens, and 4356 overall sentences\
+Bert vectors file is cached_bert_vectors/all_features_aso_exps_it_vit-ud-train_AO_balanced_2025.hdf5\
+Running 4356 sentences through BERT. This takes a while\
+100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 4356/4356 [21:46<00:00,  3.34it/s]\
+length of bert outputs 4356\
+Length of train set is 2026, limit is 2025\
+Counts of each role Counter(\{'O': 616, 'S': 281, 'A': 212, 'S-expletive': 126, 'S-passive': 101, 'S-expletive-passive': 2, 'A-passive': 1\})\
+Case counts per role defaultdict(<class 'collections.Counter'>, \{None: Counter(\{None: 26627\}), 'S-passive': Counter(\{None: 101\}), 'O': Counter(\{None: 616\}), 'S': Counter(\{None: 281\}), 'S-expletive-passive': Counter(\{None: 2\}), 'A': Counter(\{None: 212\}), 'S-expletive': Counter(\{None: 126\}), 'A-passive': Counter(\{None: 1\})\})\
+lengths of bert ids etc 1067 1067 1067 1067\
+Saving all of the tokens and non-bert stuff to cached_datasets/all_features_aso_exps_it_vit-ud-test_aso_unbalanced_2000.pkl\
+There are 1339 relevant tokens, and 1067 overall sentences\
+Bert vectors file is cached_bert_vectors/all_features_aso_exps_it_vit-ud-test_aso_unbalanced_2000.hdf5\
+Running 1067 sentences through BERT. This takes a while\
+100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 1067/1067 [03:48<00:00,  4.67it/s]\
+length of bert outputs 1067\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.453\
+[2/20] Train loss: 0.253\
+[3/20] Train loss: 0.189\
+[4/20] Train loss: 0.143\
+[5/20] Train loss: 0.126\
+[6/20] Train loss: 0.098\
+[7/20] Train loss: 0.075\
+[8/20] Train loss: 0.066\
+[9/20] Train loss: 0.046\
+[10/20] Train loss: 0.042\
+[11/20] Train loss: 0.028\
+[12/20] Train loss: 0.024\
+[13/20] Train loss: 0.020\
+[14/20] Train loss: 0.018\
+[15/20] Train loss: 0.014\
+[16/20] Train loss: 0.015\
+[17/20] Train loss: 0.013\
+[18/20] Train loss: 0.013\
+[19/20] Train loss: 0.011\
+[20/20] Train loss: 0.011\
+Trained a case classifier!\
+Examples # 1339\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-expletive': 4, 'S-expletive-passive': 5, 'S-passive': 6\}\
+Accuracy on test set of training language: \{'A': 0.8867924528301887, 'O': 0.9042207792207793\}\
+Saving classifier to classifiers/aso_it_vit-ud_0_ao_balanced_12_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.330\
+[2/20] Train loss: 0.148\
+[3/20] Train loss: 0.098\
+[4/20] Train loss: 0.069\
+[5/20] Train loss: 0.057\
+[6/20] Train loss: 0.042\
+[7/20] Train loss: 0.027\
+[8/20] Train loss: 0.019\
+[9/20] Train loss: 0.018\
+[10/20] Train loss: 0.016\
+[11/20] Train loss: 0.010\
+[12/20] Train loss: 0.012\
+[13/20] Train loss: 0.013\
+[14/20] Train loss: 0.012\
+[15/20] Train loss: 0.010\
+[16/20] Train loss: 0.013\
+[17/20] Train loss: 0.009\
+[18/20] Train loss: 0.009\
+[19/20] Train loss: 0.010\
+[20/20] Train loss: 0.009\
+Trained a case classifier!\
+Examples # 1339\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-expletive': 4, 'S-expletive-passive': 5, 'S-passive': 6\}\
+Accuracy on test set of training language: \{'A': 0.8773584905660378, 'O': 0.9383116883116883\}\
+Saving classifier to classifiers/aso_it_vit-ud_0_ao_balanced_11_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.309\
+[2/20] Train loss: 0.117\
+[3/20] Train loss: 0.081\
+[4/20] Train loss: 0.062\
+[5/20] Train loss: 0.042\
+[6/20] Train loss: 0.029\
+[7/20] Train loss: 0.026\
+[8/20] Train loss: 0.022\
+[9/20] Train loss: 0.015\
+[10/20] Train loss: 0.012\
+[11/20] Train loss: 0.011\
+[12/20] Train loss: 0.014\
+[13/20] Train loss: 0.011\
+[14/20] Train loss: 0.009\
+[15/20] Train loss: 0.008\
+[16/20] Train loss: 0.008\
+[17/20] Train loss: 0.010\
+[18/20] Train loss: 0.009\
+[19/20] Train loss: 0.007\
+[20/20] Train loss: 0.007\
+Trained a case classifier!\
+Examples # 1339\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-expletive': 4, 'S-expletive-passive': 5, 'S-passive': 6\}\
+Accuracy on test set of training language: \{'A': 0.9245283018867925, 'O': 0.935064935064935\}\
+Saving classifier to classifiers/aso_it_vit-ud_0_ao_balanced_10_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.258\
+[2/20] Train loss: 0.093\
+[3/20] Train loss: 0.063\
+[4/20] Train loss: 0.038\
+[5/20] Train loss: 0.029\
+[6/20] Train loss: 0.021\
+[7/20] Train loss: 0.017\
+[8/20] Train loss: 0.012\
+[9/20] Train loss: 0.012\
+[10/20] Train loss: 0.010\
+[11/20] Train loss: 0.009\
+[12/20] Train loss: 0.011\
+[13/20] Train loss: 0.008\
+[14/20] Train loss: 0.011\
+[15/20] Train loss: 0.011\
+[16/20] Train loss: 0.009\
+[17/20] Train loss: 0.008\
+[18/20] Train loss: 0.010\
+[19/20] Train loss: 0.008\
+[20/20] Train loss: 0.006\
+Trained a case classifier!\
+Examples # 1339\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-expletive': 4, 'S-expletive-passive': 5, 'S-passive': 6\}\
+Accuracy on test set of training language: \{'A': 0.9339622641509434, 'O': 0.9496753246753247\}\
+Saving classifier to classifiers/aso_it_vit-ud_0_ao_balanced_9_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.223\
+[2/20] Train loss: 0.091\
+[3/20] Train loss: 0.055\
+[4/20] Train loss: 0.033\
+[5/20] Train loss: 0.021\
+[6/20] Train loss: 0.013\
+[7/20] Train loss: 0.015\
+[8/20] Train loss: 0.013\
+[9/20] Train loss: 0.014\
+[10/20] Train loss: 0.011\
+[11/20] Train loss: 0.009\
+[12/20] Train loss: 0.009\
+[13/20] Train loss: 0.009\
+[14/20] Train loss: 0.013\
+[15/20] Train loss: 0.007\
+[16/20] Train loss: 0.006\
+[17/20] Train loss: 0.008\
+[18/20] Train loss: 0.007\
+[19/20] Train loss: 0.009\
+[20/20] Train loss: 0.008\
+Trained a case classifier!\
+Examples # 1339\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-expletive': 4, 'S-expletive-passive': 5, 'S-passive': 6\}\
+Accuracy on test set of training language: \{'A': 0.9386792452830188, 'O': 0.9464285714285714\}\
+Saving classifier to classifiers/aso_it_vit-ud_0_ao_balanced_8_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.247\
+[2/20] Train loss: 0.098\
+[3/20] Train loss: 0.071\
+[4/20] Train loss: 0.051\
+[5/20] Train loss: 0.028\
+[6/20] Train loss: 0.019\
+[7/20] Train loss: 0.014\
+[8/20] Train loss: 0.013\
+[9/20] Train loss: 0.011\
+[10/20] Train loss: 0.011\
+[11/20] Train loss: 0.010\
+[12/20] Train loss: 0.009\
+[13/20] Train loss: 0.008\
+[14/20] Train loss: 0.008\
+[15/20] Train loss: 0.010\
+[16/20] Train loss: 0.011\
+[17/20] Train loss: 0.008\
+[18/20] Train loss: 0.008\
+[19/20] Train loss: 0.008\
+[20/20] Train loss: 0.008\
+Trained a case classifier!\
+Examples # 1339\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-expletive': 4, 'S-expletive-passive': 5, 'S-passive': 6\}\
+Accuracy on test set of training language: \{'A': 0.910377358490566, 'O': 0.9545454545454546\}\
+Saving classifier to classifiers/aso_it_vit-ud_0_ao_balanced_7_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.284\
+[2/20] Train loss: 0.120\
+[3/20] Train loss: 0.085\
+[4/20] Train loss: 0.070\
+[5/20] Train loss: 0.047\
+[6/20] Train loss: 0.033\
+[7/20] Train loss: 0.034\
+[8/20] Train loss: 0.036\
+[9/20] Train loss: 0.022\
+[10/20] Train loss: 0.013\
+[11/20] Train loss: 0.017\
+[12/20] Train loss: 0.018\
+[13/20] Train loss: 0.011\
+[14/20] Train loss: 0.013\
+[15/20] Train loss: 0.009\
+[16/20] Train loss: 0.007\
+[17/20] Train loss: 0.007\
+[18/20] Train loss: 0.011\
+[19/20] Train loss: 0.010\
+[20/20] Train loss: 0.008\
+Trained a case classifier!\
+Examples # 1339\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-expletive': 4, 'S-expletive-passive': 5, 'S-passive': 6\}\
+Accuracy on test set of training language: \{'A': 0.8962264150943396, 'O': 0.9155844155844156\}\
+Saving classifier to classifiers/aso_it_vit-ud_0_ao_balanced_6_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.341\
+[2/20] Train loss: 0.173\
+[3/20] Train loss: 0.138\
+[4/20] Train loss: 0.099\
+[5/20] Train loss: 0.082\
+[6/20] Train loss: 0.074\
+[7/20] Train loss: 0.052\
+[8/20] Train loss: 0.052\
+[9/20] Train loss: 0.039\
+[10/20] Train loss: 0.043\
+[11/20] Train loss: 0.027\
+[12/20] Train loss: 0.023\
+[13/20] Train loss: 0.027\
+[14/20] Train loss: 0.017\
+[15/20] Train loss: 0.017\
+[16/20] Train loss: 0.016\
+[17/20] Train loss: 0.019\
+[18/20] Train loss: 0.017\
+[19/20] Train loss: 0.015\
+[20/20] Train loss: 0.009\
+Trained a case classifier!\
+Examples # 1339\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-expletive': 4, 'S-expletive-passive': 5, 'S-passive': 6\}\
+Accuracy on test set of training language: \{'A': 0.8679245283018868, 'O': 0.8636363636363636\}\
+Saving classifier to classifiers/aso_it_vit-ud_0_ao_balanced_5_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.400\
+[2/20] Train loss: 0.234\
+[3/20] Train loss: 0.177\
+[4/20] Train loss: 0.145\
+[5/20] Train loss: 0.111\
+[6/20] Train loss: 0.089\
+[7/20] Train loss: 0.064\
+[8/20] Train loss: 0.051\
+[9/20] Train loss: 0.049\
+[10/20] Train loss: 0.039\
+[11/20] Train loss: 0.035\
+[12/20] Train loss: 0.029\
+[13/20] Train loss: 0.031\
+[14/20] Train loss: 0.025\
+[15/20] Train loss: 0.038\
+[16/20] Train loss: 0.039\
+[17/20] Train loss: 0.020\
+[18/20] Train loss: 0.022\
+[19/20] Train loss: 0.029\
+[20/20] Train loss: 0.038\
+Trained a case classifier!\
+Examples # 1339\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-expletive': 4, 'S-expletive-passive': 5, 'S-passive': 6\}\
+Accuracy on test set of training language: \{'A': 0.8349056603773585, 'O': 0.8733766233766234\}\
+Saving classifier to classifiers/aso_it_vit-ud_0_ao_balanced_4_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.425\
+[2/20] Train loss: 0.254\
+[3/20] Train loss: 0.189\
+[4/20] Train loss: 0.151\
+[5/20] Train loss: 0.114\
+[6/20] Train loss: 0.090\
+[7/20] Train loss: 0.065\
+[8/20] Train loss: 0.059\
+[9/20] Train loss: 0.055\
+[10/20] Train loss: 0.046\
+[11/20] Train loss: 0.041\
+[12/20] Train loss: 0.036\
+[13/20] Train loss: 0.041\
+[14/20] Train loss: 0.029\
+[15/20] Train loss: 0.031\
+[16/20] Train loss: 0.032\
+[17/20] Train loss: 0.030\
+[18/20] Train loss: 0.029\
+[19/20] Train loss: 0.028\
+[20/20] Train loss: 0.039\
+Trained a case classifier!\
+Examples # 1339\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-expletive': 4, 'S-expletive-passive': 5, 'S-passive': 6\}\
+Accuracy on test set of training language: \{'A': 0.8820754716981132, 'O': 0.8084415584415584\}\
+Saving classifier to classifiers/aso_it_vit-ud_0_ao_balanced_3_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.507\
+[2/20] Train loss: 0.373\
+[3/20] Train loss: 0.319\
+[4/20] Train loss: 0.272\
+[5/20] Train loss: 0.232\
+[6/20] Train loss: 0.206\
+[7/20] Train loss: 0.163\
+[8/20] Train loss: 0.142\
+[9/20] Train loss: 0.127\
+[10/20] Train loss: 0.107\
+[11/20] Train loss: 0.100\
+[12/20] Train loss: 0.088\
+[13/20] Train loss: 0.089\
+[14/20] Train loss: 0.094\
+[15/20] Train loss: 0.065\
+[16/20] Train loss: 0.058\
+[17/20] Train loss: 0.056\
+[18/20] Train loss: 0.050\
+[19/20] Train loss: 0.037\
+[20/20] Train loss: 0.036\
+Trained a case classifier!\
+Examples # 1339\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-expletive': 4, 'S-expletive-passive': 5, 'S-passive': 6\}\
+Accuracy on test set of training language: \{'A': 0.6650943396226415, 'O': 0.7564935064935064\}\
+Saving classifier to classifiers/aso_it_vit-ud_0_ao_balanced_2_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.523\
+[2/20] Train loss: 0.392\
+[3/20] Train loss: 0.337\
+[4/20] Train loss: 0.290\
+[5/20] Train loss: 0.251\
+[6/20] Train loss: 0.223\
+[7/20] Train loss: 0.200\
+[8/20] Train loss: 0.175\
+[9/20] Train loss: 0.162\
+[10/20] Train loss: 0.149\
+[11/20] Train loss: 0.127\
+[12/20] Train loss: 0.117\
+[13/20] Train loss: 0.114\
+[14/20] Train loss: 0.096\
+[15/20] Train loss: 0.088\
+[16/20] Train loss: 0.086\
+[17/20] Train loss: 0.074\
+[18/20] Train loss: 0.064\
+[19/20] Train loss: 0.064\
+[20/20] Train loss: 0.061\
+Trained a case classifier!\
+Examples # 1339\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-expletive': 4, 'S-expletive-passive': 5, 'S-passive': 6\}\
+Accuracy on test set of training language: \{'A': 0.6509433962264151, 'O': 0.7321428571428571\}\
+Saving classifier to classifiers/aso_it_vit-ud_0_ao_balanced_1_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.535\
+[2/20] Train loss: 0.394\
+[3/20] Train loss: 0.336\
+[4/20] Train loss: 0.304\
+[5/20] Train loss: 0.259\
+[6/20] Train loss: 0.236\
+[7/20] Train loss: 0.211\
+[8/20] Train loss: 0.195\
+[9/20] Train loss: 0.175\
+[10/20] Train loss: 0.165\
+[11/20] Train loss: 0.135\
+[12/20] Train loss: 0.130\
+[13/20] Train loss: 0.116\
+[14/20] Train loss: 0.107\
+[15/20] Train loss: 0.106\
+[16/20] Train loss: 0.093\
+[17/20] Train loss: 0.089\
+[18/20] Train loss: 0.086\
+[19/20] Train loss: 0.074\
+[20/20] Train loss: 0.082\
+Trained a case classifier!\
+Examples # 1339\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-expletive': 4, 'S-expletive-passive': 5, 'S-passive': 6\}\
+Accuracy on test set of training language: \{'A': 0.7122641509433962, 'O': 0.6412337662337663\}\
+Saving classifier to classifiers/aso_it_vit-ud_0_ao_balanced_0_exproles\
+Loading the dest test set, with limit 2000\
+Loading all of the tokens and non-bert stuff from cached_datasets/all_features_aso_exps_it_vit-ud-test_aso_unbalanced_2000.pkl\
+There are 1339 relevant tokens, and 1067 overall sentences\
+Bert vectors file is cached_bert_vectors/all_features_aso_exps_it_vit-ud-test_aso_unbalanced_2000.hdf5\
+[Loading from disk]: 100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 1067/1067 [00:00<00:00, 2207.10it/s]\
+Loaded 1066 sentences from disk.\
+length of bert outputs 1067\
+On layer 12\
+Loaded case classifier from classifiers/aso_it_vit-ud_0_ao_balanced_12_exproles!\
+src_test_accuracy: \{'A': 0.8867924528301887, 'O': 0.9042207792207793\}\
+Examples # 1339\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-expletive': 4, 'S-expletive-passive': 5, 'S-passive': 6\}\
+There are 1339 examples to evaluate on.\
+             role case animacy    subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       S-passive                 assegnazioni  ...      0.240167    12               0.886792                0.904221\
+1       S-passive               partecipazione  ...      0.030976    12               0.886792                0.904221\
+2               O                               ...      0.000045    12               0.886792                0.904221\
+3               O                               ...      0.000010    12               0.886792                0.904221\
+4               O                               ...      0.000129    12               0.886792                0.904221\
+...           ...  ...     ...             ...  ...           ...   ...                    ...                     ...\
+1334            S                      Scrooge  ...      1.000000    12               0.886792                0.904221\
+1335  S-expletive                      Scrooge  ...      1.000000    12               0.886792                0.904221\
+1336            A                       evento  ...      0.999993    12               0.886792                0.904221\
+1337            A                      ricordo  ...      1.000000    12               0.886792                0.904221\
+1338            S                       Marley  ...      0.508909    12               0.886792                0.904221\
+\
+[1339 rows x 11 columns]\
+On layer 11\
+Loaded case classifier from classifiers/aso_it_vit-ud_0_ao_balanced_11_exproles!\
+src_test_accuracy: \{'A': 0.8773584905660378, 'O': 0.9383116883116883\}\
+Examples # 1339\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-expletive': 4, 'S-expletive-passive': 5, 'S-passive': 6\}\
+There are 1339 examples to evaluate on.\
+             role case animacy    subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       S-passive                 assegnazioni  ...  8.821687e-01    11               0.877358                0.938312\
+1       S-passive               partecipazione  ...  4.705351e-05    11               0.877358                0.938312\
+2               O                               ...  1.453607e-08    11               0.877358                0.938312\
+3               O                               ...  7.755139e-10    11               0.877358                0.938312\
+4               O                               ...  3.874282e-05    11               0.877358                0.938312\
+...           ...  ...     ...             ...  ...           ...   ...                    ...                     ...\
+1334            S                      Scrooge  ...  1.000000e+00    11               0.877358                0.938312\
+1335  S-expletive                      Scrooge  ...  1.000000e+00    11               0.877358                0.938312\
+1336            A                       evento  ...  9.988218e-01    11               0.877358                0.938312\
+1337            A                      ricordo  ...  9.999999e-01    11               0.877358                0.938312\
+1338            S                       Marley  ...  9.903347e-01    11               0.877358                0.938312\
+\
+[1339 rows x 11 columns]\
+On layer 10\
+Loaded case classifier from classifiers/aso_it_vit-ud_0_ao_balanced_10_exproles!\
+src_test_accuracy: \{'A': 0.9245283018867925, 'O': 0.935064935064935\}\
+Examples # 1339\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-expletive': 4, 'S-expletive-passive': 5, 'S-passive': 6\}\
+There are 1339 examples to evaluate on.\
+             role case animacy    subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       S-passive                 assegnazioni  ...  9.932640e-01    10               0.924528                0.935065\
+1       S-passive               partecipazione  ...  4.831078e-03    10               0.924528                0.935065\
+2               O                               ...  3.900567e-08    10               0.924528                0.935065\
+3               O                               ...  5.089334e-09    10               0.924528                0.935065\
+4               O                               ...  3.426631e-10    10               0.924528                0.935065\
+...           ...  ...     ...             ...  ...           ...   ...                    ...                     ...\
+1334            S                      Scrooge  ...  1.000000e+00    10               0.924528                0.935065\
+1335  S-expletive                      Scrooge  ...  1.000000e+00    10               0.924528                0.935065\
+1336            A                       evento  ...  9.579106e-01    10               0.924528                0.935065\
+1337            A                      ricordo  ...  1.000000e+00    10               0.924528                0.935065\
+1338            S                       Marley  ...  9.998608e-01    10               0.924528                0.935065\
+\
+[1339 rows x 11 columns]\
+On layer 9\
+Loaded case classifier from classifiers/aso_it_vit-ud_0_ao_balanced_9_exproles!\
+src_test_accuracy: \{'A': 0.9339622641509434, 'O': 0.9496753246753247\}\
+Examples # 1339\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-expletive': 4, 'S-expletive-passive': 5, 'S-passive': 6\}\
+There are 1339 examples to evaluate on.\
+             role case animacy    subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       S-passive                 assegnazioni  ...  1.472049e-01     9               0.933962                0.949675\
+1       S-passive               partecipazione  ...  7.869401e-07     9               0.933962                0.949675\
+2               O                               ...  7.710912e-07     9               0.933962                0.949675\
+3               O                               ...  2.012682e-04     9               0.933962                0.949675\
+4               O                               ...  1.036034e-09     9               0.933962                0.949675\
+...           ...  ...     ...             ...  ...           ...   ...                    ...                     ...\
+1334            S                      Scrooge  ...  1.000000e+00     9               0.933962                0.949675\
+1335  S-expletive                      Scrooge  ...  1.000000e+00     9               0.933962                0.949675\
+1336            A                       evento  ...  8.846021e-02     9               0.933962                0.949675\
+1337            A                      ricordo  ...  1.000000e+00     9               0.933962                0.949675\
+1338            S                       Marley  ...  9.999948e-01     9               0.933962                0.949675\
+\
+[1339 rows x 11 columns]\
+On layer 8\
+Loaded case classifier from classifiers/aso_it_vit-ud_0_ao_balanced_8_exproles!\
+src_test_accuracy: \{'A': 0.9386792452830188, 'O': 0.9464285714285714\}\
+Examples # 1339\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-expletive': 4, 'S-expletive-passive': 5, 'S-passive': 6\}\
+There are 1339 examples to evaluate on.\
+             role case animacy    subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       S-passive                 assegnazioni  ...  2.973539e-02     8               0.938679                0.946429\
+1       S-passive               partecipazione  ...  2.031874e-06     8               0.938679                0.946429\
+2               O                               ...  9.472760e-08     8               0.938679                0.946429\
+3               O                               ...  1.850146e-08     8               0.938679                0.946429\
+4               O                               ...  4.321134e-12     8               0.938679                0.946429\
+...           ...  ...     ...             ...  ...           ...   ...                    ...                     ...\
+1334            S                      Scrooge  ...  9.999717e-01     8               0.938679                0.946429\
+1335  S-expletive                      Scrooge  ...  1.000000e+00     8               0.938679                0.946429\
+1336            A                       evento  ...  4.876550e-01     8               0.938679                0.946429\
+1337            A                      ricordo  ...  9.999999e-01     8               0.938679                0.946429\
+1338            S                       Marley  ...  9.999988e-01     8               0.938679                0.946429\
+\
+[1339 rows x 11 columns]\
+On layer 7\
+Loaded case classifier from classifiers/aso_it_vit-ud_0_ao_balanced_7_exproles!\
+src_test_accuracy: \{'A': 0.910377358490566, 'O': 0.9545454545454546\}\
+Examples # 1339\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-expletive': 4, 'S-expletive-passive': 5, 'S-passive': 6\}\
+There are 1339 examples to evaluate on.\
+             role case animacy    subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       S-passive                 assegnazioni  ...  3.487481e-07     7               0.910377                0.954545\
+1       S-passive               partecipazione  ...  5.672056e-08     7               0.910377                0.954545\
+2               O                               ...  1.356346e-08     7               0.910377                0.954545\
+3               O                               ...  5.077715e-10     7               0.910377                0.954545\
+4               O                               ...  2.596293e-11     7               0.910377                0.954545\
+...           ...  ...     ...             ...  ...           ...   ...                    ...                     ...\
+1334            S                      Scrooge  ...  7.826508e-01     7               0.910377                0.954545\
+1335  S-expletive                      Scrooge  ...  1.000000e+00     7               0.910377                0.954545\
+1336            A                       evento  ...  9.990631e-01     7               0.910377                0.954545\
+1337            A                      ricordo  ...  9.999062e-01     7               0.910377                0.954545\
+1338            S                       Marley  ...  1.000000e+00     7               0.910377                0.954545\
+\
+[1339 rows x 11 columns]\
+On layer 6\
+Loaded case classifier from classifiers/aso_it_vit-ud_0_ao_balanced_6_exproles!\
+src_test_accuracy: \{'A': 0.8962264150943396, 'O': 0.9155844155844156\}\
+Examples # 1339\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-expletive': 4, 'S-expletive-passive': 5, 'S-passive': 6\}\
+There are 1339 examples to evaluate on.\
+             role case animacy    subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       S-passive                 assegnazioni  ...  4.071833e-02     6               0.896226                0.915584\
+1       S-passive               partecipazione  ...  4.952353e-07     6               0.896226                0.915584\
+2               O                               ...  3.022991e-04     6               0.896226                0.915584\
+3               O                               ...  9.314421e-07     6               0.896226                0.915584\
+4               O                               ...  3.072516e-09     6               0.896226                0.915584\
+...           ...  ...     ...             ...  ...           ...   ...                    ...                     ...\
+1334            S                      Scrooge  ...  5.388889e-01     6               0.896226                0.915584\
+1335  S-expletive                      Scrooge  ...  1.000000e+00     6               0.896226                0.915584\
+1336            A                       evento  ...  9.345442e-01     6               0.896226                0.915584\
+1337            A                      ricordo  ...  9.999497e-01     6               0.896226                0.915584\
+1338            S                       Marley  ...  9.946726e-01     6               0.896226                0.915584\
+\
+[1339 rows x 11 columns]\
+On layer 5\
+Loaded case classifier from classifiers/aso_it_vit-ud_0_ao_balanced_5_exproles!\
+src_test_accuracy: \{'A': 0.8679245283018868, 'O': 0.8636363636363636\}\
+Examples # 1339\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-expletive': 4, 'S-expletive-passive': 5, 'S-passive': 6\}\
+There are 1339 examples to evaluate on.\
+             role case animacy    subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       S-passive                 assegnazioni  ...  9.807596e-01     5               0.867925                0.863636\
+1       S-passive               partecipazione  ...  3.237939e-02     5               0.867925                0.863636\
+2               O                               ...  2.313879e-07     5               0.867925                0.863636\
+3               O                               ...  2.578187e-06     5               0.867925                0.863636\
+4               O                               ...  2.756712e-05     5               0.867925                0.863636\
+...           ...  ...     ...             ...  ...           ...   ...                    ...                     ...\
+1334            S                      Scrooge  ...  9.952213e-01     5               0.867925                0.863636\
+1335  S-expletive                      Scrooge  ...  9.998935e-01     5               0.867925                0.863636\
+1336            A                       evento  ...  9.558225e-01     5               0.867925                0.863636\
+1337            A                      ricordo  ...  9.930194e-01     5               0.867925                0.863636\
+1338            S                       Marley  ...  9.992062e-01     5               0.867925                0.863636\
+\
+[1339 rows x 11 columns]\
+On layer 4\
+Loaded case classifier from classifiers/aso_it_vit-ud_0_ao_balanced_4_exproles!\
+src_test_accuracy: \{'A': 0.8349056603773585, 'O': 0.8733766233766234\}\
+Examples # 1339\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-expletive': 4, 'S-expletive-passive': 5, 'S-passive': 6\}\
+There are 1339 examples to evaluate on.\
+             role case animacy    subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       S-passive                 assegnazioni  ...      0.924349     4               0.834906                0.873377\
+1       S-passive               partecipazione  ...      0.151075     4               0.834906                0.873377\
+2               O                               ...      0.000003     4               0.834906                0.873377\
+3               O                               ...      0.973390     4               0.834906                0.873377\
+4               O                               ...      0.108830     4               0.834906                0.873377\
+...           ...  ...     ...             ...  ...           ...   ...                    ...                     ...\
+1334            S                      Scrooge  ...      0.988329     4               0.834906                0.873377\
+1335  S-expletive                      Scrooge  ...      0.985512     4               0.834906                0.873377\
+1336            A                       evento  ...      0.108898     4               0.834906                0.873377\
+1337            A                      ricordo  ...      0.993797     4               0.834906                0.873377\
+1338            S                       Marley  ...      0.602130     4               0.834906                0.873377\
+\
+[1339 rows x 11 columns]\
+On layer 3\
+Loaded case classifier from classifiers/aso_it_vit-ud_0_ao_balanced_3_exproles!\
+src_test_accuracy: \{'A': 0.8820754716981132, 'O': 0.8084415584415584\}\
+Examples # 1339\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-expletive': 4, 'S-expletive-passive': 5, 'S-passive': 6\}\
+There are 1339 examples to evaluate on.\
+             role case animacy    subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       S-passive                 assegnazioni  ...      0.819543     3               0.882075                0.808442\
+1       S-passive               partecipazione  ...      0.123977     3               0.882075                0.808442\
+2               O                               ...      0.008182     3               0.882075                0.808442\
+3               O                               ...      0.035270     3               0.882075                0.808442\
+4               O                               ...      0.164879     3               0.882075                0.808442\
+...           ...  ...     ...             ...  ...           ...   ...                    ...                     ...\
+1334            S                      Scrooge  ...      0.999164     3               0.882075                0.808442\
+1335  S-expletive                      Scrooge  ...      0.998946     3               0.882075                0.808442\
+1336            A                       evento  ...      0.381911     3               0.882075                0.808442\
+1337            A                      ricordo  ...      0.998798     3               0.882075                0.808442\
+1338            S                       Marley  ...      0.983003     3               0.882075                0.808442\
+\
+[1339 rows x 11 columns]\
+On layer 2\
+Loaded case classifier from classifiers/aso_it_vit-ud_0_ao_balanced_2_exproles!\
+src_test_accuracy: \{'A': 0.6650943396226415, 'O': 0.7564935064935064\}\
+Examples # 1339\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-expletive': 4, 'S-expletive-passive': 5, 'S-passive': 6\}\
+There are 1339 examples to evaluate on.\
+             role case animacy    subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       S-passive                 assegnazioni  ...      0.991723     2               0.665094                0.756494\
+1       S-passive               partecipazione  ...      0.870354     2               0.665094                0.756494\
+2               O                               ...      0.812633     2               0.665094                0.756494\
+3               O                               ...      0.000687     2               0.665094                0.756494\
+4               O                               ...      0.903864     2               0.665094                0.756494\
+...           ...  ...     ...             ...  ...           ...   ...                    ...                     ...\
+1334            S                      Scrooge  ...      0.999892     2               0.665094                0.756494\
+1335  S-expletive                      Scrooge  ...      0.997576     2               0.665094                0.756494\
+1336            A                       evento  ...      0.025636     2               0.665094                0.756494\
+1337            A                      ricordo  ...      0.856587     2               0.665094                0.756494\
+1338            S                       Marley  ...      0.052010     2               0.665094                0.756494\
+\
+[1339 rows x 11 columns]\
+On layer 1\
+Loaded case classifier from classifiers/aso_it_vit-ud_0_ao_balanced_1_exproles!\
+src_test_accuracy: \{'A': 0.6509433962264151, 'O': 0.7321428571428571\}\
+Examples # 1339\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-expletive': 4, 'S-expletive-passive': 5, 'S-passive': 6\}\
+There are 1339 examples to evaluate on.\
+             role case animacy    subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       S-passive                 assegnazioni  ...      0.940392     1               0.650943                0.732143\
+1       S-passive               partecipazione  ...      0.723465     1               0.650943                0.732143\
+2               O                               ...      0.999883     1               0.650943                0.732143\
+3               O                               ...      0.546540     1               0.650943                0.732143\
+4               O                               ...      0.227618     1               0.650943                0.732143\
+...           ...  ...     ...             ...  ...           ...   ...                    ...                     ...\
+1334            S                      Scrooge  ...      0.999389     1               0.650943                0.732143\
+1335  S-expletive                      Scrooge  ...      0.999496     1               0.650943                0.732143\
+1336            A                       evento  ...      0.024980     1               0.650943                0.732143\
+1337            A                      ricordo  ...      0.877546     1               0.650943                0.732143\
+1338            S                       Marley  ...      0.061259     1               0.650943                0.732143\
+\
+[1339 rows x 11 columns]\
+On layer 0\
+Loaded case classifier from classifiers/aso_it_vit-ud_0_ao_balanced_0_exproles!\
+src_test_accuracy: \{'A': 0.7122641509433962, 'O': 0.6412337662337663\}\
+Examples # 1339\
+labeldict \{'A': 0, 'O': 1, 'A-passive': 2, 'S': 3, 'S-expletive': 4, 'S-expletive-passive': 5, 'S-passive': 6\}\
+There are 1339 examples to evaluate on.\
+             role case animacy    subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       S-passive                 assegnazioni  ...      0.988215     0               0.712264                0.641234\
+1       S-passive               partecipazione  ...      0.077376     0               0.712264                0.641234\
+2               O                               ...      0.998067     0               0.712264                0.641234\
+3               O                               ...      0.186030     0               0.712264                0.641234\
+4               O                               ...      0.117580     0               0.712264                0.641234\
+...           ...  ...     ...             ...  ...           ...   ...                    ...                     ...\
+1334            S                      Scrooge  ...      1.000000     0               0.712264                0.641234\
+1335  S-expletive                      Scrooge  ...      0.999985     0               0.712264                0.641234\
+1336            A                       evento  ...      0.943493     0               0.712264                0.641234\
+1337            A                      ricordo  ...      0.999118     0               0.712264                0.641234\
+1338            S                       Marley  ...      0.005029     0               0.712264                0.641234\
+\
+[1339 rows x 11 columns]\
+(erg_nom) Nick deep-subjecthood-custom % }

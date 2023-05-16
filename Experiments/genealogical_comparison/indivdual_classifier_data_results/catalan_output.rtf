@@ -1,0 +1,703 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 (erg_nom) Nick deep-subjecthood-custom % python3 run_one_experiment.py --only-ao --balance\
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html\
+args: Namespace(all_major_cases=False, average_embs=False, balance=True, erg_abs=False, nom_acc=False, only_ao=True, output_fn='last_run', reeval_src_test=False, seed=0, test_lang_fn='language_data/UD_Catalan-AnCora-master/ca_ancora-ud-test.conllu', train_lang_base_path='language_data/UD_Catalan-AnCora-master/ca_ancora-ud')\
+Just set the seed to 0\
+Need to train classifiers!\
+Loading the source train set, with limit 2025\
+Counts of each role \{'A': 1013, 'O': 1738\}\
+Case counts per role defaultdict(<class 'collections.Counter'>, \{None: Counter(\{None: 42603\}), 'A': Counter(\{None: 1013\}), 'O': Counter(\{None: 1738\}), 'S': Counter(\{None: 371\})\})\
+lengths of bert ids etc 1227 1227 1227 1227\
+Saving all of the tokens and non-bert stuff to cached_datasets/all_features_aso_exps_ca_ancora-ud-train_AO_balanced_2025.pkl\
+There are 2026 relevant tokens, and 1227 overall sentences\
+Bert vectors file is cached_bert_vectors/all_features_aso_exps_ca_ancora-ud-train_AO_balanced_2025.hdf5\
+Running 1227 sentences through BERT. This takes a while\
+100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 1227/1227 [00:52<00:00, 23.35it/s]\
+length of bert outputs 1227\
+Length of train set is 2026, limit is 2025\
+Counts of each role Counter(\{'O': 1124, 'A': 612, 'S': 249, 'S-aux': 9, 'O-aux': 3, 'A-aux': 2, 'S-passive': 1\})\
+Case counts per role defaultdict(<class 'collections.Counter'>, \{None: Counter(\{None: 28226\}), 'A': Counter(\{None: 612\}), 'O': Counter(\{None: 1124\}), 'S': Counter(\{None: 249\}), 'S-aux': Counter(\{None: 9\}), 'O-aux': Counter(\{None: 3\}), 'S-passive': Counter(\{None: 1\}), 'A-aux': Counter(\{None: 2\})\})\
+lengths of bert ids etc 830 830 830 830\
+Saving all of the tokens and non-bert stuff to cached_datasets/all_features_aso_exps_ca_ancora-ud-test_aso_unbalanced_2000.pkl\
+There are 2000 relevant tokens, and 830 overall sentences\
+Bert vectors file is cached_bert_vectors/all_features_aso_exps_ca_ancora-ud-test_aso_unbalanced_2000.hdf5\
+Running 830 sentences through BERT. This takes a while\
+100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 830/830 [00:34<00:00, 23.77it/s]\
+length of bert outputs 830\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.575\
+[2/20] Train loss: 0.388\
+[3/20] Train loss: 0.302\
+[4/20] Train loss: 0.261\
+[5/20] Train loss: 0.232\
+[6/20] Train loss: 0.189\
+[7/20] Train loss: 0.171\
+[8/20] Train loss: 0.140\
+[9/20] Train loss: 0.108\
+[10/20] Train loss: 0.080\
+[11/20] Train loss: 0.069\
+[12/20] Train loss: 0.057\
+[13/20] Train loss: 0.058\
+[14/20] Train loss: 0.042\
+[15/20] Train loss: 0.032\
+[16/20] Train loss: 0.028\
+[17/20] Train loss: 0.024\
+[18/20] Train loss: 0.022\
+[19/20] Train loss: 0.021\
+[20/20] Train loss: 0.017\
+Trained a case classifier!\
+Examples # 2000\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5, 'S-passive': 6\}\
+Accuracy on test set of training language: \{'A': 0.8496732026143791, 'O': 0.8167259786476868\}\
+Saving classifier to classifiers/aso_ca_ancora-ud_0_ao_balanced_12_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.470\
+[2/20] Train loss: 0.289\
+[3/20] Train loss: 0.213\
+[4/20] Train loss: 0.173\
+[5/20] Train loss: 0.161\
+[6/20] Train loss: 0.118\
+[7/20] Train loss: 0.103\
+[8/20] Train loss: 0.091\
+[9/20] Train loss: 0.068\
+[10/20] Train loss: 0.056\
+[11/20] Train loss: 0.036\
+[12/20] Train loss: 0.030\
+[13/20] Train loss: 0.028\
+[14/20] Train loss: 0.023\
+[15/20] Train loss: 0.018\
+[16/20] Train loss: 0.019\
+[17/20] Train loss: 0.016\
+[18/20] Train loss: 0.016\
+[19/20] Train loss: 0.014\
+[20/20] Train loss: 0.010\
+Trained a case classifier!\
+Examples # 2000\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5, 'S-passive': 6\}\
+Accuracy on test set of training language: \{'A': 0.8888888888888888, 'O': 0.8389679715302492\}\
+Saving classifier to classifiers/aso_ca_ancora-ud_0_ao_balanced_11_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.426\
+[2/20] Train loss: 0.241\
+[3/20] Train loss: 0.187\
+[4/20] Train loss: 0.155\
+[5/20] Train loss: 0.135\
+[6/20] Train loss: 0.109\
+[7/20] Train loss: 0.078\
+[8/20] Train loss: 0.068\
+[9/20] Train loss: 0.057\
+[10/20] Train loss: 0.050\
+[11/20] Train loss: 0.041\
+[12/20] Train loss: 0.033\
+[13/20] Train loss: 0.023\
+[14/20] Train loss: 0.018\
+[15/20] Train loss: 0.015\
+[16/20] Train loss: 0.017\
+[17/20] Train loss: 0.015\
+[18/20] Train loss: 0.014\
+[19/20] Train loss: 0.011\
+[20/20] Train loss: 0.013\
+Trained a case classifier!\
+Examples # 2000\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5, 'S-passive': 6\}\
+Accuracy on test set of training language: \{'A': 0.8954248366013072, 'O': 0.849644128113879\}\
+Saving classifier to classifiers/aso_ca_ancora-ud_0_ao_balanced_10_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.419\
+[2/20] Train loss: 0.240\
+[3/20] Train loss: 0.178\
+[4/20] Train loss: 0.135\
+[5/20] Train loss: 0.111\
+[6/20] Train loss: 0.092\
+[7/20] Train loss: 0.062\
+[8/20] Train loss: 0.052\
+[9/20] Train loss: 0.039\
+[10/20] Train loss: 0.032\
+[11/20] Train loss: 0.028\
+[12/20] Train loss: 0.018\
+[13/20] Train loss: 0.020\
+[14/20] Train loss: 0.018\
+[15/20] Train loss: 0.014\
+[16/20] Train loss: 0.012\
+[17/20] Train loss: 0.015\
+[18/20] Train loss: 0.012\
+[19/20] Train loss: 0.009\
+[20/20] Train loss: 0.010\
+Trained a case classifier!\
+Examples # 2000\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5, 'S-passive': 6\}\
+Accuracy on test set of training language: \{'A': 0.8643790849673203, 'O': 0.8834519572953736\}\
+Saving classifier to classifiers/aso_ca_ancora-ud_0_ao_balanced_9_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.388\
+[2/20] Train loss: 0.226\
+[3/20] Train loss: 0.165\
+[4/20] Train loss: 0.125\
+[5/20] Train loss: 0.095\
+[6/20] Train loss: 0.070\
+[7/20] Train loss: 0.055\
+[8/20] Train loss: 0.046\
+[9/20] Train loss: 0.034\
+[10/20] Train loss: 0.023\
+[11/20] Train loss: 0.021\
+[12/20] Train loss: 0.018\
+[13/20] Train loss: 0.020\
+[14/20] Train loss: 0.011\
+[15/20] Train loss: 0.010\
+[16/20] Train loss: 0.013\
+[17/20] Train loss: 0.012\
+[18/20] Train loss: 0.009\
+[19/20] Train loss: 0.011\
+[20/20] Train loss: 0.011\
+Trained a case classifier!\
+Examples # 2000\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5, 'S-passive': 6\}\
+Accuracy on test set of training language: \{'A': 0.880718954248366, 'O': 0.902135231316726\}\
+Saving classifier to classifiers/aso_ca_ancora-ud_0_ao_balanced_8_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.402\
+[2/20] Train loss: 0.256\
+[3/20] Train loss: 0.189\
+[4/20] Train loss: 0.154\
+[5/20] Train loss: 0.125\
+[6/20] Train loss: 0.080\
+[7/20] Train loss: 0.063\
+[8/20] Train loss: 0.044\
+[9/20] Train loss: 0.038\
+[10/20] Train loss: 0.028\
+[11/20] Train loss: 0.022\
+[12/20] Train loss: 0.019\
+[13/20] Train loss: 0.016\
+[14/20] Train loss: 0.017\
+[15/20] Train loss: 0.013\
+[16/20] Train loss: 0.013\
+[17/20] Train loss: 0.012\
+[18/20] Train loss: 0.013\
+[19/20] Train loss: 0.011\
+[20/20] Train loss: 0.009\
+Trained a case classifier!\
+Examples # 2000\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5, 'S-passive': 6\}\
+Accuracy on test set of training language: \{'A': 0.8513071895424836, 'O': 0.8709964412811388\}\
+Saving classifier to classifiers/aso_ca_ancora-ud_0_ao_balanced_7_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.423\
+[2/20] Train loss: 0.263\
+[3/20] Train loss: 0.216\
+[4/20] Train loss: 0.169\
+[5/20] Train loss: 0.149\
+[6/20] Train loss: 0.119\
+[7/20] Train loss: 0.085\
+[8/20] Train loss: 0.069\
+[9/20] Train loss: 0.050\
+[10/20] Train loss: 0.041\
+[11/20] Train loss: 0.030\
+[12/20] Train loss: 0.026\
+[13/20] Train loss: 0.018\
+[14/20] Train loss: 0.016\
+[15/20] Train loss: 0.013\
+[16/20] Train loss: 0.016\
+[17/20] Train loss: 0.015\
+[18/20] Train loss: 0.012\
+[19/20] Train loss: 0.015\
+[20/20] Train loss: 0.013\
+Trained a case classifier!\
+Examples # 2000\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5, 'S-passive': 6\}\
+Accuracy on test set of training language: \{'A': 0.8447712418300654, 'O': 0.8505338078291815\}\
+Saving classifier to classifiers/aso_ca_ancora-ud_0_ao_balanced_6_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.466\
+[2/20] Train loss: 0.323\
+[3/20] Train loss: 0.267\
+[4/20] Train loss: 0.232\
+[5/20] Train loss: 0.182\
+[6/20] Train loss: 0.147\
+[7/20] Train loss: 0.126\
+[8/20] Train loss: 0.095\
+[9/20] Train loss: 0.073\
+[10/20] Train loss: 0.059\
+[11/20] Train loss: 0.048\
+[12/20] Train loss: 0.044\
+[13/20] Train loss: 0.034\
+[14/20] Train loss: 0.036\
+[15/20] Train loss: 0.023\
+[16/20] Train loss: 0.024\
+[17/20] Train loss: 0.023\
+[18/20] Train loss: 0.015\
+[19/20] Train loss: 0.016\
+[20/20] Train loss: 0.014\
+Trained a case classifier!\
+Examples # 2000\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5, 'S-passive': 6\}\
+Accuracy on test set of training language: \{'A': 0.8251633986928104, 'O': 0.8033807829181495\}\
+Saving classifier to classifiers/aso_ca_ancora-ud_0_ao_balanced_5_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.475\
+[2/20] Train loss: 0.351\
+[3/20] Train loss: 0.290\
+[4/20] Train loss: 0.241\
+[5/20] Train loss: 0.203\
+[6/20] Train loss: 0.175\
+[7/20] Train loss: 0.134\
+[8/20] Train loss: 0.114\
+[9/20] Train loss: 0.090\
+[10/20] Train loss: 0.084\
+[11/20] Train loss: 0.080\
+[12/20] Train loss: 0.067\
+[13/20] Train loss: 0.049\
+[14/20] Train loss: 0.038\
+[15/20] Train loss: 0.039\
+[16/20] Train loss: 0.042\
+[17/20] Train loss: 0.032\
+[18/20] Train loss: 0.027\
+[19/20] Train loss: 0.023\
+[20/20] Train loss: 0.027\
+Trained a case classifier!\
+Examples # 2000\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5, 'S-passive': 6\}\
+Accuracy on test set of training language: \{'A': 0.7663398692810458, 'O': 0.8434163701067615\}\
+Saving classifier to classifiers/aso_ca_ancora-ud_0_ao_balanced_4_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.503\
+[2/20] Train loss: 0.365\
+[3/20] Train loss: 0.300\
+[4/20] Train loss: 0.254\
+[5/20] Train loss: 0.225\
+[6/20] Train loss: 0.190\
+[7/20] Train loss: 0.155\
+[8/20] Train loss: 0.127\
+[9/20] Train loss: 0.108\
+[10/20] Train loss: 0.092\
+[11/20] Train loss: 0.091\
+[12/20] Train loss: 0.069\
+[13/20] Train loss: 0.067\
+[14/20] Train loss: 0.056\
+[15/20] Train loss: 0.052\
+[16/20] Train loss: 0.038\
+[17/20] Train loss: 0.034\
+[18/20] Train loss: 0.034\
+[19/20] Train loss: 0.032\
+[20/20] Train loss: 0.027\
+Trained a case classifier!\
+Examples # 2000\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5, 'S-passive': 6\}\
+Accuracy on test set of training language: \{'A': 0.7696078431372549, 'O': 0.7891459074733096\}\
+Saving classifier to classifiers/aso_ca_ancora-ud_0_ao_balanced_3_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.546\
+[2/20] Train loss: 0.422\
+[3/20] Train loss: 0.374\
+[4/20] Train loss: 0.325\
+[5/20] Train loss: 0.278\
+[6/20] Train loss: 0.246\
+[7/20] Train loss: 0.236\
+[8/20] Train loss: 0.196\
+[9/20] Train loss: 0.166\
+[10/20] Train loss: 0.141\
+[11/20] Train loss: 0.131\
+[12/20] Train loss: 0.110\
+[13/20] Train loss: 0.104\
+[14/20] Train loss: 0.087\
+[15/20] Train loss: 0.082\
+[16/20] Train loss: 0.068\
+[17/20] Train loss: 0.066\
+[18/20] Train loss: 0.059\
+[19/20] Train loss: 0.060\
+[20/20] Train loss: 0.055\
+Trained a case classifier!\
+Examples # 2000\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5, 'S-passive': 6\}\
+Accuracy on test set of training language: \{'A': 0.7173202614379085, 'O': 0.6877224199288257\}\
+Saving classifier to classifiers/aso_ca_ancora-ud_0_ao_balanced_2_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.562\
+[2/20] Train loss: 0.434\
+[3/20] Train loss: 0.392\
+[4/20] Train loss: 0.351\
+[5/20] Train loss: 0.317\
+[6/20] Train loss: 0.292\
+[7/20] Train loss: 0.259\
+[8/20] Train loss: 0.227\
+[9/20] Train loss: 0.203\
+[10/20] Train loss: 0.202\
+[11/20] Train loss: 0.168\
+[12/20] Train loss: 0.156\
+[13/20] Train loss: 0.141\
+[14/20] Train loss: 0.136\
+[15/20] Train loss: 0.109\
+[16/20] Train loss: 0.102\
+[17/20] Train loss: 0.082\
+[18/20] Train loss: 0.086\
+[19/20] Train loss: 0.076\
+[20/20] Train loss: 0.071\
+Trained a case classifier!\
+Examples # 2000\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5, 'S-passive': 6\}\
+Accuracy on test set of training language: \{'A': 0.6911764705882353, 'O': 0.693950177935943\}\
+Saving classifier to classifiers/aso_ca_ancora-ud_0_ao_balanced_1_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.549\
+[2/20] Train loss: 0.430\
+[3/20] Train loss: 0.374\
+[4/20] Train loss: 0.339\
+[5/20] Train loss: 0.319\
+[6/20] Train loss: 0.277\
+[7/20] Train loss: 0.255\
+[8/20] Train loss: 0.230\
+[9/20] Train loss: 0.213\
+[10/20] Train loss: 0.199\
+[11/20] Train loss: 0.187\
+[12/20] Train loss: 0.174\
+[13/20] Train loss: 0.158\
+[14/20] Train loss: 0.149\
+[15/20] Train loss: 0.126\
+[16/20] Train loss: 0.131\
+[17/20] Train loss: 0.118\
+[18/20] Train loss: 0.106\
+[19/20] Train loss: 0.096\
+[20/20] Train loss: 0.090\
+Trained a case classifier!\
+Examples # 2000\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5, 'S-passive': 6\}\
+Accuracy on test set of training language: \{'A': 0.6944444444444444, 'O': 0.7064056939501779\}\
+Saving classifier to classifiers/aso_ca_ancora-ud_0_ao_balanced_0_exproles\
+Loading the dest test set, with limit 2000\
+Loading all of the tokens and non-bert stuff from cached_datasets/all_features_aso_exps_ca_ancora-ud-test_aso_unbalanced_2000.pkl\
+There are 2000 relevant tokens, and 830 overall sentences\
+Bert vectors file is cached_bert_vectors/all_features_aso_exps_ca_ancora-ud-test_aso_unbalanced_2000.hdf5\
+[Loading from disk]: 100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 830/830 [00:00<00:00, 1844.56it/s]\
+Loaded 829 sentences from disk.\
+length of bert outputs 830\
+On layer 12\
+Loaded case classifier from classifiers/aso_ca_ancora-ud_0_ao_balanced_12_exproles!\
+src_test_accuracy: \{'A': 0.8496732026143791, 'O': 0.8167259786476868\}\
+Examples # 2000\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5, 'S-passive': 6\}\
+There are 2000 examples to evaluate on.\
+     role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       A                    n\'famero  ...      0.091595    12               0.849673                0.816726\
+1       O                            ...      0.039150    12               0.849673                0.816726\
+2       A                     xifra  ...      0.999977    12               0.849673                0.816726\
+3       O                            ...      0.853794    12               0.849673                0.816726\
+4       A                  empreses  ...      0.999937    12               0.849673                0.816726\
+...   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1995    S                  hospital  ...      0.979782    12               0.849673                0.816726\
+1996    A                   contagi  ...      0.999832    12               0.849673                0.816726\
+1997    O                            ...      0.092977    12               0.849673                0.816726\
+1998    O                            ...      0.540047    12               0.849673                0.816726\
+1999    S                    gerent  ...      0.457007    12               0.849673                0.816726\
+\
+[2000 rows x 11 columns]\
+On layer 11\
+Loaded case classifier from classifiers/aso_ca_ancora-ud_0_ao_balanced_11_exproles!\
+src_test_accuracy: \{'A': 0.8888888888888888, 'O': 0.8389679715302492\}\
+Examples # 2000\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5, 'S-passive': 6\}\
+There are 2000 examples to evaluate on.\
+     role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       A                    n\'famero  ...      0.999685    11               0.888889                0.838968\
+1       O                            ...      0.000123    11               0.888889                0.838968\
+2       A                     xifra  ...      1.000000    11               0.888889                0.838968\
+3       O                            ...      0.988464    11               0.888889                0.838968\
+4       A                  empreses  ...      0.999726    11               0.888889                0.838968\
+...   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1995    S                  hospital  ...      0.999929    11               0.888889                0.838968\
+1996    A                   contagi  ...      0.999887    11               0.888889                0.838968\
+1997    O                            ...      0.033554    11               0.888889                0.838968\
+1998    O                            ...      0.188152    11               0.888889                0.838968\
+1999    S                    gerent  ...      0.995505    11               0.888889                0.838968\
+\
+[2000 rows x 11 columns]\
+On layer 10\
+Loaded case classifier from classifiers/aso_ca_ancora-ud_0_ao_balanced_10_exproles!\
+src_test_accuracy: \{'A': 0.8954248366013072, 'O': 0.849644128113879\}\
+Examples # 2000\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5, 'S-passive': 6\}\
+There are 2000 examples to evaluate on.\
+     role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       A                    n\'famero  ...      0.999990    10               0.895425                0.849644\
+1       O                            ...      0.000085    10               0.895425                0.849644\
+2       A                     xifra  ...      0.997863    10               0.895425                0.849644\
+3       O                            ...      0.124178    10               0.895425                0.849644\
+4       A                  empreses  ...      0.999890    10               0.895425                0.849644\
+...   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1995    S                  hospital  ...      1.000000    10               0.895425                0.849644\
+1996    A                   contagi  ...      0.999935    10               0.895425                0.849644\
+1997    O                            ...      0.000840    10               0.895425                0.849644\
+1998    O                            ...      0.073943    10               0.895425                0.849644\
+1999    S                    gerent  ...      0.257823    10               0.895425                0.849644\
+\
+[2000 rows x 11 columns]\
+On layer 9\
+Loaded case classifier from classifiers/aso_ca_ancora-ud_0_ao_balanced_9_exproles!\
+src_test_accuracy: \{'A': 0.8643790849673203, 'O': 0.8834519572953736\}\
+Examples # 2000\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5, 'S-passive': 6\}\
+There are 2000 examples to evaluate on.\
+     role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       A                    n\'famero  ...  9.999274e-01     9               0.864379                0.883452\
+1       O                            ...  2.619856e-05     9               0.864379                0.883452\
+2       A                     xifra  ...  9.999837e-01     9               0.864379                0.883452\
+3       O                            ...  1.229502e-04     9               0.864379                0.883452\
+4       A                  empreses  ...  9.961183e-01     9               0.864379                0.883452\
+...   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1995    S                  hospital  ...  1.000000e+00     9               0.864379                0.883452\
+1996    A                   contagi  ...  9.933602e-01     9               0.864379                0.883452\
+1997    O                            ...  9.005034e-07     9               0.864379                0.883452\
+1998    O                            ...  5.517535e-02     9               0.864379                0.883452\
+1999    S                    gerent  ...  9.988967e-01     9               0.864379                0.883452\
+\
+[2000 rows x 11 columns]\
+On layer 8\
+Loaded case classifier from classifiers/aso_ca_ancora-ud_0_ao_balanced_8_exproles!\
+src_test_accuracy: \{'A': 0.880718954248366, 'O': 0.902135231316726\}\
+Examples # 2000\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5, 'S-passive': 6\}\
+There are 2000 examples to evaluate on.\
+     role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       A                    n\'famero  ...      0.500000     8               0.880719                0.902135\
+1       O                            ...      0.123736     8               0.880719                0.902135\
+2       A                     xifra  ...      0.999996     8               0.880719                0.902135\
+3       O                            ...      0.018821     8               0.880719                0.902135\
+4       A                  empreses  ...      0.999826     8               0.880719                0.902135\
+...   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1995    S                  hospital  ...      0.999869     8               0.880719                0.902135\
+1996    A                   contagi  ...      0.999964     8               0.880719                0.902135\
+1997    O                            ...      0.000006     8               0.880719                0.902135\
+1998    O                            ...      0.009006     8               0.880719                0.902135\
+1999    S                    gerent  ...      0.999608     8               0.880719                0.902135\
+\
+[2000 rows x 11 columns]\
+On layer 7\
+Loaded case classifier from classifiers/aso_ca_ancora-ud_0_ao_balanced_7_exproles!\
+src_test_accuracy: \{'A': 0.8513071895424836, 'O': 0.8709964412811388\}\
+Examples # 2000\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5, 'S-passive': 6\}\
+There are 2000 examples to evaluate on.\
+     role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       A                    n\'famero  ...      1.000000     7               0.851307                0.870996\
+1       O                            ...      0.649116     7               0.851307                0.870996\
+2       A                     xifra  ...      0.999814     7               0.851307                0.870996\
+3       O                            ...      0.000009     7               0.851307                0.870996\
+4       A                  empreses  ...      0.999814     7               0.851307                0.870996\
+...   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1995    S                  hospital  ...      1.000000     7               0.851307                0.870996\
+1996    A                   contagi  ...      0.999876     7               0.851307                0.870996\
+1997    O                            ...      0.009379     7               0.851307                0.870996\
+1998    O                            ...      0.962058     7               0.851307                0.870996\
+1999    S                    gerent  ...      0.998748     7               0.851307                0.870996\
+\
+[2000 rows x 11 columns]\
+On layer 6\
+Loaded case classifier from classifiers/aso_ca_ancora-ud_0_ao_balanced_6_exproles!\
+src_test_accuracy: \{'A': 0.8447712418300654, 'O': 0.8505338078291815\}\
+Examples # 2000\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5, 'S-passive': 6\}\
+There are 2000 examples to evaluate on.\
+     role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       A                    n\'famero  ...      1.000000     6               0.844771                0.850534\
+1       O                            ...      0.101440     6               0.844771                0.850534\
+2       A                     xifra  ...      0.999003     6               0.844771                0.850534\
+3       O                            ...      0.000465     6               0.844771                0.850534\
+4       A                  empreses  ...      0.997362     6               0.844771                0.850534\
+...   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1995    S                  hospital  ...      0.999976     6               0.844771                0.850534\
+1996    A                   contagi  ...      0.665705     6               0.844771                0.850534\
+1997    O                            ...      0.000650     6               0.844771                0.850534\
+1998    O                            ...      0.002195     6               0.844771                0.850534\
+1999    S                    gerent  ...      0.999999     6               0.844771                0.850534\
+\
+[2000 rows x 11 columns]\
+On layer 5\
+Loaded case classifier from classifiers/aso_ca_ancora-ud_0_ao_balanced_5_exproles!\
+src_test_accuracy: \{'A': 0.8251633986928104, 'O': 0.8033807829181495\}\
+Examples # 2000\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5, 'S-passive': 6\}\
+There are 2000 examples to evaluate on.\
+     role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       A                    n\'famero  ...      0.999816     5               0.825163                0.803381\
+1       O                            ...      0.048424     5               0.825163                0.803381\
+2       A                     xifra  ...      0.999909     5               0.825163                0.803381\
+3       O                            ...      0.977707     5               0.825163                0.803381\
+4       A                  empreses  ...      0.939942     5               0.825163                0.803381\
+...   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1995    S                  hospital  ...      1.000000     5               0.825163                0.803381\
+1996    A                   contagi  ...      0.055004     5               0.825163                0.803381\
+1997    O                            ...      0.042683     5               0.825163                0.803381\
+1998    O                            ...      0.007364     5               0.825163                0.803381\
+1999    S                    gerent  ...      1.000000     5               0.825163                0.803381\
+\
+[2000 rows x 11 columns]\
+On layer 4\
+Loaded case classifier from classifiers/aso_ca_ancora-ud_0_ao_balanced_4_exproles!\
+src_test_accuracy: \{'A': 0.7663398692810458, 'O': 0.8434163701067615\}\
+Examples # 2000\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5, 'S-passive': 6\}\
+There are 2000 examples to evaluate on.\
+     role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       A                    n\'famero  ...      1.000000     4                0.76634                0.843416\
+1       O                            ...      0.008344     4                0.76634                0.843416\
+2       A                     xifra  ...      1.000000     4                0.76634                0.843416\
+3       O                            ...      0.998933     4                0.76634                0.843416\
+4       A                  empreses  ...      0.997397     4                0.76634                0.843416\
+...   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1995    S                  hospital  ...      0.999936     4                0.76634                0.843416\
+1996    A                   contagi  ...      0.000031     4                0.76634                0.843416\
+1997    O                            ...      0.007918     4                0.76634                0.843416\
+1998    O                            ...      0.000202     4                0.76634                0.843416\
+1999    S                    gerent  ...      0.982921     4                0.76634                0.843416\
+\
+[2000 rows x 11 columns]\
+On layer 3\
+Loaded case classifier from classifiers/aso_ca_ancora-ud_0_ao_balanced_3_exproles!\
+src_test_accuracy: \{'A': 0.7696078431372549, 'O': 0.7891459074733096\}\
+Examples # 2000\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5, 'S-passive': 6\}\
+There are 2000 examples to evaluate on.\
+     role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       A                    n\'famero  ...      1.000000     3               0.769608                0.789146\
+1       O                            ...      0.069946     3               0.769608                0.789146\
+2       A                     xifra  ...      1.000000     3               0.769608                0.789146\
+3       O                            ...      0.998407     3               0.769608                0.789146\
+4       A                  empreses  ...      0.998597     3               0.769608                0.789146\
+...   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1995    S                  hospital  ...      1.000000     3               0.769608                0.789146\
+1996    A                   contagi  ...      0.008209     3               0.769608                0.789146\
+1997    O                            ...      0.217400     3               0.769608                0.789146\
+1998    O                            ...      0.019147     3               0.769608                0.789146\
+1999    S                    gerent  ...      0.996738     3               0.769608                0.789146\
+\
+[2000 rows x 11 columns]\
+On layer 2\
+Loaded case classifier from classifiers/aso_ca_ancora-ud_0_ao_balanced_2_exproles!\
+src_test_accuracy: \{'A': 0.7173202614379085, 'O': 0.6877224199288257\}\
+Examples # 2000\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5, 'S-passive': 6\}\
+There are 2000 examples to evaluate on.\
+     role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       A                    n\'famero  ...      0.999996     2                0.71732                0.687722\
+1       O                            ...      0.789663     2                0.71732                0.687722\
+2       A                     xifra  ...      1.000000     2                0.71732                0.687722\
+3       O                            ...      0.999977     2                0.71732                0.687722\
+4       A                  empreses  ...      0.830790     2                0.71732                0.687722\
+...   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1995    S                  hospital  ...      0.999999     2                0.71732                0.687722\
+1996    A                   contagi  ...      0.000713     2                0.71732                0.687722\
+1997    O                            ...      0.347803     2                0.71732                0.687722\
+1998    O                            ...      0.157304     2                0.71732                0.687722\
+1999    S                    gerent  ...      0.407110     2                0.71732                0.687722\
+\
+[2000 rows x 11 columns]\
+On layer 1\
+Loaded case classifier from classifiers/aso_ca_ancora-ud_0_ao_balanced_1_exproles!\
+src_test_accuracy: \{'A': 0.6911764705882353, 'O': 0.693950177935943\}\
+Examples # 2000\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5, 'S-passive': 6\}\
+There are 2000 examples to evaluate on.\
+     role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       A                    n\'famero  ...      1.000000     1               0.691176                 0.69395\
+1       O                            ...      0.743409     1               0.691176                 0.69395\
+2       A                     xifra  ...      1.000000     1               0.691176                 0.69395\
+3       O                            ...      0.999569     1               0.691176                 0.69395\
+4       A                  empreses  ...      0.637469     1               0.691176                 0.69395\
+...   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1995    S                  hospital  ...      0.998810     1               0.691176                 0.69395\
+1996    A                   contagi  ...      0.147394     1               0.691176                 0.69395\
+1997    O                            ...      0.013427     1               0.691176                 0.69395\
+1998    O                            ...      0.025515     1               0.691176                 0.69395\
+1999    S                    gerent  ...      0.031418     1               0.691176                 0.69395\
+\
+[2000 rows x 11 columns]\
+On layer 0\
+Loaded case classifier from classifiers/aso_ca_ancora-ud_0_ao_balanced_0_exproles!\
+src_test_accuracy: \{'A': 0.6944444444444444, 'O': 0.7064056939501779\}\
+Examples # 2000\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5, 'S-passive': 6\}\
+There are 2000 examples to evaluate on.\
+     role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       A                    n\'famero  ...      0.998981     0               0.694444                0.706406\
+1       O                            ...      0.668660     0               0.694444                0.706406\
+2       A                     xifra  ...      1.000000     0               0.694444                0.706406\
+3       O                            ...      0.999828     0               0.694444                0.706406\
+4       A                  empreses  ...      0.979490     0               0.694444                0.706406\
+...   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1995    S                  hospital  ...      1.000000     0               0.694444                0.706406\
+1996    A                   contagi  ...      0.724328     0               0.694444                0.706406\
+1997    O                            ...      0.002273     0               0.694444                0.706406\
+1998    O                            ...      0.017445     0               0.694444                0.706406\
+1999    S                    gerent  ...      0.002481     0               0.694444                0.706406\
+\
+[2000 rows x 11 columns]\
+(erg_nom) Nick deep-subjecthood-custom % }

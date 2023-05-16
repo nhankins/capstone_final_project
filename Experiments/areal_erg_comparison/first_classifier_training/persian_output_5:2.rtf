@@ -1,0 +1,911 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset178 GeezaPro;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 (erg_nom) Nick deep-subjecthood-custom % python3 run_one_experiment.py --only-ao --balance\
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html\
+args: Namespace(all_major_cases=False, average_embs=False, balance=True, erg_abs=False, nom_acc=False, only_ao=True, output_fn='last_run', reeval_src_test=False, seed=0, test_lang_fn='language_data/UD_Persian-Seraji-master/fa_seraji-ud-test.conllu', train_lang_base_path='language_data/UD_Persian-Seraji-master/fa_seraji-ud')\
+Just set the seed to 0\
+Need to train classifiers!\
+Loading the source train set, with limit 2025\
+Counts of each role \{'A': 1013, 'O': 2418\}\
+Case counts per role defaultdict(<class 'collections.Counter'>, \{None: Counter(\{None: 100917\}), 'S-passive': Counter(\{None: 57\}), 'S': Counter(\{None: 2385\}), 'O': Counter(\{None: 2418\}), 'A': Counter(\{None: 1013\}), 'A-passive': Counter(\{None: 1\})\})\
+lengths of bert ids etc 4287 4287 4287 4287\
+Saving all of the tokens and non-bert stuff to cached_datasets/all_features_aso_exps_fa_seraji-ud-train_AO_balanced_2025.pkl\
+There are 2026 relevant tokens, and 4287 overall sentences\
+Bert vectors file is cached_bert_vectors/all_features_aso_exps_fa_seraji-ud-train_AO_balanced_2025.hdf5\
+Running 4287 sentences through BERT. This takes a while\
+100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 4287/4287 [02:43<00:00, 26.30it/s]\
+length of bert outputs 4287\
+Length of train set is 2026, limit is 2025\
+Counts of each role Counter(\{'S': 337, 'O': 315, 'A': 137, 'S-passive': 12\})\
+Case counts per role defaultdict(<class 'collections.Counter'>, \{'S': Counter(\{None: 337\}), None: Counter(\{None: 15321\}), 'O': Counter(\{None: 315\}), 'A': Counter(\{None: 137\}), 'S-passive': Counter(\{None: 12\})\})\
+lengths of bert ids etc 600 600 600 600\
+Saving all of the tokens and non-bert stuff to cached_datasets/all_features_aso_exps_fa_seraji-ud-test_aso_unbalanced_2000.pkl\
+There are 801 relevant tokens, and 600 overall sentences\
+Bert vectors file is cached_bert_vectors/all_features_aso_exps_fa_seraji-ud-test_aso_unbalanced_2000.hdf5\
+Running 600 sentences through BERT. This takes a while\
+100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 600/600 [00:23<00:00, 25.02it/s]\
+length of bert outputs 600\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.478\
+[2/20] Train loss: 0.289\
+[3/20] Train loss: 0.244\
+[4/20] Train loss: 0.207\
+[5/20] Train loss: 0.177\
+[6/20] Train loss: 0.164\
+[7/20] Train loss: 0.133\
+[8/20] Train loss: 0.115\
+[9/20] Train loss: 0.090\
+[10/20] Train loss: 0.089\
+[11/20] Train loss: 0.065\
+[12/20] Train loss: 0.055\
+[13/20] Train loss: 0.042\
+[14/20] Train loss: 0.038\
+[15/20] Train loss: 0.027\
+[16/20] Train loss: 0.025\
+[17/20] Train loss: 0.020\
+[18/20] Train loss: 0.020\
+[19/20] Train loss: 0.018\
+[20/20] Train loss: 0.016\
+Trained a case classifier!\
+Examples # 801\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-passive': 3\}\
+Accuracy on test set of training language: \{'A': 0.927007299270073, 'O': 0.8253968253968254\}\
+Saving classifier to classifiers/aso_fa_seraji-ud_0_ao_balanced_12_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.378\
+[2/20] Train loss: 0.234\
+[3/20] Train loss: 0.189\
+[4/20] Train loss: 0.160\
+[5/20] Train loss: 0.141\
+[6/20] Train loss: 0.109\
+[7/20] Train loss: 0.093\
+[8/20] Train loss: 0.072\
+[9/20] Train loss: 0.061\
+[10/20] Train loss: 0.059\
+[11/20] Train loss: 0.034\
+[12/20] Train loss: 0.027\
+[13/20] Train loss: 0.026\
+[14/20] Train loss: 0.020\
+[15/20] Train loss: 0.020\
+[16/20] Train loss: 0.014\
+[17/20] Train loss: 0.015\
+[18/20] Train loss: 0.013\
+[19/20] Train loss: 0.013\
+[20/20] Train loss: 0.012\
+Trained a case classifier!\
+Examples # 801\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-passive': 3\}\
+Accuracy on test set of training language: \{'A': 0.927007299270073, 'O': 0.8634920634920635\}\
+Saving classifier to classifiers/aso_fa_seraji-ud_0_ao_balanced_11_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.355\
+[2/20] Train loss: 0.219\
+[3/20] Train loss: 0.183\
+[4/20] Train loss: 0.156\
+[5/20] Train loss: 0.123\
+[6/20] Train loss: 0.107\
+[7/20] Train loss: 0.084\
+[8/20] Train loss: 0.063\
+[9/20] Train loss: 0.051\
+[10/20] Train loss: 0.045\
+[11/20] Train loss: 0.032\
+[12/20] Train loss: 0.030\
+[13/20] Train loss: 0.025\
+[14/20] Train loss: 0.018\
+[15/20] Train loss: 0.015\
+[16/20] Train loss: 0.012\
+[17/20] Train loss: 0.014\
+[18/20] Train loss: 0.012\
+[19/20] Train loss: 0.012\
+[20/20] Train loss: 0.008\
+Trained a case classifier!\
+Examples # 801\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-passive': 3\}\
+Accuracy on test set of training language: \{'A': 0.9416058394160584, 'O': 0.8793650793650793\}\
+Saving classifier to classifiers/aso_fa_seraji-ud_0_ao_balanced_10_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.328\
+[2/20] Train loss: 0.193\
+[3/20] Train loss: 0.162\
+[4/20] Train loss: 0.129\
+[5/20] Train loss: 0.107\
+[6/20] Train loss: 0.083\
+[7/20] Train loss: 0.069\
+[8/20] Train loss: 0.053\
+[9/20] Train loss: 0.040\
+[10/20] Train loss: 0.032\
+[11/20] Train loss: 0.028\
+[12/20] Train loss: 0.021\
+[13/20] Train loss: 0.018\
+[14/20] Train loss: 0.016\
+[15/20] Train loss: 0.015\
+[16/20] Train loss: 0.014\
+[17/20] Train loss: 0.013\
+[18/20] Train loss: 0.009\
+[19/20] Train loss: 0.013\
+[20/20] Train loss: 0.010\
+Trained a case classifier!\
+Examples # 801\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-passive': 3\}\
+Accuracy on test set of training language: \{'A': 0.927007299270073, 'O': 0.8857142857142857\}\
+Saving classifier to classifiers/aso_fa_seraji-ud_0_ao_balanced_9_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.317\
+[2/20] Train loss: 0.196\
+[3/20] Train loss: 0.165\
+[4/20] Train loss: 0.115\
+[5/20] Train loss: 0.098\
+[6/20] Train loss: 0.085\
+[7/20] Train loss: 0.054\
+[8/20] Train loss: 0.041\
+[9/20] Train loss: 0.032\
+[10/20] Train loss: 0.031\
+[11/20] Train loss: 0.021\
+[12/20] Train loss: 0.017\
+[13/20] Train loss: 0.015\
+[14/20] Train loss: 0.012\
+[15/20] Train loss: 0.017\
+[16/20] Train loss: 0.011\
+[17/20] Train loss: 0.010\
+[18/20] Train loss: 0.009\
+[19/20] Train loss: 0.010\
+[20/20] Train loss: 0.011\
+Trained a case classifier!\
+Examples # 801\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-passive': 3\}\
+Accuracy on test set of training language: \{'A': 0.9124087591240876, 'O': 0.9174603174603174\}\
+Saving classifier to classifiers/aso_fa_seraji-ud_0_ao_balanced_8_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.327\
+[2/20] Train loss: 0.192\
+[3/20] Train loss: 0.155\
+[4/20] Train loss: 0.129\
+[5/20] Train loss: 0.109\
+[6/20] Train loss: 0.081\
+[7/20] Train loss: 0.059\
+[8/20] Train loss: 0.041\
+[9/20] Train loss: 0.035\
+[10/20] Train loss: 0.027\
+[11/20] Train loss: 0.025\
+[12/20] Train loss: 0.016\
+[13/20] Train loss: 0.017\
+[14/20] Train loss: 0.012\
+[15/20] Train loss: 0.013\
+[16/20] Train loss: 0.013\
+[17/20] Train loss: 0.012\
+[18/20] Train loss: 0.011\
+[19/20] Train loss: 0.011\
+[20/20] Train loss: 0.009\
+Trained a case classifier!\
+Examples # 801\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-passive': 3\}\
+Accuracy on test set of training language: \{'A': 0.9124087591240876, 'O': 0.8825396825396825\}\
+Saving classifier to classifiers/aso_fa_seraji-ud_0_ao_balanced_7_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.378\
+[2/20] Train loss: 0.240\
+[3/20] Train loss: 0.196\
+[4/20] Train loss: 0.159\
+[5/20] Train loss: 0.133\
+[6/20] Train loss: 0.103\
+[7/20] Train loss: 0.076\
+[8/20] Train loss: 0.060\
+[9/20] Train loss: 0.053\
+[10/20] Train loss: 0.037\
+[11/20] Train loss: 0.030\
+[12/20] Train loss: 0.028\
+[13/20] Train loss: 0.028\
+[14/20] Train loss: 0.018\
+[15/20] Train loss: 0.020\
+[16/20] Train loss: 0.015\
+[17/20] Train loss: 0.013\
+[18/20] Train loss: 0.014\
+[19/20] Train loss: 0.015\
+[20/20] Train loss: 0.013\
+Trained a case classifier!\
+Examples # 801\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-passive': 3\}\
+Accuracy on test set of training language: \{'A': 0.8832116788321168, 'O': 0.8476190476190476\}\
+Saving classifier to classifiers/aso_fa_seraji-ud_0_ao_balanced_6_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.456\
+[2/20] Train loss: 0.350\
+[3/20] Train loss: 0.295\
+[4/20] Train loss: 0.252\
+[5/20] Train loss: 0.215\
+[6/20] Train loss: 0.197\
+[7/20] Train loss: 0.151\
+[8/20] Train loss: 0.117\
+[9/20] Train loss: 0.101\
+[10/20] Train loss: 0.078\
+[11/20] Train loss: 0.067\
+[12/20] Train loss: 0.057\
+[13/20] Train loss: 0.049\
+[14/20] Train loss: 0.042\
+[15/20] Train loss: 0.043\
+[16/20] Train loss: 0.044\
+[17/20] Train loss: 0.028\
+[18/20] Train loss: 0.023\
+[19/20] Train loss: 0.016\
+[20/20] Train loss: 0.020\
+Trained a case classifier!\
+Examples # 801\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-passive': 3\}\
+Accuracy on test set of training language: \{'A': 0.8978102189781022, 'O': 0.707936507936508\}\
+Saving classifier to classifiers/aso_fa_seraji-ud_0_ao_balanced_5_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.491\
+[2/20] Train loss: 0.370\
+[3/20] Train loss: 0.320\
+[4/20] Train loss: 0.269\
+[5/20] Train loss: 0.241\
+[6/20] Train loss: 0.206\
+[7/20] Train loss: 0.187\
+[8/20] Train loss: 0.157\
+[9/20] Train loss: 0.118\
+[10/20] Train loss: 0.094\
+[11/20] Train loss: 0.088\
+[12/20] Train loss: 0.083\
+[13/20] Train loss: 0.063\
+[14/20] Train loss: 0.056\
+[15/20] Train loss: 0.051\
+[16/20] Train loss: 0.043\
+[17/20] Train loss: 0.042\
+[18/20] Train loss: 0.031\
+[19/20] Train loss: 0.027\
+[20/20] Train loss: 0.030\
+Trained a case classifier!\
+Examples # 801\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-passive': 3\}\
+Accuracy on test set of training language: \{'A': 0.8686131386861314, 'O': 0.7206349206349206\}\
+Saving classifier to classifiers/aso_fa_seraji-ud_0_ao_balanced_4_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.517\
+[2/20] Train loss: 0.388\
+[3/20] Train loss: 0.349\
+[4/20] Train loss: 0.312\
+[5/20] Train loss: 0.275\
+[6/20] Train loss: 0.246\
+[7/20] Train loss: 0.219\
+[8/20] Train loss: 0.180\
+[9/20] Train loss: 0.175\
+[10/20] Train loss: 0.152\
+[11/20] Train loss: 0.125\
+[12/20] Train loss: 0.119\
+[13/20] Train loss: 0.089\
+[14/20] Train loss: 0.079\
+[15/20] Train loss: 0.070\
+[16/20] Train loss: 0.072\
+[17/20] Train loss: 0.064\
+[18/20] Train loss: 0.079\
+[19/20] Train loss: 0.052\
+[20/20] Train loss: 0.044\
+Trained a case classifier!\
+Examples # 801\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-passive': 3\}\
+Accuracy on test set of training language: \{'A': 0.8102189781021898, 'O': 0.6984126984126984\}\
+Saving classifier to classifiers/aso_fa_seraji-ud_0_ao_balanced_3_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.559\
+[2/20] Train loss: 0.437\
+[3/20] Train loss: 0.413\
+[4/20] Train loss: 0.374\
+[5/20] Train loss: 0.339\
+[6/20] Train loss: 0.318\
+[7/20] Train loss: 0.285\
+[8/20] Train loss: 0.274\
+[9/20] Train loss: 0.238\
+[10/20] Train loss: 0.212\
+[11/20] Train loss: 0.193\
+[12/20] Train loss: 0.179\
+[13/20] Train loss: 0.165\
+[14/20] Train loss: 0.139\
+[15/20] Train loss: 0.136\
+[16/20] Train loss: 0.114\
+[17/20] Train loss: 0.107\
+[18/20] Train loss: 0.112\
+[19/20] Train loss: 0.105\
+[20/20] Train loss: 0.088\
+Trained a case classifier!\
+Examples # 801\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-passive': 3\}\
+Accuracy on test set of training language: \{'A': 0.781021897810219, 'O': 0.6222222222222222\}\
+Saving classifier to classifiers/aso_fa_seraji-ud_0_ao_balanced_2_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.564\
+[2/20] Train loss: 0.468\
+[3/20] Train loss: 0.433\
+[4/20] Train loss: 0.390\
+[5/20] Train loss: 0.368\
+[6/20] Train loss: 0.355\
+[7/20] Train loss: 0.330\
+[8/20] Train loss: 0.312\
+[9/20] Train loss: 0.281\
+[10/20] Train loss: 0.267\
+[11/20] Train loss: 0.251\
+[12/20] Train loss: 0.241\
+[13/20] Train loss: 0.215\
+[14/20] Train loss: 0.197\
+[15/20] Train loss: 0.192\
+[16/20] Train loss: 0.167\
+[17/20] Train loss: 0.159\
+[18/20] Train loss: 0.151\
+[19/20] Train loss: 0.155\
+[20/20] Train loss: 0.142\
+Trained a case classifier!\
+Examples # 801\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-passive': 3\}\
+Accuracy on test set of training language: \{'A': 0.7518248175182481, 'O': 0.6126984126984127\}\
+Saving classifier to classifiers/aso_fa_seraji-ud_0_ao_balanced_1_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.579\
+[2/20] Train loss: 0.494\
+[3/20] Train loss: 0.465\
+[4/20] Train loss: 0.438\
+[5/20] Train loss: 0.413\
+[6/20] Train loss: 0.394\
+[7/20] Train loss: 0.373\
+[8/20] Train loss: 0.363\
+[9/20] Train loss: 0.335\
+[10/20] Train loss: 0.324\
+[11/20] Train loss: 0.306\
+[12/20] Train loss: 0.293\
+[13/20] Train loss: 0.287\
+[14/20] Train loss: 0.263\
+[15/20] Train loss: 0.264\
+[16/20] Train loss: 0.237\
+[17/20] Train loss: 0.231\
+[18/20] Train loss: 0.223\
+[19/20] Train loss: 0.214\
+[20/20] Train loss: 0.199\
+Trained a case classifier!\
+Examples # 801\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-passive': 3\}\
+Accuracy on test set of training language: \{'A': 0.6788321167883211, 'O': 0.6857142857142857\}\
+Saving classifier to classifiers/aso_fa_seraji-ud_0_ao_balanced_0_exproles\
+Loading the dest test set, with limit 2000\
+Loading all of the tokens and non-bert stuff from cached_datasets/all_features_aso_exps_fa_seraji-ud-test_aso_unbalanced_2000.pkl\
+There are 801 relevant tokens, and 600 overall sentences\
+Bert vectors file is cached_bert_vectors/all_features_aso_exps_fa_seraji-ud-test_aso_unbalanced_2000.hdf5\
+[Loading from disk]: 100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 600/600 [00:00<00:00, 2138.07it/s]\
+Loaded 599 sentences from disk.\
+length of bert outputs 600\
+On layer 12\
+Loaded case classifier from classifiers/aso_fa_seraji-ud_0_ao_balanced_12_exproles!\
+src_test_accuracy: \{'A': 0.927007299270073, 'O': 0.8253968253968254\}\
+Examples # 801\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-passive': 3\}\
+There are 801 examples to evaluate on.\
+    role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0      S                     
+\f1 \'e4\'d9\'c7\'e3\uc0\u1740 
+\f0   ...      0.999999    12               0.927007                0.825397\
+1      O                            ...      0.598685    12               0.927007                0.825397\
+2      S                     
+\f1 \'da\'c8\'c7\'d1\'ca
+\f0   ...      0.999802    12               0.927007                0.825397\
+3      S                    
+\f1 \'dd\'d1\'cf\'e6\'d3\uc0\u1740 
+\f0   ...      0.999996    12               0.927007                0.825397\
+4      S                    
+\f1 \'dd\'d1\'cf\'e6\'d3\uc0\u1740 
+\f0   ...      0.999731    12               0.927007                0.825397\
+..   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+796    A                      
+\f1 \uc0\u1705 \'e6\'d4\'d4
+\f0   ...      0.682292    12               0.927007                0.825397\
+797    S                     
+\f1 \'e3\'d1\'cd\'e6\'e3
+\f0   ...      1.000000    12               0.927007                0.825397\
+798    O                            ...      0.000040    12               0.927007                0.825397\
+799    S                     
+\f1 \'d4\'e4\'c7\'ce\'ca
+\f0   ...      0.998039    12               0.927007                0.825397\
+800    S                  
+\f1 \'d4\'e4\'c7\'d3\'c7\'e4\'cf\'e4
+\f0   ...      0.999902    12               0.927007                0.825397\
+\
+[801 rows x 11 columns]\
+On layer 11\
+Loaded case classifier from classifiers/aso_fa_seraji-ud_0_ao_balanced_11_exproles!\
+src_test_accuracy: \{'A': 0.927007299270073, 'O': 0.8634920634920635\}\
+Examples # 801\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-passive': 3\}\
+There are 801 examples to evaluate on.\
+    role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0      S                     
+\f1 \'e4\'d9\'c7\'e3\uc0\u1740 
+\f0   ...      0.999994    11               0.927007                0.863492\
+1      O                            ...      0.666617    11               0.927007                0.863492\
+2      S                     
+\f1 \'da\'c8\'c7\'d1\'ca
+\f0   ...      0.997093    11               0.927007                0.863492\
+3      S                    
+\f1 \'dd\'d1\'cf\'e6\'d3\uc0\u1740 
+\f0   ...      0.999990    11               0.927007                0.863492\
+4      S                    
+\f1 \'dd\'d1\'cf\'e6\'d3\uc0\u1740 
+\f0   ...      0.999757    11               0.927007                0.863492\
+..   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+796    A                      
+\f1 \uc0\u1705 \'e6\'d4\'d4
+\f0   ...      0.812523    11               0.927007                0.863492\
+797    S                     
+\f1 \'e3\'d1\'cd\'e6\'e3
+\f0   ...      0.999963    11               0.927007                0.863492\
+798    O                            ...      0.000002    11               0.927007                0.863492\
+799    S                     
+\f1 \'d4\'e4\'c7\'ce\'ca
+\f0   ...      0.997204    11               0.927007                0.863492\
+800    S                  
+\f1 \'d4\'e4\'c7\'d3\'c7\'e4\'cf\'e4
+\f0   ...      0.999931    11               0.927007                0.863492\
+\
+[801 rows x 11 columns]\
+On layer 10\
+Loaded case classifier from classifiers/aso_fa_seraji-ud_0_ao_balanced_10_exproles!\
+src_test_accuracy: \{'A': 0.9416058394160584, 'O': 0.8793650793650793\}\
+Examples # 801\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-passive': 3\}\
+There are 801 examples to evaluate on.\
+    role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0      S                     
+\f1 \'e4\'d9\'c7\'e3\uc0\u1740 
+\f0   ...      0.999998    10               0.941606                0.879365\
+1      O                            ...      0.959668    10               0.941606                0.879365\
+2      S                     
+\f1 \'da\'c8\'c7\'d1\'ca
+\f0   ...      0.999728    10               0.941606                0.879365\
+3      S                    
+\f1 \'dd\'d1\'cf\'e6\'d3\uc0\u1740 
+\f0   ...      0.999893    10               0.941606                0.879365\
+4      S                    
+\f1 \'dd\'d1\'cf\'e6\'d3\uc0\u1740 
+\f0   ...      0.999303    10               0.941606                0.879365\
+..   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+796    A                      
+\f1 \uc0\u1705 \'e6\'d4\'d4
+\f0   ...      0.877374    10               0.941606                0.879365\
+797    S                     
+\f1 \'e3\'d1\'cd\'e6\'e3
+\f0   ...      1.000000    10               0.941606                0.879365\
+798    O                            ...      0.000007    10               0.941606                0.879365\
+799    S                     
+\f1 \'d4\'e4\'c7\'ce\'ca
+\f0   ...      0.998961    10               0.941606                0.879365\
+800    S                  
+\f1 \'d4\'e4\'c7\'d3\'c7\'e4\'cf\'e4
+\f0   ...      0.999925    10               0.941606                0.879365\
+\
+[801 rows x 11 columns]\
+On layer 9\
+Loaded case classifier from classifiers/aso_fa_seraji-ud_0_ao_balanced_9_exproles!\
+src_test_accuracy: \{'A': 0.927007299270073, 'O': 0.8857142857142857\}\
+Examples # 801\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-passive': 3\}\
+There are 801 examples to evaluate on.\
+    role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0      S                     
+\f1 \'e4\'d9\'c7\'e3\uc0\u1740 
+\f0   ...      0.997969     9               0.927007                0.885714\
+1      O                            ...      0.922639     9               0.927007                0.885714\
+2      S                     
+\f1 \'da\'c8\'c7\'d1\'ca
+\f0   ...      0.997705     9               0.927007                0.885714\
+3      S                    
+\f1 \'dd\'d1\'cf\'e6\'d3\uc0\u1740 
+\f0   ...      0.999999     9               0.927007                0.885714\
+4      S                    
+\f1 \'dd\'d1\'cf\'e6\'d3\uc0\u1740 
+\f0   ...      0.998163     9               0.927007                0.885714\
+..   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+796    A                      
+\f1 \uc0\u1705 \'e6\'d4\'d4
+\f0   ...      0.016576     9               0.927007                0.885714\
+797    S                     
+\f1 \'e3\'d1\'cd\'e6\'e3
+\f0   ...      1.000000     9               0.927007                0.885714\
+798    O                            ...      0.000005     9               0.927007                0.885714\
+799    S                     
+\f1 \'d4\'e4\'c7\'ce\'ca
+\f0   ...      0.999461     9               0.927007                0.885714\
+800    S                  
+\f1 \'d4\'e4\'c7\'d3\'c7\'e4\'cf\'e4
+\f0   ...      0.999051     9               0.927007                0.885714\
+\
+[801 rows x 11 columns]\
+On layer 8\
+Loaded case classifier from classifiers/aso_fa_seraji-ud_0_ao_balanced_8_exproles!\
+src_test_accuracy: \{'A': 0.9124087591240876, 'O': 0.9174603174603174\}\
+Examples # 801\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-passive': 3\}\
+There are 801 examples to evaluate on.\
+    role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0      S                     
+\f1 \'e4\'d9\'c7\'e3\uc0\u1740 
+\f0   ...  9.999942e-01     8               0.912409                 0.91746\
+1      O                            ...  4.757331e-03     8               0.912409                 0.91746\
+2      S                     
+\f1 \'da\'c8\'c7\'d1\'ca
+\f0   ...  9.999956e-01     8               0.912409                 0.91746\
+3      S                    
+\f1 \'dd\'d1\'cf\'e6\'d3\uc0\u1740 
+\f0   ...  9.996521e-01     8               0.912409                 0.91746\
+4      S                    
+\f1 \'dd\'d1\'cf\'e6\'d3\uc0\u1740 
+\f0   ...  1.000000e+00     8               0.912409                 0.91746\
+..   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+796    A                      
+\f1 \uc0\u1705 \'e6\'d4\'d4
+\f0   ...  4.603906e-02     8               0.912409                 0.91746\
+797    S                     
+\f1 \'e3\'d1\'cd\'e6\'e3
+\f0   ...  9.999949e-01     8               0.912409                 0.91746\
+798    O                            ...  3.580440e-07     8               0.912409                 0.91746\
+799    S                     
+\f1 \'d4\'e4\'c7\'ce\'ca
+\f0   ...  9.999135e-01     8               0.912409                 0.91746\
+800    S                  
+\f1 \'d4\'e4\'c7\'d3\'c7\'e4\'cf\'e4
+\f0   ...  9.999999e-01     8               0.912409                 0.91746\
+\
+[801 rows x 11 columns]\
+On layer 7\
+Loaded case classifier from classifiers/aso_fa_seraji-ud_0_ao_balanced_7_exproles!\
+src_test_accuracy: \{'A': 0.9124087591240876, 'O': 0.8825396825396825\}\
+Examples # 801\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-passive': 3\}\
+There are 801 examples to evaluate on.\
+    role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0      S                     
+\f1 \'e4\'d9\'c7\'e3\uc0\u1740 
+\f0   ...      0.999759     7               0.912409                 0.88254\
+1      O                            ...      0.000013     7               0.912409                 0.88254\
+2      S                     
+\f1 \'da\'c8\'c7\'d1\'ca
+\f0   ...      1.000000     7               0.912409                 0.88254\
+3      S                    
+\f1 \'dd\'d1\'cf\'e6\'d3\uc0\u1740 
+\f0   ...      1.000000     7               0.912409                 0.88254\
+4      S                    
+\f1 \'dd\'d1\'cf\'e6\'d3\uc0\u1740 
+\f0   ...      1.000000     7               0.912409                 0.88254\
+..   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+796    A                      
+\f1 \uc0\u1705 \'e6\'d4\'d4
+\f0   ...      0.997251     7               0.912409                 0.88254\
+797    S                     
+\f1 \'e3\'d1\'cd\'e6\'e3
+\f0   ...      1.000000     7               0.912409                 0.88254\
+798    O                            ...      0.004536     7               0.912409                 0.88254\
+799    S                     
+\f1 \'d4\'e4\'c7\'ce\'ca
+\f0   ...      0.999362     7               0.912409                 0.88254\
+800    S                  
+\f1 \'d4\'e4\'c7\'d3\'c7\'e4\'cf\'e4
+\f0   ...      0.999379     7               0.912409                 0.88254\
+\
+[801 rows x 11 columns]\
+On layer 6\
+Loaded case classifier from classifiers/aso_fa_seraji-ud_0_ao_balanced_6_exproles!\
+src_test_accuracy: \{'A': 0.8832116788321168, 'O': 0.8476190476190476\}\
+Examples # 801\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-passive': 3\}\
+There are 801 examples to evaluate on.\
+    role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0      S                     
+\f1 \'e4\'d9\'c7\'e3\uc0\u1740 
+\f0   ...  9.994366e-01     6               0.883212                0.847619\
+1      O                            ...  5.981222e-09     6               0.883212                0.847619\
+2      S                     
+\f1 \'da\'c8\'c7\'d1\'ca
+\f0   ...  9.999993e-01     6               0.883212                0.847619\
+3      S                    
+\f1 \'dd\'d1\'cf\'e6\'d3\uc0\u1740 
+\f0   ...  9.998119e-01     6               0.883212                0.847619\
+4      S                    
+\f1 \'dd\'d1\'cf\'e6\'d3\uc0\u1740 
+\f0   ...  9.979981e-01     6               0.883212                0.847619\
+..   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+796    A                      
+\f1 \uc0\u1705 \'e6\'d4\'d4
+\f0   ...  9.999993e-01     6               0.883212                0.847619\
+797    S                     
+\f1 \'e3\'d1\'cd\'e6\'e3
+\f0   ...  9.999835e-01     6               0.883212                0.847619\
+798    O                            ...  8.700671e-02     6               0.883212                0.847619\
+799    S                     
+\f1 \'d4\'e4\'c7\'ce\'ca
+\f0   ...  9.288276e-01     6               0.883212                0.847619\
+800    S                  
+\f1 \'d4\'e4\'c7\'d3\'c7\'e4\'cf\'e4
+\f0   ...  9.999964e-01     6               0.883212                0.847619\
+\
+[801 rows x 11 columns]\
+On layer 5\
+Loaded case classifier from classifiers/aso_fa_seraji-ud_0_ao_balanced_5_exproles!\
+src_test_accuracy: \{'A': 0.8978102189781022, 'O': 0.707936507936508\}\
+Examples # 801\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-passive': 3\}\
+There are 801 examples to evaluate on.\
+    role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0      S                     
+\f1 \'e4\'d9\'c7\'e3\uc0\u1740 
+\f0   ...      0.999758     5                0.89781                0.707937\
+1      O                            ...      0.001177     5                0.89781                0.707937\
+2      S                     
+\f1 \'da\'c8\'c7\'d1\'ca
+\f0   ...      0.997270     5                0.89781                0.707937\
+3      S                    
+\f1 \'dd\'d1\'cf\'e6\'d3\uc0\u1740 
+\f0   ...      0.999060     5                0.89781                0.707937\
+4      S                    
+\f1 \'dd\'d1\'cf\'e6\'d3\uc0\u1740 
+\f0   ...      0.999913     5                0.89781                0.707937\
+..   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+796    A                      
+\f1 \uc0\u1705 \'e6\'d4\'d4
+\f0   ...      0.999672     5                0.89781                0.707937\
+797    S                     
+\f1 \'e3\'d1\'cd\'e6\'e3
+\f0   ...      0.938903     5                0.89781                0.707937\
+798    O                            ...      0.095983     5                0.89781                0.707937\
+799    S                     
+\f1 \'d4\'e4\'c7\'ce\'ca
+\f0   ...      0.515894     5                0.89781                0.707937\
+800    S                  
+\f1 \'d4\'e4\'c7\'d3\'c7\'e4\'cf\'e4
+\f0   ...      0.722867     5                0.89781                0.707937\
+\
+[801 rows x 11 columns]\
+On layer 4\
+Loaded case classifier from classifiers/aso_fa_seraji-ud_0_ao_balanced_4_exproles!\
+src_test_accuracy: \{'A': 0.8686131386861314, 'O': 0.7206349206349206\}\
+Examples # 801\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-passive': 3\}\
+There are 801 examples to evaluate on.\
+    role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0      S                     
+\f1 \'e4\'d9\'c7\'e3\uc0\u1740 
+\f0   ...      0.999744     4               0.868613                0.720635\
+1      O                            ...      0.000067     4               0.868613                0.720635\
+2      S                     
+\f1 \'da\'c8\'c7\'d1\'ca
+\f0   ...      0.997232     4               0.868613                0.720635\
+3      S                    
+\f1 \'dd\'d1\'cf\'e6\'d3\uc0\u1740 
+\f0   ...      0.919737     4               0.868613                0.720635\
+4      S                    
+\f1 \'dd\'d1\'cf\'e6\'d3\uc0\u1740 
+\f0   ...      0.998226     4               0.868613                0.720635\
+..   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+796    A                      
+\f1 \uc0\u1705 \'e6\'d4\'d4
+\f0   ...      0.984318     4               0.868613                0.720635\
+797    S                     
+\f1 \'e3\'d1\'cd\'e6\'e3
+\f0   ...      0.894849     4               0.868613                0.720635\
+798    O                            ...      0.030104     4               0.868613                0.720635\
+799    S                     
+\f1 \'d4\'e4\'c7\'ce\'ca
+\f0   ...      0.990610     4               0.868613                0.720635\
+800    S                  
+\f1 \'d4\'e4\'c7\'d3\'c7\'e4\'cf\'e4
+\f0   ...      0.768506     4               0.868613                0.720635\
+\
+[801 rows x 11 columns]\
+On layer 3\
+Loaded case classifier from classifiers/aso_fa_seraji-ud_0_ao_balanced_3_exproles!\
+src_test_accuracy: \{'A': 0.8102189781021898, 'O': 0.6984126984126984\}\
+Examples # 801\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-passive': 3\}\
+There are 801 examples to evaluate on.\
+    role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0      S                     
+\f1 \'e4\'d9\'c7\'e3\uc0\u1740 
+\f0   ...      0.998441     3               0.810219                0.698413\
+1      O                            ...      0.003222     3               0.810219                0.698413\
+2      S                     
+\f1 \'da\'c8\'c7\'d1\'ca
+\f0   ...      0.999999     3               0.810219                0.698413\
+3      S                    
+\f1 \'dd\'d1\'cf\'e6\'d3\uc0\u1740 
+\f0   ...      0.635596     3               0.810219                0.698413\
+4      S                    
+\f1 \'dd\'d1\'cf\'e6\'d3\uc0\u1740 
+\f0   ...      0.960063     3               0.810219                0.698413\
+..   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+796    A                      
+\f1 \uc0\u1705 \'e6\'d4\'d4
+\f0   ...      0.993683     3               0.810219                0.698413\
+797    S                     
+\f1 \'e3\'d1\'cd\'e6\'e3
+\f0   ...      0.999376     3               0.810219                0.698413\
+798    O                            ...      0.292415     3               0.810219                0.698413\
+799    S                     
+\f1 \'d4\'e4\'c7\'ce\'ca
+\f0   ...      0.997256     3               0.810219                0.698413\
+800    S                  
+\f1 \'d4\'e4\'c7\'d3\'c7\'e4\'cf\'e4
+\f0   ...      0.926637     3               0.810219                0.698413\
+\
+[801 rows x 11 columns]\
+On layer 2\
+Loaded case classifier from classifiers/aso_fa_seraji-ud_0_ao_balanced_2_exproles!\
+src_test_accuracy: \{'A': 0.781021897810219, 'O': 0.6222222222222222\}\
+Examples # 801\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-passive': 3\}\
+There are 801 examples to evaluate on.\
+    role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0      S                     
+\f1 \'e4\'d9\'c7\'e3\uc0\u1740 
+\f0   ...      0.986392     2               0.781022                0.622222\
+1      O                            ...      0.001701     2               0.781022                0.622222\
+2      S                     
+\f1 \'da\'c8\'c7\'d1\'ca
+\f0   ...      1.000000     2               0.781022                0.622222\
+3      S                    
+\f1 \'dd\'d1\'cf\'e6\'d3\uc0\u1740 
+\f0   ...      0.999902     2               0.781022                0.622222\
+4      S                    
+\f1 \'dd\'d1\'cf\'e6\'d3\uc0\u1740 
+\f0   ...      1.000000     2               0.781022                0.622222\
+..   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+796    A                      
+\f1 \uc0\u1705 \'e6\'d4\'d4
+\f0   ...      0.974848     2               0.781022                0.622222\
+797    S                     
+\f1 \'e3\'d1\'cd\'e6\'e3
+\f0   ...      0.060807     2               0.781022                0.622222\
+798    O                            ...      0.057797     2               0.781022                0.622222\
+799    S                     
+\f1 \'d4\'e4\'c7\'ce\'ca
+\f0   ...      0.994031     2               0.781022                0.622222\
+800    S                  
+\f1 \'d4\'e4\'c7\'d3\'c7\'e4\'cf\'e4
+\f0   ...      0.507357     2               0.781022                0.622222\
+\
+[801 rows x 11 columns]\
+On layer 1\
+Loaded case classifier from classifiers/aso_fa_seraji-ud_0_ao_balanced_1_exproles!\
+src_test_accuracy: \{'A': 0.7518248175182481, 'O': 0.6126984126984127\}\
+Examples # 801\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-passive': 3\}\
+There are 801 examples to evaluate on.\
+    role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0      S                     
+\f1 \'e4\'d9\'c7\'e3\uc0\u1740 
+\f0   ...      0.999998     1               0.751825                0.612698\
+1      O                            ...      0.073309     1               0.751825                0.612698\
+2      S                     
+\f1 \'da\'c8\'c7\'d1\'ca
+\f0   ...      0.999951     1               0.751825                0.612698\
+3      S                    
+\f1 \'dd\'d1\'cf\'e6\'d3\uc0\u1740 
+\f0   ...      0.994806     1               0.751825                0.612698\
+4      S                    
+\f1 \'dd\'d1\'cf\'e6\'d3\uc0\u1740 
+\f0   ...      0.999997     1               0.751825                0.612698\
+..   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+796    A                      
+\f1 \uc0\u1705 \'e6\'d4\'d4
+\f0   ...      0.966212     1               0.751825                0.612698\
+797    S                     
+\f1 \'e3\'d1\'cd\'e6\'e3
+\f0   ...      0.264218     1               0.751825                0.612698\
+798    O                            ...      0.568909     1               0.751825                0.612698\
+799    S                     
+\f1 \'d4\'e4\'c7\'ce\'ca
+\f0   ...      0.966916     1               0.751825                0.612698\
+800    S                  
+\f1 \'d4\'e4\'c7\'d3\'c7\'e4\'cf\'e4
+\f0   ...      0.413719     1               0.751825                0.612698\
+\
+[801 rows x 11 columns]\
+On layer 0\
+Loaded case classifier from classifiers/aso_fa_seraji-ud_0_ao_balanced_0_exproles!\
+src_test_accuracy: \{'A': 0.6788321167883211, 'O': 0.6857142857142857\}\
+Examples # 801\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-passive': 3\}\
+There are 801 examples to evaluate on.\
+    role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0      S                     
+\f1 \'e4\'d9\'c7\'e3\uc0\u1740 
+\f0   ...      0.999996     0               0.678832                0.685714\
+1      O                            ...      0.131806     0               0.678832                0.685714\
+2      S                     
+\f1 \'da\'c8\'c7\'d1\'ca
+\f0   ...      0.998382     0               0.678832                0.685714\
+3      S                    
+\f1 \'dd\'d1\'cf\'e6\'d3\uc0\u1740 
+\f0   ...      0.650533     0               0.678832                0.685714\
+4      S                    
+\f1 \'dd\'d1\'cf\'e6\'d3\uc0\u1740 
+\f0   ...      0.955135     0               0.678832                0.685714\
+..   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+796    A                      
+\f1 \uc0\u1705 \'e6\'d4\'d4
+\f0   ...      0.807488     0               0.678832                0.685714\
+797    S                     
+\f1 \'e3\'d1\'cd\'e6\'e3
+\f0   ...      0.324781     0               0.678832                0.685714\
+798    O                            ...      0.349707     0               0.678832                0.685714\
+799    S                     
+\f1 \'d4\'e4\'c7\'ce\'ca
+\f0   ...      0.653423     0               0.678832                0.685714\
+800    S                  
+\f1 \'d4\'e4\'c7\'d3\'c7\'e4\'cf\'e4
+\f0   ...      0.038410     0               0.678832                0.685714\
+\
+[801 rows x 11 columns]\
+(erg_nom) Nick deep-subjecthood-custom % }

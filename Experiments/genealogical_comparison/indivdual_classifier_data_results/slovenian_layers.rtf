@@ -1,0 +1,703 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 erg_nom) Nick deep-subjecthood-custom % python3 run_one_experiment.py --only-ao --balance\
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html\
+args: Namespace(all_major_cases=False, average_embs=False, balance=True, erg_abs=False, nom_acc=False, only_ao=True, output_fn='last_run', reeval_src_test=False, seed=0, test_lang_fn='language_data/UD_Slovenian-SSJ-master/sl_ssj-ud-test.conllu', train_lang_base_path='language_data/UD_Slovenian-SSJ-master/sl_ssj-ud')\
+Just set the seed to 0\
+Need to train classifiers!\
+Loading the source train set, with limit 2025\
+Counts of each role \{'A': 1013, 'O': 2690\}\
+Case counts per role defaultdict(<class 'collections.Counter'>, \{None: Counter(\{None: 77262\}), 'A': Counter(\{'Nom': 996, 'Gen': 16, 'Loc': 1\}), 'S': Counter(\{'Nom': 953, 'Gen': 110\}), 'O': Counter(\{'Acc': 2018, 'Gen': 440, 'Dat': 227, 'Nom': 3, 'Loc': 2\}), 'S-expletive': Counter(\{'Nom': 406, 'Gen': 9\})\})\
+lengths of bert ids etc 4100 4100 4100 4100\
+Saving all of the tokens and non-bert stuff to cached_datasets/all_features_aso_exps_sl_ssj-ud-train_AO_balanced_2025.pkl\
+There are 2026 relevant tokens, and 4100 overall sentences\
+Bert vectors file is cached_bert_vectors/all_features_aso_exps_sl_ssj-ud-train_AO_balanced_2025.hdf5\
+Running 4100 sentences through BERT. This takes a while\
+100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 4100/4100 [02:33<00:00, 26.79it/s]\
+length of bert outputs 4100\
+Length of train set is 2026, limit is 2025\
+Counts of each role Counter(\{'O': 841, 'S': 357, 'A': 353, 'S-expletive': 135, 'S-aux': 1\})\
+Case counts per role defaultdict(<class 'collections.Counter'>, \{None: Counter(\{None: 23755\}), 'O': Counter(\{'Acc': 646, 'Gen': 126, 'Dat': 68, 'Nom': 1\}), 'A': Counter(\{'Nom': 347, 'Gen': 5, 'Acc': 1\}), 'S-expletive': Counter(\{'Nom': 129, 'Gen': 6\}), 'S': Counter(\{'Nom': 327, 'Gen': 29, 'Acc': 1\}), 'S-aux': Counter(\{'Nom': 1\})\})\
+lengths of bert ids etc 1282 1282 1282 1282\
+Saving all of the tokens and non-bert stuff to cached_datasets/all_features_aso_exps_sl_ssj-ud-test_aso_unbalanced_2000.pkl\
+There are 1687 relevant tokens, and 1282 overall sentences\
+Bert vectors file is cached_bert_vectors/all_features_aso_exps_sl_ssj-ud-test_aso_unbalanced_2000.hdf5\
+Running 1282 sentences through BERT. This takes a while\
+100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 1282/1282 [00:47<00:00, 26.97it/s]\
+length of bert outputs 1282\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.562\
+[2/20] Train loss: 0.390\
+[3/20] Train loss: 0.323\
+[4/20] Train loss: 0.268\
+[5/20] Train loss: 0.241\
+[6/20] Train loss: 0.190\
+[7/20] Train loss: 0.160\
+[8/20] Train loss: 0.132\
+[9/20] Train loss: 0.109\
+[10/20] Train loss: 0.090\
+[11/20] Train loss: 0.065\
+[12/20] Train loss: 0.057\
+[13/20] Train loss: 0.044\
+[14/20] Train loss: 0.041\
+[15/20] Train loss: 0.028\
+[16/20] Train loss: 0.028\
+[17/20] Train loss: 0.025\
+[18/20] Train loss: 0.023\
+[19/20] Train loss: 0.021\
+[20/20] Train loss: 0.018\
+Trained a case classifier!\
+Examples # 1687\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-expletive': 4\}\
+Accuracy on test set of training language: \{'A': 0.8413597733711048, 'O': 0.821640903686088\}\
+Saving classifier to classifiers/aso_sl_ssj-ud_0_ao_balanced_12_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.465\
+[2/20] Train loss: 0.301\
+[3/20] Train loss: 0.236\
+[4/20] Train loss: 0.199\
+[5/20] Train loss: 0.158\
+[6/20] Train loss: 0.122\
+[7/20] Train loss: 0.107\
+[8/20] Train loss: 0.084\
+[9/20] Train loss: 0.061\
+[10/20] Train loss: 0.052\
+[11/20] Train loss: 0.043\
+[12/20] Train loss: 0.036\
+[13/20] Train loss: 0.026\
+[14/20] Train loss: 0.024\
+[15/20] Train loss: 0.020\
+[16/20] Train loss: 0.020\
+[17/20] Train loss: 0.016\
+[18/20] Train loss: 0.013\
+[19/20] Train loss: 0.014\
+[20/20] Train loss: 0.011\
+Trained a case classifier!\
+Examples # 1687\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-expletive': 4\}\
+Accuracy on test set of training language: \{'A': 0.8980169971671388, 'O': 0.8668252080856124\}\
+Saving classifier to classifiers/aso_sl_ssj-ud_0_ao_balanced_11_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.455\
+[2/20] Train loss: 0.282\
+[3/20] Train loss: 0.219\
+[4/20] Train loss: 0.185\
+[5/20] Train loss: 0.161\
+[6/20] Train loss: 0.129\
+[7/20] Train loss: 0.097\
+[8/20] Train loss: 0.080\
+[9/20] Train loss: 0.065\
+[10/20] Train loss: 0.067\
+[11/20] Train loss: 0.039\
+[12/20] Train loss: 0.031\
+[13/20] Train loss: 0.025\
+[14/20] Train loss: 0.020\
+[15/20] Train loss: 0.017\
+[16/20] Train loss: 0.016\
+[17/20] Train loss: 0.014\
+[18/20] Train loss: 0.016\
+[19/20] Train loss: 0.010\
+[20/20] Train loss: 0.010\
+Trained a case classifier!\
+Examples # 1687\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-expletive': 4\}\
+Accuracy on test set of training language: \{'A': 0.8980169971671388, 'O': 0.8846611177170036\}\
+Saving classifier to classifiers/aso_sl_ssj-ud_0_ao_balanced_10_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.424\
+[2/20] Train loss: 0.256\
+[3/20] Train loss: 0.194\
+[4/20] Train loss: 0.158\
+[5/20] Train loss: 0.141\
+[6/20] Train loss: 0.112\
+[7/20] Train loss: 0.086\
+[8/20] Train loss: 0.072\
+[9/20] Train loss: 0.056\
+[10/20] Train loss: 0.044\
+[11/20] Train loss: 0.030\
+[12/20] Train loss: 0.021\
+[13/20] Train loss: 0.019\
+[14/20] Train loss: 0.020\
+[15/20] Train loss: 0.016\
+[16/20] Train loss: 0.014\
+[17/20] Train loss: 0.015\
+[18/20] Train loss: 0.014\
+[19/20] Train loss: 0.012\
+[20/20] Train loss: 0.009\
+Trained a case classifier!\
+Examples # 1687\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-expletive': 4\}\
+Accuracy on test set of training language: \{'A': 0.8895184135977338, 'O': 0.8929845422116528\}\
+Saving classifier to classifiers/aso_sl_ssj-ud_0_ao_balanced_9_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.437\
+[2/20] Train loss: 0.258\
+[3/20] Train loss: 0.201\
+[4/20] Train loss: 0.163\
+[5/20] Train loss: 0.110\
+[6/20] Train loss: 0.085\
+[7/20] Train loss: 0.073\
+[8/20] Train loss: 0.049\
+[9/20] Train loss: 0.041\
+[10/20] Train loss: 0.026\
+[11/20] Train loss: 0.021\
+[12/20] Train loss: 0.015\
+[13/20] Train loss: 0.019\
+[14/20] Train loss: 0.017\
+[15/20] Train loss: 0.011\
+[16/20] Train loss: 0.011\
+[17/20] Train loss: 0.012\
+[18/20] Train loss: 0.013\
+[19/20] Train loss: 0.009\
+[20/20] Train loss: 0.013\
+Trained a case classifier!\
+Examples # 1687\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-expletive': 4\}\
+Accuracy on test set of training language: \{'A': 0.8980169971671388, 'O': 0.8870392390011891\}\
+Saving classifier to classifiers/aso_sl_ssj-ud_0_ao_balanced_8_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.474\
+[2/20] Train loss: 0.325\
+[3/20] Train loss: 0.243\
+[4/20] Train loss: 0.199\
+[5/20] Train loss: 0.162\
+[6/20] Train loss: 0.119\
+[7/20] Train loss: 0.098\
+[8/20] Train loss: 0.068\
+[9/20] Train loss: 0.054\
+[10/20] Train loss: 0.036\
+[11/20] Train loss: 0.028\
+[12/20] Train loss: 0.025\
+[13/20] Train loss: 0.020\
+[14/20] Train loss: 0.021\
+[15/20] Train loss: 0.017\
+[16/20] Train loss: 0.015\
+[17/20] Train loss: 0.014\
+[18/20] Train loss: 0.013\
+[19/20] Train loss: 0.012\
+[20/20] Train loss: 0.013\
+Trained a case classifier!\
+Examples # 1687\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-expletive': 4\}\
+Accuracy on test set of training language: \{'A': 0.8951841359773371, 'O': 0.8418549346016647\}\
+Saving classifier to classifiers/aso_sl_ssj-ud_0_ao_balanced_7_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.506\
+[2/20] Train loss: 0.381\
+[3/20] Train loss: 0.329\
+[4/20] Train loss: 0.263\
+[5/20] Train loss: 0.222\
+[6/20] Train loss: 0.174\
+[7/20] Train loss: 0.130\
+[8/20] Train loss: 0.098\
+[9/20] Train loss: 0.068\
+[10/20] Train loss: 0.058\
+[11/20] Train loss: 0.043\
+[12/20] Train loss: 0.033\
+[13/20] Train loss: 0.030\
+[14/20] Train loss: 0.022\
+[15/20] Train loss: 0.020\
+[16/20] Train loss: 0.017\
+[17/20] Train loss: 0.018\
+[18/20] Train loss: 0.017\
+[19/20] Train loss: 0.014\
+[20/20] Train loss: 0.018\
+Trained a case classifier!\
+Examples # 1687\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-expletive': 4\}\
+Accuracy on test set of training language: \{'A': 0.830028328611898, 'O': 0.8156956004756243\}\
+Saving classifier to classifiers/aso_sl_ssj-ud_0_ao_balanced_6_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.562\
+[2/20] Train loss: 0.455\
+[3/20] Train loss: 0.400\
+[4/20] Train loss: 0.338\
+[5/20] Train loss: 0.296\
+[6/20] Train loss: 0.245\
+[7/20] Train loss: 0.196\
+[8/20] Train loss: 0.173\
+[9/20] Train loss: 0.135\
+[10/20] Train loss: 0.109\
+[11/20] Train loss: 0.079\
+[12/20] Train loss: 0.067\
+[13/20] Train loss: 0.051\
+[14/20] Train loss: 0.041\
+[15/20] Train loss: 0.037\
+[16/20] Train loss: 0.030\
+[17/20] Train loss: 0.028\
+[18/20] Train loss: 0.029\
+[19/20] Train loss: 0.022\
+[20/20] Train loss: 0.020\
+Trained a case classifier!\
+Examples # 1687\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-expletive': 4\}\
+Accuracy on test set of training language: \{'A': 0.7422096317280453, 'O': 0.7407847800237812\}\
+Saving classifier to classifiers/aso_sl_ssj-ud_0_ao_balanced_5_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.592\
+[2/20] Train loss: 0.482\
+[3/20] Train loss: 0.428\
+[4/20] Train loss: 0.380\
+[5/20] Train loss: 0.336\
+[6/20] Train loss: 0.275\
+[7/20] Train loss: 0.227\
+[8/20] Train loss: 0.187\
+[9/20] Train loss: 0.153\
+[10/20] Train loss: 0.120\
+[11/20] Train loss: 0.100\
+[12/20] Train loss: 0.086\
+[13/20] Train loss: 0.069\
+[14/20] Train loss: 0.057\
+[15/20] Train loss: 0.062\
+[16/20] Train loss: 0.051\
+[17/20] Train loss: 0.039\
+[18/20] Train loss: 0.029\
+[19/20] Train loss: 0.025\
+[20/20] Train loss: 0.026\
+Trained a case classifier!\
+Examples # 1687\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-expletive': 4\}\
+Accuracy on test set of training language: \{'A': 0.7478753541076487, 'O': 0.6932223543400713\}\
+Saving classifier to classifiers/aso_sl_ssj-ud_0_ao_balanced_4_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.609\
+[2/20] Train loss: 0.488\
+[3/20] Train loss: 0.440\
+[4/20] Train loss: 0.381\
+[5/20] Train loss: 0.340\
+[6/20] Train loss: 0.287\
+[7/20] Train loss: 0.245\
+[8/20] Train loss: 0.208\
+[9/20] Train loss: 0.188\
+[10/20] Train loss: 0.147\
+[11/20] Train loss: 0.131\
+[12/20] Train loss: 0.107\
+[13/20] Train loss: 0.095\
+[14/20] Train loss: 0.085\
+[15/20] Train loss: 0.075\
+[16/20] Train loss: 0.059\
+[17/20] Train loss: 0.052\
+[18/20] Train loss: 0.055\
+[19/20] Train loss: 0.043\
+[20/20] Train loss: 0.036\
+Trained a case classifier!\
+Examples # 1687\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-expletive': 4\}\
+Accuracy on test set of training language: \{'A': 0.6997167138810199, 'O': 0.737217598097503\}\
+Saving classifier to classifiers/aso_sl_ssj-ud_0_ao_balanced_3_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.631\
+[2/20] Train loss: 0.531\
+[3/20] Train loss: 0.482\
+[4/20] Train loss: 0.421\
+[5/20] Train loss: 0.388\
+[6/20] Train loss: 0.347\
+[7/20] Train loss: 0.296\
+[8/20] Train loss: 0.258\
+[9/20] Train loss: 0.239\
+[10/20] Train loss: 0.213\
+[11/20] Train loss: 0.199\
+[12/20] Train loss: 0.179\
+[13/20] Train loss: 0.152\
+[14/20] Train loss: 0.138\
+[15/20] Train loss: 0.118\
+[16/20] Train loss: 0.103\
+[17/20] Train loss: 0.105\
+[18/20] Train loss: 0.120\
+[19/20] Train loss: 0.085\
+[20/20] Train loss: 0.100\
+Trained a case classifier!\
+Examples # 1687\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-expletive': 4\}\
+Accuracy on test set of training language: \{'A': 0.5580736543909348, 'O': 0.7526753864447087\}\
+Saving classifier to classifiers/aso_sl_ssj-ud_0_ao_balanced_2_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.635\
+[2/20] Train loss: 0.541\
+[3/20] Train loss: 0.486\
+[4/20] Train loss: 0.441\
+[5/20] Train loss: 0.420\
+[6/20] Train loss: 0.377\
+[7/20] Train loss: 0.346\
+[8/20] Train loss: 0.328\
+[9/20] Train loss: 0.288\
+[10/20] Train loss: 0.266\
+[11/20] Train loss: 0.239\
+[12/20] Train loss: 0.224\
+[13/20] Train loss: 0.199\
+[14/20] Train loss: 0.183\
+[15/20] Train loss: 0.173\
+[16/20] Train loss: 0.158\
+[17/20] Train loss: 0.159\
+[18/20] Train loss: 0.139\
+[19/20] Train loss: 0.122\
+[20/20] Train loss: 0.117\
+Trained a case classifier!\
+Examples # 1687\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-expletive': 4\}\
+Accuracy on test set of training language: \{'A': 0.5892351274787535, 'O': 0.7063020214030915\}\
+Saving classifier to classifiers/aso_sl_ssj-ud_0_ao_balanced_1_exproles\
+Balancing cases to all have 1013 elements\
+After trimming cases, have 2026 total indices\
+Examples # 2026\
+labeldict \{'A': 0, 'O': 1\}\
+train dataset labeldict \{'A': 0, 'O': 1\}\
+Training on 2026 data points.\
+[1/20] Train loss: 0.637\
+[2/20] Train loss: 0.540\
+[3/20] Train loss: 0.490\
+[4/20] Train loss: 0.454\
+[5/20] Train loss: 0.420\
+[6/20] Train loss: 0.393\
+[7/20] Train loss: 0.369\
+[8/20] Train loss: 0.343\
+[9/20] Train loss: 0.319\
+[10/20] Train loss: 0.301\
+[11/20] Train loss: 0.272\
+[12/20] Train loss: 0.249\
+[13/20] Train loss: 0.236\
+[14/20] Train loss: 0.215\
+[15/20] Train loss: 0.201\
+[16/20] Train loss: 0.185\
+[17/20] Train loss: 0.182\
+[18/20] Train loss: 0.171\
+[19/20] Train loss: 0.179\
+[20/20] Train loss: 0.158\
+Trained a case classifier!\
+Examples # 1687\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-expletive': 4\}\
+Accuracy on test set of training language: \{'A': 0.6090651558073654, 'O': 0.6064209274673008\}\
+Saving classifier to classifiers/aso_sl_ssj-ud_0_ao_balanced_0_exproles\
+Loading the dest test set, with limit 2000\
+Loading all of the tokens and non-bert stuff from cached_datasets/all_features_aso_exps_sl_ssj-ud-test_aso_unbalanced_2000.pkl\
+There are 1687 relevant tokens, and 1282 overall sentences\
+Bert vectors file is cached_bert_vectors/all_features_aso_exps_sl_ssj-ud-test_aso_unbalanced_2000.hdf5\
+[Loading from disk]: 100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 1282/1282 [00:00<00:00, 2374.40it/s]\
+Loaded 1281 sentences from disk.\
+length of bert outputs 1282\
+On layer 12\
+Loaded case classifier from classifiers/aso_sl_ssj-ud_0_ao_balanced_12_exproles!\
+src_test_accuracy: \{'A': 0.8413597733711048, 'O': 0.821640903686088\}\
+Examples # 1687\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-expletive': 4\}\
+There are 1687 examples to evaluate on.\
+             role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0               O  Acc                       ...      0.000008    12                0.84136                0.821641\
+1               A  Nom              reforma  ...      1.000000    12                0.84136                0.821641\
+2     S-expletive  Nom              Reforme  ...      0.556660    12                0.84136                0.821641\
+3               O  Dat                       ...      0.500000    12                0.84136                0.821641\
+4               O  Acc                       ...      0.812438    12                0.84136                0.821641\
+...           ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1682            S  Nom                Robot  ...      0.999998    12                0.84136                0.821641\
+1683            O  Gen                       ...      0.038020    12                0.84136                0.821641\
+1684  S-expletive  Nom               Odnosi  ...      0.966276    12                0.84136                0.821641\
+1685            A  Nom                 Chen  ...      0.999132    12                0.84136                0.821641\
+1686            O  Acc                       ...      0.060567    12                0.84136                0.821641\
+\
+[1687 rows x 11 columns]\
+On layer 11\
+Loaded case classifier from classifiers/aso_sl_ssj-ud_0_ao_balanced_11_exproles!\
+src_test_accuracy: \{'A': 0.8980169971671388, 'O': 0.8668252080856124\}\
+Examples # 1687\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-expletive': 4\}\
+There are 1687 examples to evaluate on.\
+             role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0               O  Acc                       ...      0.000009    11               0.898017                0.866825\
+1               A  Nom              reforma  ...      1.000000    11               0.898017                0.866825\
+2     S-expletive  Nom              Reforme  ...      0.983295    11               0.898017                0.866825\
+3               O  Dat                       ...      0.059881    11               0.898017                0.866825\
+4               O  Acc                       ...      0.786741    11               0.898017                0.866825\
+...           ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1682            S  Nom                Robot  ...      0.999974    11               0.898017                0.866825\
+1683            O  Gen                       ...      0.032249    11               0.898017                0.866825\
+1684  S-expletive  Nom               Odnosi  ...      0.999995    11               0.898017                0.866825\
+1685            A  Nom                 Chen  ...      0.999454    11               0.898017                0.866825\
+1686            O  Acc                       ...      0.003374    11               0.898017                0.866825\
+\
+[1687 rows x 11 columns]\
+On layer 10\
+Loaded case classifier from classifiers/aso_sl_ssj-ud_0_ao_balanced_10_exproles!\
+src_test_accuracy: \{'A': 0.8980169971671388, 'O': 0.8846611177170036\}\
+Examples # 1687\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-expletive': 4\}\
+There are 1687 examples to evaluate on.\
+             role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0               O  Acc                       ...      0.000009    10               0.898017                0.884661\
+1               A  Nom              reforma  ...      1.000000    10               0.898017                0.884661\
+2     S-expletive  Nom              Reforme  ...      0.893386    10               0.898017                0.884661\
+3               O  Dat                       ...      0.005032    10               0.898017                0.884661\
+4               O  Acc                       ...      0.438928    10               0.898017                0.884661\
+...           ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1682            S  Nom                Robot  ...      0.500000    10               0.898017                0.884661\
+1683            O  Gen                       ...      0.014156    10               0.898017                0.884661\
+1684  S-expletive  Nom               Odnosi  ...      0.999998    10               0.898017                0.884661\
+1685            A  Nom                 Chen  ...      0.999995    10               0.898017                0.884661\
+1686            O  Acc                       ...      0.244027    10               0.898017                0.884661\
+\
+[1687 rows x 11 columns]\
+On layer 9\
+Loaded case classifier from classifiers/aso_sl_ssj-ud_0_ao_balanced_9_exproles!\
+src_test_accuracy: \{'A': 0.8895184135977338, 'O': 0.8929845422116528\}\
+Examples # 1687\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-expletive': 4\}\
+There are 1687 examples to evaluate on.\
+             role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0               O  Acc                       ...      0.000024     9               0.889518                0.892985\
+1               A  Nom              reforma  ...      1.000000     9               0.889518                0.892985\
+2     S-expletive  Nom              Reforme  ...      0.992023     9               0.889518                0.892985\
+3               O  Dat                       ...      0.000108     9               0.889518                0.892985\
+4               O  Acc                       ...      0.004710     9               0.889518                0.892985\
+...           ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1682            S  Nom                Robot  ...      1.000000     9               0.889518                0.892985\
+1683            O  Gen                       ...      0.000444     9               0.889518                0.892985\
+1684  S-expletive  Nom               Odnosi  ...      0.981672     9               0.889518                0.892985\
+1685            A  Nom                 Chen  ...      0.999974     9               0.889518                0.892985\
+1686            O  Acc                       ...      0.088016     9               0.889518                0.892985\
+\
+[1687 rows x 11 columns]\
+On layer 8\
+Loaded case classifier from classifiers/aso_sl_ssj-ud_0_ao_balanced_8_exproles!\
+src_test_accuracy: \{'A': 0.8980169971671388, 'O': 0.8870392390011891\}\
+Examples # 1687\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-expletive': 4\}\
+There are 1687 examples to evaluate on.\
+             role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0               O  Acc                       ...      0.000002     8               0.898017                0.887039\
+1               A  Nom              reforma  ...      0.999979     8               0.898017                0.887039\
+2     S-expletive  Nom              Reforme  ...      0.999850     8               0.898017                0.887039\
+3               O  Dat                       ...      0.000099     8               0.898017                0.887039\
+4               O  Acc                       ...      0.167625     8               0.898017                0.887039\
+...           ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1682            S  Nom                Robot  ...      1.000000     8               0.898017                0.887039\
+1683            O  Gen                       ...      0.000007     8               0.898017                0.887039\
+1684  S-expletive  Nom               Odnosi  ...      0.996378     8               0.898017                0.887039\
+1685            A  Nom                 Chen  ...      0.500000     8               0.898017                0.887039\
+1686            O  Acc                       ...      0.004671     8               0.898017                0.887039\
+\
+[1687 rows x 11 columns]\
+On layer 7\
+Loaded case classifier from classifiers/aso_sl_ssj-ud_0_ao_balanced_7_exproles!\
+src_test_accuracy: \{'A': 0.8951841359773371, 'O': 0.8418549346016647\}\
+Examples # 1687\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-expletive': 4\}\
+There are 1687 examples to evaluate on.\
+             role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0               O  Acc                       ...      0.000017     7               0.895184                0.841855\
+1               A  Nom              reforma  ...      1.000000     7               0.895184                0.841855\
+2     S-expletive  Nom              Reforme  ...      0.990773     7               0.895184                0.841855\
+3               O  Dat                       ...      0.000118     7               0.895184                0.841855\
+4               O  Acc                       ...      0.029312     7               0.895184                0.841855\
+...           ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1682            S  Nom                Robot  ...      0.999997     7               0.895184                0.841855\
+1683            O  Gen                       ...      0.049242     7               0.895184                0.841855\
+1684  S-expletive  Nom               Odnosi  ...      0.999043     7               0.895184                0.841855\
+1685            A  Nom                 Chen  ...      1.000000     7               0.895184                0.841855\
+1686            O  Acc                       ...      0.133261     7               0.895184                0.841855\
+\
+[1687 rows x 11 columns]\
+On layer 6\
+Loaded case classifier from classifiers/aso_sl_ssj-ud_0_ao_balanced_6_exproles!\
+src_test_accuracy: \{'A': 0.830028328611898, 'O': 0.8156956004756243\}\
+Examples # 1687\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-expletive': 4\}\
+There are 1687 examples to evaluate on.\
+             role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0               O  Acc                       ...      0.006665     6               0.830028                0.815696\
+1               A  Nom              reforma  ...      1.000000     6               0.830028                0.815696\
+2     S-expletive  Nom              Reforme  ...      0.773747     6               0.830028                0.815696\
+3               O  Dat                       ...      0.088362     6               0.830028                0.815696\
+4               O  Acc                       ...      0.138089     6               0.830028                0.815696\
+...           ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1682            S  Nom                Robot  ...      0.998793     6               0.830028                0.815696\
+1683            O  Gen                       ...      0.020538     6               0.830028                0.815696\
+1684  S-expletive  Nom               Odnosi  ...      0.999947     6               0.830028                0.815696\
+1685            A  Nom                 Chen  ...      0.999968     6               0.830028                0.815696\
+1686            O  Acc                       ...      0.003042     6               0.830028                0.815696\
+\
+[1687 rows x 11 columns]\
+On layer 5\
+Loaded case classifier from classifiers/aso_sl_ssj-ud_0_ao_balanced_5_exproles!\
+src_test_accuracy: \{'A': 0.7422096317280453, 'O': 0.7407847800237812\}\
+Examples # 1687\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-expletive': 4\}\
+There are 1687 examples to evaluate on.\
+             role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0               O  Acc                       ...      0.011540     5                0.74221                0.740785\
+1               A  Nom              reforma  ...      1.000000     5                0.74221                0.740785\
+2     S-expletive  Nom              Reforme  ...      0.949657     5                0.74221                0.740785\
+3               O  Dat                       ...      0.123306     5                0.74221                0.740785\
+4               O  Acc                       ...      0.999925     5                0.74221                0.740785\
+...           ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1682            S  Nom                Robot  ...      0.999964     5                0.74221                0.740785\
+1683            O  Gen                       ...      0.998983     5                0.74221                0.740785\
+1684  S-expletive  Nom               Odnosi  ...      1.000000     5                0.74221                0.740785\
+1685            A  Nom                 Chen  ...      0.999955     5                0.74221                0.740785\
+1686            O  Acc                       ...      0.995136     5                0.74221                0.740785\
+\
+[1687 rows x 11 columns]\
+On layer 4\
+Loaded case classifier from classifiers/aso_sl_ssj-ud_0_ao_balanced_4_exproles!\
+src_test_accuracy: \{'A': 0.7478753541076487, 'O': 0.6932223543400713\}\
+Examples # 1687\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-expletive': 4\}\
+There are 1687 examples to evaluate on.\
+             role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0               O  Acc                       ...      0.000047     4               0.747875                0.693222\
+1               A  Nom              reforma  ...      1.000000     4               0.747875                0.693222\
+2     S-expletive  Nom              Reforme  ...      0.931130     4               0.747875                0.693222\
+3               O  Dat                       ...      0.225739     4               0.747875                0.693222\
+4               O  Acc                       ...      0.999412     4               0.747875                0.693222\
+...           ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1682            S  Nom                Robot  ...      0.999990     4               0.747875                0.693222\
+1683            O  Gen                       ...      0.999563     4               0.747875                0.693222\
+1684  S-expletive  Nom               Odnosi  ...      0.999987     4               0.747875                0.693222\
+1685            A  Nom                 Chen  ...      0.999972     4               0.747875                0.693222\
+1686            O  Acc                       ...      0.021817     4               0.747875                0.693222\
+\
+[1687 rows x 11 columns]\
+On layer 3\
+Loaded case classifier from classifiers/aso_sl_ssj-ud_0_ao_balanced_3_exproles!\
+src_test_accuracy: \{'A': 0.6997167138810199, 'O': 0.737217598097503\}\
+Examples # 1687\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-expletive': 4\}\
+There are 1687 examples to evaluate on.\
+             role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0               O  Acc                       ...      0.003330     3               0.699717                0.737218\
+1               A  Nom              reforma  ...      0.999998     3               0.699717                0.737218\
+2     S-expletive  Nom              Reforme  ...      0.963271     3               0.699717                0.737218\
+3               O  Dat                       ...      0.120947     3               0.699717                0.737218\
+4               O  Acc                       ...      0.999905     3               0.699717                0.737218\
+...           ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1682            S  Nom                Robot  ...      0.999874     3               0.699717                0.737218\
+1683            O  Gen                       ...      0.991419     3               0.699717                0.737218\
+1684  S-expletive  Nom               Odnosi  ...      0.999474     3               0.699717                0.737218\
+1685            A  Nom                 Chen  ...      1.000000     3               0.699717                0.737218\
+1686            O  Acc                       ...      0.278377     3               0.699717                0.737218\
+\
+[1687 rows x 11 columns]\
+On layer 2\
+Loaded case classifier from classifiers/aso_sl_ssj-ud_0_ao_balanced_2_exproles!\
+src_test_accuracy: \{'A': 0.5580736543909348, 'O': 0.7526753864447087\}\
+Examples # 1687\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-expletive': 4\}\
+There are 1687 examples to evaluate on.\
+             role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0               O  Acc                       ...      0.176072     2               0.558074                0.752675\
+1               A  Nom              reforma  ...      0.978975     2               0.558074                0.752675\
+2     S-expletive  Nom              Reforme  ...      0.879663     2               0.558074                0.752675\
+3               O  Dat                       ...      0.743130     2               0.558074                0.752675\
+4               O  Acc                       ...      0.996963     2               0.558074                0.752675\
+...           ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1682            S  Nom                Robot  ...      0.999998     2               0.558074                0.752675\
+1683            O  Gen                       ...      0.900043     2               0.558074                0.752675\
+1684  S-expletive  Nom               Odnosi  ...      0.999875     2               0.558074                0.752675\
+1685            A  Nom                 Chen  ...      0.999993     2               0.558074                0.752675\
+1686            O  Acc                       ...      0.855138     2               0.558074                0.752675\
+\
+[1687 rows x 11 columns]\
+On layer 1\
+Loaded case classifier from classifiers/aso_sl_ssj-ud_0_ao_balanced_1_exproles!\
+src_test_accuracy: \{'A': 0.5892351274787535, 'O': 0.7063020214030915\}\
+Examples # 1687\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-expletive': 4\}\
+There are 1687 examples to evaluate on.\
+             role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0               O  Acc                       ...      0.069811     1               0.589235                0.706302\
+1               A  Nom              reforma  ...      0.977848     1               0.589235                0.706302\
+2     S-expletive  Nom              Reforme  ...      0.987705     1               0.589235                0.706302\
+3               O  Dat                       ...      0.567337     1               0.589235                0.706302\
+4               O  Acc                       ...      0.932278     1               0.589235                0.706302\
+...           ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1682            S  Nom                Robot  ...      0.999999     1               0.589235                0.706302\
+1683            O  Gen                       ...      0.981670     1               0.589235                0.706302\
+1684  S-expletive  Nom               Odnosi  ...      0.999997     1               0.589235                0.706302\
+1685            A  Nom                 Chen  ...      0.999123     1               0.589235                0.706302\
+1686            O  Acc                       ...      0.215249     1               0.589235                0.706302\
+\
+[1687 rows x 11 columns]\
+On layer 0\
+Loaded case classifier from classifiers/aso_sl_ssj-ud_0_ao_balanced_0_exproles!\
+src_test_accuracy: \{'A': 0.6090651558073654, 'O': 0.6064209274673008\}\
+Examples # 1687\
+labeldict \{'A': 0, 'O': 1, 'S': 2, 'S-aux': 3, 'S-expletive': 4\}\
+There are 1687 examples to evaluate on.\
+             role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0               O  Acc                       ...      0.651087     0               0.609065                0.606421\
+1               A  Nom              reforma  ...      0.999191     0               0.609065                0.606421\
+2     S-expletive  Nom              Reforme  ...      0.999997     0               0.609065                0.606421\
+3               O  Dat                       ...      0.496650     0               0.609065                0.606421\
+4               O  Acc                       ...      0.999976     0               0.609065                0.606421\
+...           ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1682            S  Nom                Robot  ...      0.999992     0               0.609065                0.606421\
+1683            O  Gen                       ...      0.861121     0               0.609065                0.606421\
+1684  S-expletive  Nom               Odnosi  ...      0.999678     0               0.609065                0.606421\
+1685            A  Nom                 Chen  ...      0.842871     0               0.609065                0.606421\
+1686            O  Acc                       ...      0.553603     0               0.609065                0.606421\
+\
+[1687 rows x 11 columns]\
+(erg_nom) Nick deep-subjecthood-custom % }

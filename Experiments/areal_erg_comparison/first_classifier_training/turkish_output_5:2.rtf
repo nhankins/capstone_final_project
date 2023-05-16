@@ -1,0 +1,280 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 (erg_nom) Nick deep-subjecthood-custom % python3 run_one_experiment.py --only-ao --balance\
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html\
+args: Namespace(all_major_cases=False, average_embs=False, balance=True, erg_abs=False, nom_acc=False, only_ao=True, output_fn='last_run', reeval_src_test=False, seed=0, test_lang_fn='language_data/UD_Turkish-Penn-master/tr_penn-ud-test.conllu', train_lang_base_path='language_data/UD_Turkish-Penn-master/tr_penn-ud')\
+Just set the seed to 0\
+Classifiers already trained!\
+Loading the dest test set, with limit 2000\
+Loading all of the tokens and non-bert stuff from cached_datasets/all_features_aso_exps_tr_penn-ud-test_aso_unbalanced_2000.pkl\
+There are 791 relevant tokens, and 924 overall sentences\
+Bert vectors file is cached_bert_vectors/all_features_aso_exps_tr_penn-ud-test_aso_unbalanced_2000.hdf5\
+[Loading from disk]: 100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 924/924 [00:00<00:00, 3075.48it/s]\
+Loaded 923 sentences from disk.\
+length of bert outputs 924\
+On layer 12\
+Loaded case classifier from classifiers/aso_tr_penn-ud_0_ao_balanced_12_exproles!\
+src_test_accuracy: \{'A': 0.9137931034482759, 'O': 0.8920863309352518\}\
+Examples # 791\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5\}\
+There are 791 examples to evaluate on.\
+    role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0      S  Nom               s\'fcreci  ...      0.001857    12               0.913793                0.892086\
+1      A  Nom               i\uc0\u351 lemi  ...      0.997853    12               0.913793                0.892086\
+2      O  Dat                       ...      0.001379    12               0.913793                0.892086\
+3      S  Nom               sat\uc0\u305 m\u305   ...      0.000160    12               0.913793                0.892086\
+4      S  Nom              endeksi  ...      0.789661    12               0.913793                0.892086\
+..   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+786    O  Nom                       ...      0.000368    12               0.913793                0.892086\
+787    O  Acc                       ...      0.001899    12               0.913793                0.892086\
+788    O  Nom                       ...      0.000027    12               0.913793                0.892086\
+789    O  Nom                       ...      0.079094    12               0.913793                0.892086\
+790    O  Nom                       ...      0.962861    12               0.913793                0.892086\
+\
+[791 rows x 11 columns]\
+On layer 11\
+Loaded case classifier from classifiers/aso_tr_penn-ud_0_ao_balanced_11_exproles!\
+src_test_accuracy: \{'A': 0.9425287356321839, 'O': 0.9064748201438849\}\
+Examples # 791\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5\}\
+There are 791 examples to evaluate on.\
+    role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0      S  Nom               s\'fcreci  ...  4.104616e-02    11               0.942529                0.906475\
+1      A  Nom               i\uc0\u351 lemi  ...  9.996393e-01    11               0.942529                0.906475\
+2      O  Dat                       ...  4.708255e-05    11               0.942529                0.906475\
+3      S  Nom               sat\uc0\u305 m\u305   ...  5.813995e-02    11               0.942529                0.906475\
+4      S  Nom              endeksi  ...  9.996905e-01    11               0.942529                0.906475\
+..   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+786    O  Nom                       ...  3.892306e-04    11               0.942529                0.906475\
+787    O  Acc                       ...  5.388220e-03    11               0.942529                0.906475\
+788    O  Nom                       ...  2.209981e-08    11               0.942529                0.906475\
+789    O  Nom                       ...  5.571699e-01    11               0.942529                0.906475\
+790    O  Nom                       ...  9.978558e-01    11               0.942529                0.906475\
+\
+[791 rows x 11 columns]\
+On layer 10\
+Loaded case classifier from classifiers/aso_tr_penn-ud_0_ao_balanced_10_exproles!\
+src_test_accuracy: \{'A': 0.9367816091954023, 'O': 0.920863309352518\}\
+Examples # 791\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5\}\
+There are 791 examples to evaluate on.\
+    role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0      S  Nom               s\'fcreci  ...  2.124084e-01    10               0.936782                0.920863\
+1      A  Nom               i\uc0\u351 lemi  ...  9.951060e-01    10               0.936782                0.920863\
+2      O  Dat                       ...  1.957322e-08    10               0.936782                0.920863\
+3      S  Nom               sat\uc0\u305 m\u305   ...  2.116893e-02    10               0.936782                0.920863\
+4      S  Nom              endeksi  ...  9.999806e-01    10               0.936782                0.920863\
+..   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+786    O  Nom                       ...  1.442451e-02    10               0.936782                0.920863\
+787    O  Acc                       ...  9.351729e-04    10               0.936782                0.920863\
+788    O  Nom                       ...  9.424398e-05    10               0.936782                0.920863\
+789    O  Nom                       ...  8.351220e-02    10               0.936782                0.920863\
+790    O  Nom                       ...  9.938141e-01    10               0.936782                0.920863\
+\
+[791 rows x 11 columns]\
+On layer 9\
+Loaded case classifier from classifiers/aso_tr_penn-ud_0_ao_balanced_9_exproles!\
+src_test_accuracy: \{'A': 0.9597701149425287, 'O': 0.9100719424460432\}\
+Examples # 791\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5\}\
+There are 791 examples to evaluate on.\
+    role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0      S  Nom               s\'fcreci  ...  7.082974e-01     9                0.95977                0.910072\
+1      A  Nom               i\uc0\u351 lemi  ...  9.999423e-01     9                0.95977                0.910072\
+2      O  Dat                       ...  4.142149e-08     9                0.95977                0.910072\
+3      S  Nom               sat\uc0\u305 m\u305   ...  5.155093e-04     9                0.95977                0.910072\
+4      S  Nom              endeksi  ...  9.999825e-01     9                0.95977                0.910072\
+..   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+786    O  Nom                       ...  6.100152e-06     9                0.95977                0.910072\
+787    O  Acc                       ...  2.557306e-02     9                0.95977                0.910072\
+788    O  Nom                       ...  9.788156e-07     9                0.95977                0.910072\
+789    O  Nom                       ...  1.880498e-01     9                0.95977                0.910072\
+790    O  Nom                       ...  9.999931e-01     9                0.95977                0.910072\
+\
+[791 rows x 11 columns]\
+On layer 8\
+Loaded case classifier from classifiers/aso_tr_penn-ud_0_ao_balanced_8_exproles!\
+src_test_accuracy: \{'A': 0.9597701149425287, 'O': 0.9244604316546763\}\
+Examples # 791\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5\}\
+There are 791 examples to evaluate on.\
+    role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0      S  Nom               s\'fcreci  ...  1.472570e-01     8                0.95977                 0.92446\
+1      A  Nom               i\uc0\u351 lemi  ...  9.999993e-01     8                0.95977                 0.92446\
+2      O  Dat                       ...  2.703560e-08     8                0.95977                 0.92446\
+3      S  Nom               sat\uc0\u305 m\u305   ...  1.340237e-02     8                0.95977                 0.92446\
+4      S  Nom              endeksi  ...  9.998667e-01     8                0.95977                 0.92446\
+..   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+786    O  Nom                       ...  4.182502e-02     8                0.95977                 0.92446\
+787    O  Acc                       ...  9.137481e-05     8                0.95977                 0.92446\
+788    O  Nom                       ...  3.708296e-07     8                0.95977                 0.92446\
+789    O  Nom                       ...  6.901462e-03     8                0.95977                 0.92446\
+790    O  Nom                       ...  9.999779e-01     8                0.95977                 0.92446\
+\
+[791 rows x 11 columns]\
+On layer 7\
+Loaded case classifier from classifiers/aso_tr_penn-ud_0_ao_balanced_7_exproles!\
+src_test_accuracy: \{'A': 0.9310344827586207, 'O': 0.9100719424460432\}\
+Examples # 791\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5\}\
+There are 791 examples to evaluate on.\
+    role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0      S  Nom               s\'fcreci  ...  5.321978e-04     7               0.931034                0.910072\
+1      A  Nom               i\uc0\u351 lemi  ...  8.390929e-01     7               0.931034                0.910072\
+2      O  Dat                       ...  2.987861e-05     7               0.931034                0.910072\
+3      S  Nom               sat\uc0\u305 m\u305   ...  2.521435e-05     7               0.931034                0.910072\
+4      S  Nom              endeksi  ...  9.959229e-01     7               0.931034                0.910072\
+..   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+786    O  Nom                       ...  3.725768e-08     7               0.931034                0.910072\
+787    O  Acc                       ...  8.806550e-03     7               0.931034                0.910072\
+788    O  Nom                       ...  6.903625e-02     7               0.931034                0.910072\
+789    O  Nom                       ...  1.762747e-01     7               0.931034                0.910072\
+790    O  Nom                       ...  9.999994e-01     7               0.931034                0.910072\
+\
+[791 rows x 11 columns]\
+On layer 6\
+Loaded case classifier from classifiers/aso_tr_penn-ud_0_ao_balanced_6_exproles!\
+src_test_accuracy: \{'A': 0.9310344827586207, 'O': 0.8884892086330936\}\
+Examples # 791\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5\}\
+There are 791 examples to evaluate on.\
+    role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0      S  Nom               s\'fcreci  ...  3.707938e-01     6               0.931034                0.888489\
+1      A  Nom               i\uc0\u351 lemi  ...  9.999944e-01     6               0.931034                0.888489\
+2      O  Dat                       ...  1.395808e-07     6               0.931034                0.888489\
+3      S  Nom               sat\uc0\u305 m\u305   ...  1.134718e-05     6               0.931034                0.888489\
+4      S  Nom              endeksi  ...  9.975857e-01     6               0.931034                0.888489\
+..   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+786    O  Nom                       ...  5.476223e-06     6               0.931034                0.888489\
+787    O  Acc                       ...  6.849698e-03     6               0.931034                0.888489\
+788    O  Nom                       ...  1.893759e-03     6               0.931034                0.888489\
+789    O  Nom                       ...  1.115271e-04     6               0.931034                0.888489\
+790    O  Nom                       ...  9.998191e-01     6               0.931034                0.888489\
+\
+[791 rows x 11 columns]\
+On layer 5\
+Loaded case classifier from classifiers/aso_tr_penn-ud_0_ao_balanced_5_exproles!\
+src_test_accuracy: \{'A': 0.896551724137931, 'O': 0.8201438848920863\}\
+Examples # 791\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5\}\
+There are 791 examples to evaluate on.\
+    role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0      S  Nom               s\'fcreci  ...      0.236843     5               0.896552                0.820144\
+1      A  Nom               i\uc0\u351 lemi  ...      0.994321     5               0.896552                0.820144\
+2      O  Dat                       ...      0.007733     5               0.896552                0.820144\
+3      S  Nom               sat\uc0\u305 m\u305   ...      0.000163     5               0.896552                0.820144\
+4      S  Nom              endeksi  ...      0.924351     5               0.896552                0.820144\
+..   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+786    O  Nom                       ...      0.000102     5               0.896552                0.820144\
+787    O  Acc                       ...      0.009649     5               0.896552                0.820144\
+788    O  Nom                       ...      0.130120     5               0.896552                0.820144\
+789    O  Nom                       ...      0.001383     5               0.896552                0.820144\
+790    O  Nom                       ...      0.746559     5               0.896552                0.820144\
+\
+[791 rows x 11 columns]\
+On layer 4\
+Loaded case classifier from classifiers/aso_tr_penn-ud_0_ao_balanced_4_exproles!\
+src_test_accuracy: \{'A': 0.8620689655172413, 'O': 0.8273381294964028\}\
+Examples # 791\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5\}\
+There are 791 examples to evaluate on.\
+    role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0      S  Nom               s\'fcreci  ...      0.042802     4               0.862069                0.827338\
+1      A  Nom               i\uc0\u351 lemi  ...      0.998879     4               0.862069                0.827338\
+2      O  Dat                       ...      0.000012     4               0.862069                0.827338\
+3      S  Nom               sat\uc0\u305 m\u305   ...      0.041957     4               0.862069                0.827338\
+4      S  Nom              endeksi  ...      0.986323     4               0.862069                0.827338\
+..   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+786    O  Nom                       ...      0.004856     4               0.862069                0.827338\
+787    O  Acc                       ...      0.003366     4               0.862069                0.827338\
+788    O  Nom                       ...      0.139279     4               0.862069                0.827338\
+789    O  Nom                       ...      0.011788     4               0.862069                0.827338\
+790    O  Nom                       ...      0.999964     4               0.862069                0.827338\
+\
+[791 rows x 11 columns]\
+On layer 3\
+Loaded case classifier from classifiers/aso_tr_penn-ud_0_ao_balanced_3_exproles!\
+src_test_accuracy: \{'A': 0.8218390804597702, 'O': 0.8309352517985612\}\
+Examples # 791\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5\}\
+There are 791 examples to evaluate on.\
+    role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0      S  Nom               s\'fcreci  ...      0.034104     3               0.821839                0.830935\
+1      A  Nom               i\uc0\u351 lemi  ...      0.975569     3               0.821839                0.830935\
+2      O  Dat                       ...      0.000152     3               0.821839                0.830935\
+3      S  Nom               sat\uc0\u305 m\u305   ...      0.000455     3               0.821839                0.830935\
+4      S  Nom              endeksi  ...      0.980770     3               0.821839                0.830935\
+..   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+786    O  Nom                       ...      0.001012     3               0.821839                0.830935\
+787    O  Acc                       ...      0.000212     3               0.821839                0.830935\
+788    O  Nom                       ...      0.372682     3               0.821839                0.830935\
+789    O  Nom                       ...      0.036401     3               0.821839                0.830935\
+790    O  Nom                       ...      0.999699     3               0.821839                0.830935\
+\
+[791 rows x 11 columns]\
+On layer 2\
+Loaded case classifier from classifiers/aso_tr_penn-ud_0_ao_balanced_2_exproles!\
+src_test_accuracy: \{'A': 0.8103448275862069, 'O': 0.7589928057553957\}\
+Examples # 791\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5\}\
+There are 791 examples to evaluate on.\
+    role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0      S  Nom               s\'fcreci  ...  3.731916e-01     2               0.810345                0.758993\
+1      A  Nom               i\uc0\u351 lemi  ...  3.130096e-01     2               0.810345                0.758993\
+2      O  Dat                       ...  5.175089e-02     2               0.810345                0.758993\
+3      S  Nom               sat\uc0\u305 m\u305   ...  4.934779e-02     2               0.810345                0.758993\
+4      S  Nom              endeksi  ...  9.946185e-01     2               0.810345                0.758993\
+..   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+786    O  Nom                       ...  3.180752e-01     2               0.810345                0.758993\
+787    O  Acc                       ...  1.025387e-07     2               0.810345                0.758993\
+788    O  Nom                       ...  1.218893e-03     2               0.810345                0.758993\
+789    O  Nom                       ...  2.277421e-04     2               0.810345                0.758993\
+790    O  Nom                       ...  9.999938e-01     2               0.810345                0.758993\
+\
+[791 rows x 11 columns]\
+On layer 1\
+Loaded case classifier from classifiers/aso_tr_penn-ud_0_ao_balanced_1_exproles!\
+src_test_accuracy: \{'A': 0.7701149425287356, 'O': 0.7877697841726619\}\
+Examples # 791\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5\}\
+There are 791 examples to evaluate on.\
+    role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0      S  Nom               s\'fcreci  ...      0.854153     1               0.770115                 0.78777\
+1      A  Nom               i\uc0\u351 lemi  ...      0.419100     1               0.770115                 0.78777\
+2      O  Dat                       ...      0.175354     1               0.770115                 0.78777\
+3      S  Nom               sat\uc0\u305 m\u305   ...      0.138684     1               0.770115                 0.78777\
+4      S  Nom              endeksi  ...      0.960938     1               0.770115                 0.78777\
+..   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+786    O  Nom                       ...      0.011859     1               0.770115                 0.78777\
+787    O  Acc                       ...      0.000760     1               0.770115                 0.78777\
+788    O  Nom                       ...      0.011613     1               0.770115                 0.78777\
+789    O  Nom                       ...      0.002405     1               0.770115                 0.78777\
+790    O  Nom                       ...      0.999997     1               0.770115                 0.78777\
+\
+[791 rows x 11 columns]\
+On layer 0\
+Loaded case classifier from classifiers/aso_tr_penn-ud_0_ao_balanced_0_exproles!\
+src_test_accuracy: \{'A': 0.7298850574712644, 'O': 0.8273381294964028\}\
+Examples # 791\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'O-aux': 3, 'S': 4, 'S-aux': 5\}\
+There are 791 examples to evaluate on.\
+    role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0      S  Nom               s\'fcreci  ...      0.963311     0               0.729885                0.827338\
+1      A  Nom               i\uc0\u351 lemi  ...      0.023790     0               0.729885                0.827338\
+2      O  Dat                       ...      0.033166     0               0.729885                0.827338\
+3      S  Nom               sat\uc0\u305 m\u305   ...      0.065226     0               0.729885                0.827338\
+4      S  Nom              endeksi  ...      0.698295     0               0.729885                0.827338\
+..   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+786    O  Nom                       ...      0.062734     0               0.729885                0.827338\
+787    O  Acc                       ...      0.000005     0               0.729885                0.827338\
+788    O  Nom                       ...      0.014301     0               0.729885                0.827338\
+789    O  Nom                       ...      0.000767     0               0.729885                0.827338\
+790    O  Nom                       ...      0.999411     0               0.729885                0.827338\
+\
+[791 rows x 11 columns]\
+(erg_nom) Nick deep-subjecthood-custom % }

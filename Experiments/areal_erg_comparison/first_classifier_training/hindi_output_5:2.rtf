@@ -1,0 +1,384 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset77 KohinoorDevanagari-Regular;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 (erg_nom) Nick deep-subjecthood-custom % python3 run_one_experiment.py --only-ao --balance\
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html\
+args: Namespace(all_major_cases=False, average_embs=False, balance=True, erg_abs=False, nom_acc=False, only_ao=True, output_fn='last_run', reeval_src_test=False, seed=0, test_lang_fn='language_data/UD_Hindi-HDTB-master/hi_hdtb-ud-test.conllu', train_lang_base_path='language_data/UD_Hindi-HDTB-master/hi_hdtb-ud')\
+Just set the seed to 0\
+Classifiers already trained!\
+Loading the dest test set, with limit 2000\
+Loading all of the tokens and non-bert stuff from cached_datasets/all_features_aso_exps_hi_hdtb-ud-test_aso_unbalanced_2000.pkl\
+There are 2004 relevant tokens, and 1171 overall sentences\
+Bert vectors file is cached_bert_vectors/all_features_aso_exps_hi_hdtb-ud-test_aso_unbalanced_2000.hdf5\
+Running 1171 sentences through BERT. This takes a while\
+100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 1171/1171 [00:44<00:00, 26.17it/s]\
+length of bert outputs 1171\
+On layer 12\
+Loaded case classifier from classifiers/aso_hi_hdtb-ud_0_ao_balanced_12_exproles!\
+src_test_accuracy: \{'A': 0.88996138996139, 'O': 0.8623326959847036\}\
+Examples # 2004\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-passive': 6\}\
+There are 2004 examples to evaluate on.\
+     role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       O  Nom                       ...  4.512180e-07    12               0.889961                0.862333\
+1       S  Acc              
+\f1 \uc0\u2346 \u2366 \u2352 \u2381 \u2357 \u2340 \u2368 
+\f0   ...  9.999996e-01    12               0.889961                0.862333\
+2       O  Acc                       ...  2.977254e-07    12               0.889961                0.862333\
+3       S  Nom                 
+\f1 \uc0\u2343 \u2370 \u2344 \u2368 
+\f0   ...  3.478836e-03    12               0.889961                0.862333\
+4       S  Acc                  
+\f1 \uc0\u2358 \u2367 \u2357 
+\f0   ...  8.713414e-02    12               0.889961                0.862333\
+...   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1999    A  Nom                
+\f1 \uc0\u2360 \u2350 \u2367 \u2340 \u2367 
+\f0   ...  9.991304e-01    12               0.889961                0.862333\
+2000    O  Acc                       ...  9.491746e-04    12               0.889961                0.862333\
+2001    O  Nom                       ...  6.951741e-04    12               0.889961                0.862333\
+2002    O  Nom                       ...  3.848967e-06    12               0.889961                0.862333\
+2003    O  Nom                       ...  4.458605e-02    12               0.889961                0.862333\
+\
+[2004 rows x 11 columns]\
+On layer 11\
+Loaded case classifier from classifiers/aso_hi_hdtb-ud_0_ao_balanced_11_exproles!\
+src_test_accuracy: \{'A': 0.915057915057915, 'O': 0.8604206500956023\}\
+Examples # 2004\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-passive': 6\}\
+There are 2004 examples to evaluate on.\
+     role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       O  Nom                       ...  4.841407e-08    11               0.915058                0.860421\
+1       S  Acc              
+\f1 \uc0\u2346 \u2366 \u2352 \u2381 \u2357 \u2340 \u2368 
+\f0   ...  1.000000e+00    11               0.915058                0.860421\
+2       O  Acc                       ...  3.488073e-07    11               0.915058                0.860421\
+3       S  Nom                 
+\f1 \uc0\u2343 \u2370 \u2344 \u2368 
+\f0   ...  2.561840e-05    11               0.915058                0.860421\
+4       S  Acc                  
+\f1 \uc0\u2358 \u2367 \u2357 
+\f0   ...  2.403053e-02    11               0.915058                0.860421\
+...   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1999    A  Nom                
+\f1 \uc0\u2360 \u2350 \u2367 \u2340 \u2367 
+\f0   ...  9.999994e-01    11               0.915058                0.860421\
+2000    O  Acc                       ...  1.076334e-03    11               0.915058                0.860421\
+2001    O  Nom                       ...  1.362309e-08    11               0.915058                0.860421\
+2002    O  Nom                       ...  6.995133e-06    11               0.915058                0.860421\
+2003    O  Nom                       ...  1.252861e-04    11               0.915058                0.860421\
+\
+[2004 rows x 11 columns]\
+On layer 10\
+Loaded case classifier from classifiers/aso_hi_hdtb-ud_0_ao_balanced_10_exproles!\
+src_test_accuracy: \{'A': 0.915057915057915, 'O': 0.8967495219885278\}\
+Examples # 2004\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-passive': 6\}\
+There are 2004 examples to evaluate on.\
+     role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       O  Nom                       ...  5.517514e-08    10               0.915058                 0.89675\
+1       S  Acc              
+\f1 \uc0\u2346 \u2366 \u2352 \u2381 \u2357 \u2340 \u2368 
+\f0   ...  1.000000e+00    10               0.915058                 0.89675\
+2       O  Acc                       ...  1.844717e-07    10               0.915058                 0.89675\
+3       S  Nom                 
+\f1 \uc0\u2343 \u2370 \u2344 \u2368 
+\f0   ...  1.131435e-04    10               0.915058                 0.89675\
+4       S  Acc                  
+\f1 \uc0\u2358 \u2367 \u2357 
+\f0   ...  9.266938e-02    10               0.915058                 0.89675\
+...   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1999    A  Nom                
+\f1 \uc0\u2360 \u2350 \u2367 \u2340 \u2367 
+\f0   ...  9.999998e-01    10               0.915058                 0.89675\
+2000    O  Acc                       ...  6.841508e-04    10               0.915058                 0.89675\
+2001    O  Nom                       ...  5.766797e-07    10               0.915058                 0.89675\
+2002    O  Nom                       ...  7.294977e-08    10               0.915058                 0.89675\
+2003    O  Nom                       ...  3.778573e-03    10               0.915058                 0.89675\
+\
+[2004 rows x 11 columns]\
+On layer 9\
+Loaded case classifier from classifiers/aso_hi_hdtb-ud_0_ao_balanced_9_exproles!\
+src_test_accuracy: \{'A': 0.9015444015444015, 'O': 0.9168260038240917\}\
+Examples # 2004\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-passive': 6\}\
+There are 2004 examples to evaluate on.\
+     role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       O  Nom                       ...  5.271204e-10     9               0.901544                0.916826\
+1       S  Acc              
+\f1 \uc0\u2346 \u2366 \u2352 \u2381 \u2357 \u2340 \u2368 
+\f0   ...  9.999999e-01     9               0.901544                0.916826\
+2       O  Acc                       ...  6.834840e-05     9               0.901544                0.916826\
+3       S  Nom                 
+\f1 \uc0\u2343 \u2370 \u2344 \u2368 
+\f0   ...  3.819039e-01     9               0.901544                0.916826\
+4       S  Acc                  
+\f1 \uc0\u2358 \u2367 \u2357 
+\f0   ...  5.987400e-01     9               0.901544                0.916826\
+...   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1999    A  Nom                
+\f1 \uc0\u2360 \u2350 \u2367 \u2340 \u2367 
+\f0   ...  1.000000e+00     9               0.901544                0.916826\
+2000    O  Acc                       ...  5.000000e-01     9               0.901544                0.916826\
+2001    O  Nom                       ...  1.552116e-07     9               0.901544                0.916826\
+2002    O  Nom                       ...  2.648030e-07     9               0.901544                0.916826\
+2003    O  Nom                       ...  3.877923e-06     9               0.901544                0.916826\
+\
+[2004 rows x 11 columns]\
+On layer 8\
+Loaded case classifier from classifiers/aso_hi_hdtb-ud_0_ao_balanced_8_exproles!\
+src_test_accuracy: \{'A': 0.9266409266409267, 'O': 0.9034416826003824\}\
+Examples # 2004\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-passive': 6\}\
+There are 2004 examples to evaluate on.\
+     role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       O  Nom                       ...  6.978701e-05     8               0.926641                0.903442\
+1       S  Acc              
+\f1 \uc0\u2346 \u2366 \u2352 \u2381 \u2357 \u2340 \u2368 
+\f0   ...  9.994556e-01     8               0.926641                0.903442\
+2       O  Acc                       ...  7.412571e-08     8               0.926641                0.903442\
+3       S  Nom                 
+\f1 \uc0\u2343 \u2370 \u2344 \u2368 
+\f0   ...  9.802896e-01     8               0.926641                0.903442\
+4       S  Acc                  
+\f1 \uc0\u2358 \u2367 \u2357 
+\f0   ...  9.923223e-01     8               0.926641                0.903442\
+...   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1999    A  Nom                
+\f1 \uc0\u2360 \u2350 \u2367 \u2340 \u2367 
+\f0   ...  9.999598e-01     8               0.926641                0.903442\
+2000    O  Acc                       ...  3.177856e-04     8               0.926641                0.903442\
+2001    O  Nom                       ...  8.076580e-06     8               0.926641                0.903442\
+2002    O  Nom                       ...  3.657830e-07     8               0.926641                0.903442\
+2003    O  Nom                       ...  1.551946e-05     8               0.926641                0.903442\
+\
+[2004 rows x 11 columns]\
+On layer 7\
+Loaded case classifier from classifiers/aso_hi_hdtb-ud_0_ao_balanced_7_exproles!\
+src_test_accuracy: \{'A': 0.9305019305019305, 'O': 0.892925430210325\}\
+Examples # 2004\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-passive': 6\}\
+There are 2004 examples to evaluate on.\
+     role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       O  Nom                       ...  2.975657e-09     7               0.930502                0.892925\
+1       S  Acc              
+\f1 \uc0\u2346 \u2366 \u2352 \u2381 \u2357 \u2340 \u2368 
+\f0   ...  9.999985e-01     7               0.930502                0.892925\
+2       O  Acc                       ...  3.362215e-09     7               0.930502                0.892925\
+3       S  Nom                 
+\f1 \uc0\u2343 \u2370 \u2344 \u2368 
+\f0   ...  5.752943e-03     7               0.930502                0.892925\
+4       S  Acc                  
+\f1 \uc0\u2358 \u2367 \u2357 
+\f0   ...  9.396262e-01     7               0.930502                0.892925\
+...   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1999    A  Nom                
+\f1 \uc0\u2360 \u2350 \u2367 \u2340 \u2367 
+\f0   ...  9.999992e-01     7               0.930502                0.892925\
+2000    O  Acc                       ...  3.648454e-08     7               0.930502                0.892925\
+2001    O  Nom                       ...  3.142088e-06     7               0.930502                0.892925\
+2002    O  Nom                       ...  8.328647e-08     7               0.930502                0.892925\
+2003    O  Nom                       ...  1.909446e-06     7               0.930502                0.892925\
+\
+[2004 rows x 11 columns]\
+On layer 6\
+Loaded case classifier from classifiers/aso_hi_hdtb-ud_0_ao_balanced_6_exproles!\
+src_test_accuracy: \{'A': 0.9247104247104247, 'O': 0.8747609942638623\}\
+Examples # 2004\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-passive': 6\}\
+There are 2004 examples to evaluate on.\
+     role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       O  Nom                       ...  1.520521e-04     6                0.92471                0.874761\
+1       S  Acc              
+\f1 \uc0\u2346 \u2366 \u2352 \u2381 \u2357 \u2340 \u2368 
+\f0   ...  9.999622e-01     6                0.92471                0.874761\
+2       O  Acc                       ...  6.736012e-09     6                0.92471                0.874761\
+3       S  Nom                 
+\f1 \uc0\u2343 \u2370 \u2344 \u2368 
+\f0   ...  1.104716e-04     6                0.92471                0.874761\
+4       S  Acc                  
+\f1 \uc0\u2358 \u2367 \u2357 
+\f0   ...  4.708070e-01     6                0.92471                0.874761\
+...   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1999    A  Nom                
+\f1 \uc0\u2360 \u2350 \u2367 \u2340 \u2367 
+\f0   ...  9.999583e-01     6                0.92471                0.874761\
+2000    O  Acc                       ...  5.448850e-07     6                0.92471                0.874761\
+2001    O  Nom                       ...  1.024455e-05     6                0.92471                0.874761\
+2002    O  Nom                       ...  1.050707e-06     6                0.92471                0.874761\
+2003    O  Nom                       ...  3.482866e-03     6                0.92471                0.874761\
+\
+[2004 rows x 11 columns]\
+On layer 5\
+Loaded case classifier from classifiers/aso_hi_hdtb-ud_0_ao_balanced_5_exproles!\
+src_test_accuracy: \{'A': 0.9015444015444015, 'O': 0.844168260038241\}\
+Examples # 2004\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-passive': 6\}\
+There are 2004 examples to evaluate on.\
+     role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       O  Nom                       ...  8.570095e-08     5               0.901544                0.844168\
+1       S  Acc              
+\f1 \uc0\u2346 \u2366 \u2352 \u2381 \u2357 \u2340 \u2368 
+\f0   ...  9.480069e-01     5               0.901544                0.844168\
+2       O  Acc                       ...  5.434417e-05     5               0.901544                0.844168\
+3       S  Nom                 
+\f1 \uc0\u2343 \u2370 \u2344 \u2368 
+\f0   ...  6.996559e-01     5               0.901544                0.844168\
+4       S  Acc                  
+\f1 \uc0\u2358 \u2367 \u2357 
+\f0   ...  5.000000e-01     5               0.901544                0.844168\
+...   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1999    A  Nom                
+\f1 \uc0\u2360 \u2350 \u2367 \u2340 \u2367 
+\f0   ...  9.957437e-01     5               0.901544                0.844168\
+2000    O  Acc                       ...  4.264357e-07     5               0.901544                0.844168\
+2001    O  Nom                       ...  2.569256e-04     5               0.901544                0.844168\
+2002    O  Nom                       ...  1.589819e-04     5               0.901544                0.844168\
+2003    O  Nom                       ...  5.998945e-06     5               0.901544                0.844168\
+\
+[2004 rows x 11 columns]\
+On layer 4\
+Loaded case classifier from classifiers/aso_hi_hdtb-ud_0_ao_balanced_4_exproles!\
+src_test_accuracy: \{'A': 0.9073359073359073, 'O': 0.8097514340344169\}\
+Examples # 2004\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-passive': 6\}\
+There are 2004 examples to evaluate on.\
+     role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       O  Nom                       ...  2.680031e-07     4               0.907336                0.809751\
+1       S  Acc              
+\f1 \uc0\u2346 \u2366 \u2352 \u2381 \u2357 \u2340 \u2368 
+\f0   ...  9.998703e-01     4               0.907336                0.809751\
+2       O  Acc                       ...  6.591888e-03     4               0.907336                0.809751\
+3       S  Nom                 
+\f1 \uc0\u2343 \u2370 \u2344 \u2368 
+\f0   ...  4.042277e-02     4               0.907336                0.809751\
+4       S  Acc                  
+\f1 \uc0\u2358 \u2367 \u2357 
+\f0   ...  2.700699e-02     4               0.907336                0.809751\
+...   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1999    A  Nom                
+\f1 \uc0\u2360 \u2350 \u2367 \u2340 \u2367 
+\f0   ...  9.935575e-01     4               0.907336                0.809751\
+2000    O  Acc                       ...  1.197486e-03     4               0.907336                0.809751\
+2001    O  Nom                       ...  3.107723e-03     4               0.907336                0.809751\
+2002    O  Nom                       ...  5.749581e-02     4               0.907336                0.809751\
+2003    O  Nom                       ...  1.822865e-04     4               0.907336                0.809751\
+\
+[2004 rows x 11 columns]\
+On layer 3\
+Loaded case classifier from classifiers/aso_hi_hdtb-ud_0_ao_balanced_3_exproles!\
+src_test_accuracy: \{'A': 0.8571428571428571, 'O': 0.8546845124282982\}\
+Examples # 2004\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-passive': 6\}\
+There are 2004 examples to evaluate on.\
+     role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       O  Nom                       ...      0.000001     3               0.857143                0.854685\
+1       S  Acc              
+\f1 \uc0\u2346 \u2366 \u2352 \u2381 \u2357 \u2340 \u2368 
+\f0   ...      0.865562     3               0.857143                0.854685\
+2       O  Acc                       ...      0.002694     3               0.857143                0.854685\
+3       S  Nom                 
+\f1 \uc0\u2343 \u2370 \u2344 \u2368 
+\f0   ...      0.003025     3               0.857143                0.854685\
+4       S  Acc                  
+\f1 \uc0\u2358 \u2367 \u2357 
+\f0   ...      0.028554     3               0.857143                0.854685\
+...   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1999    A  Nom                
+\f1 \uc0\u2360 \u2350 \u2367 \u2340 \u2367 
+\f0   ...      0.993676     3               0.857143                0.854685\
+2000    O  Acc                       ...      0.053002     3               0.857143                0.854685\
+2001    O  Nom                       ...      0.003741     3               0.857143                0.854685\
+2002    O  Nom                       ...      0.014007     3               0.857143                0.854685\
+2003    O  Nom                       ...      0.123036     3               0.857143                0.854685\
+\
+[2004 rows x 11 columns]\
+On layer 2\
+Loaded case classifier from classifiers/aso_hi_hdtb-ud_0_ao_balanced_2_exproles!\
+src_test_accuracy: \{'A': 0.7625482625482626, 'O': 0.6940726577437859\}\
+Examples # 2004\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-passive': 6\}\
+There are 2004 examples to evaluate on.\
+     role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       O  Nom                       ...      0.421101     2               0.762548                0.694073\
+1       S  Acc              
+\f1 \uc0\u2346 \u2366 \u2352 \u2381 \u2357 \u2340 \u2368 
+\f0   ...      0.959341     2               0.762548                0.694073\
+2       O  Acc                       ...      0.009723     2               0.762548                0.694073\
+3       S  Nom                 
+\f1 \uc0\u2343 \u2370 \u2344 \u2368 
+\f0   ...      0.654568     2               0.762548                0.694073\
+4       S  Acc                  
+\f1 \uc0\u2358 \u2367 \u2357 
+\f0   ...      0.020506     2               0.762548                0.694073\
+...   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1999    A  Nom                
+\f1 \uc0\u2360 \u2350 \u2367 \u2340 \u2367 
+\f0   ...      0.999894     2               0.762548                0.694073\
+2000    O  Acc                       ...      0.562149     2               0.762548                0.694073\
+2001    O  Nom                       ...      0.000842     2               0.762548                0.694073\
+2002    O  Nom                       ...      0.003229     2               0.762548                0.694073\
+2003    O  Nom                       ...      0.378074     2               0.762548                0.694073\
+\
+[2004 rows x 11 columns]\
+On layer 1\
+Loaded case classifier from classifiers/aso_hi_hdtb-ud_0_ao_balanced_1_exproles!\
+src_test_accuracy: \{'A': 0.7915057915057915, 'O': 0.5898661567877629\}\
+Examples # 2004\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-passive': 6\}\
+There are 2004 examples to evaluate on.\
+     role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       O  Nom                       ...      0.290119     1               0.791506                0.589866\
+1       S  Acc              
+\f1 \uc0\u2346 \u2366 \u2352 \u2381 \u2357 \u2340 \u2368 
+\f0   ...      0.888265     1               0.791506                0.589866\
+2       O  Acc                       ...      0.494773     1               0.791506                0.589866\
+3       S  Nom                 
+\f1 \uc0\u2343 \u2370 \u2344 \u2368 
+\f0   ...      0.767807     1               0.791506                0.589866\
+4       S  Acc                  
+\f1 \uc0\u2358 \u2367 \u2357 
+\f0   ...      0.100476     1               0.791506                0.589866\
+...   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1999    A  Nom                
+\f1 \uc0\u2360 \u2350 \u2367 \u2340 \u2367 
+\f0   ...      0.904745     1               0.791506                0.589866\
+2000    O  Acc                       ...      0.343866     1               0.791506                0.589866\
+2001    O  Nom                       ...      0.150639     1               0.791506                0.589866\
+2002    O  Nom                       ...      0.081556     1               0.791506                0.589866\
+2003    O  Nom                       ...      0.500283     1               0.791506                0.589866\
+\
+[2004 rows x 11 columns]\
+On layer 0\
+Loaded case classifier from classifiers/aso_hi_hdtb-ud_0_ao_balanced_0_exproles!\
+src_test_accuracy: \{'A': 0.7065637065637066, 'O': 0.641491395793499\}\
+Examples # 2004\
+labeldict \{'A': 0, 'O': 1, 'A-aux': 2, 'A-passive': 3, 'O-aux': 4, 'S': 5, 'S-passive': 6\}\
+There are 2004 examples to evaluate on.\
+     role case animacy subject_word  ... probability_A layer source_test_accuracy_A  source_test_accuracy_O\
+0       O  Nom                       ...      0.569564     0               0.706564                0.641491\
+1       S  Acc              
+\f1 \uc0\u2346 \u2366 \u2352 \u2381 \u2357 \u2340 \u2368 
+\f0   ...      0.799420     0               0.706564                0.641491\
+2       O  Acc                       ...      0.600031     0               0.706564                0.641491\
+3       S  Nom                 
+\f1 \uc0\u2343 \u2370 \u2344 \u2368 
+\f0   ...      0.500000     0               0.706564                0.641491\
+4       S  Acc                  
+\f1 \uc0\u2358 \u2367 \u2357 
+\f0   ...      0.379951     0               0.706564                0.641491\
+...   ...  ...     ...          ...  ...           ...   ...                    ...                     ...\
+1999    A  Nom                
+\f1 \uc0\u2360 \u2350 \u2367 \u2340 \u2367 
+\f0   ...      0.944907     0               0.706564                0.641491\
+2000    O  Acc                       ...      0.233528     0               0.706564                0.641491\
+2001    O  Nom                       ...      0.223373     0               0.706564                0.641491\
+2002    O  Nom                       ...      0.121604     0               0.706564                0.641491\
+2003    O  Nom                       ...      0.356493     0               0.706564                0.641491\
+\
+[2004 rows x 11 columns]\
+(erg_nom) Nick deep-subjecthood-custom % }
