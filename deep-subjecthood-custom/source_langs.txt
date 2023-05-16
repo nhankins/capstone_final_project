@@ -1,0 +1,6 @@
+language_data/UD_Persian-Seraji-master/fa_seraji-ud-train.conllu
+language_data/UD_Turkish-Penn-master/tr_penn-ud-train.conllu
+language_data/UD_Western_Armenian-ArmTDP-master/hyw_armtdp-ud-train.conllu
+language_data/UD_Indonesian-GSD-master/id_gsd-ud-train.conllu
+language_data/UD_Urdu-UDTB-master/ur_udtb-ud-train.conllu
+language_data/UD_Hindi-HDTB-master/hi_hdtb-ud-train.conllu
